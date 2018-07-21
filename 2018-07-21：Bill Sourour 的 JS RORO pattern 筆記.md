@@ -43,6 +43,8 @@ function findUsersByRole ({
 console.log(options.role) // 'Admin'
 ```
 
+ > Destructuring does a shallow copy, complex data types( array, object ) get copied by reference.
+
 ## 更好檢查變數的 pattern
 ```javascript
 // 之前常常這樣寫吧？
