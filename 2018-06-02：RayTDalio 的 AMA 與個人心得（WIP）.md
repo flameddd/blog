@@ -36,10 +36,13 @@ How do I know I am Right ? Find people disagree with me, demarcracy
 
  > Yes—and it’s still not easy.
 
- > Meaningful work and meaningful relationships. When I look back on my life and the various accomplishments I’ve made and impacts I’ve had, the most important source of happiness for me has been the wonderful relationships I’ve had and continue to have, whether that’s with my family, with my friends, or with my communities.
+ ## What makes you happy?
+ - Meaningful work and meaningful relationships. 當我回顧我的 life 跟數個我成功的成就與影響。對我來說最重要的幸福來源是我擁有的 wonderful relationships 並持續擁有它們，無論是跟我的家人、朋友或是社區 。
 
- > The ocean has a tremendous rejuvenative capacity if it is not abused continuously, so I believe the best path is to help people help the world fall in love with it and want to protect it. That’s what I’m on a mission to do.
-
+ ## I know ocean preservation is a passion of yours. What chances do you think we have of fundamentally repairing those ecosystems? Do you think it’s an issue of will or do you think there’s a fundamental knowledge gap of how we repair complex web objects like ecosystems?
+  - 只要不持續的汙染，海洋有極強的恢復能力。所以我相信最好的方式是幫助人們幫助世界愛上它、想要保護它。這就是我目前的任務。
+ 
+ ## Ray, I've been trying to instill as much "radical transparency" as I possibly can into my team and my organization. What do you say to people who are scared of the concept, or who resist with objections like, "They don't need to know all of this stuff" and treat information as a prize to be hoarded rather than a tool that can help the business?
  > Work it through with them appealing to both their logic and emotions. For most people, there is an emotional barrier that stands in the way of their wanting the transparency that gives everyone awareness (for example, do you want people to know your weaknesses? Do you want people to know your mistakes? Many people will say no but few can describe why that’s better for the organization). If you can’t reach an agreement, you will have to move on to what you do about it. To me, being radically truthful and radically transparent is important and defines the culture that I’m in, so people who can’t adapt to this might have to leave. Typically, most people can understand intellectually that it is best for the community and initially try it, and then come to love it.
 
  ## 對投資者而言，最重要的原則為：
@@ -52,11 +55,26 @@ How do I know I am Right ? Find people disagree with me, demarcracy
  ## Hi Ray, do you workout? About halfway through your book, really like it.
   - 這是我其中一個最大的缺點，沒有像我工作時一樣的「戒律discipline」來「運動」。
 
+## My questions is, what would be your advice for raising kids to understand and adopt the importance of successful principles?
  > Live by them yourself so that you are a good role model. Additionally, I would recommend you and they see the “Principles for Success” animation and talk about it because many people told me that that was invaluable for watching with your kid.
 
+## 世界移動的速度是全方面指數性成長(科技、社會、政治等等)。你如何決定 pick and stick with something 來帶給你自己、家人或工作上益處 (如:花時間學新東西 vs 採用/執行某些你已經學會的東西)？你有任何規則來畫分你的行程(有分配特定多少時間給自己、給家人、或給工作上)，如果有，那會是怎樣的呢？
  > Whenever I’m in a position in which too many choices are coming at me at once to handle them all well (which is most of the time like it is for most people), it forces me up to the higher level to reflect on my priorities and organize myself to reject good alternatives. If you have my book Principles, there’s one about this idea, Prioritize: While you can have virtually anything you want, you can’t have everything you want.
 
- > The key to whatever success I’ve had has to do more with my dealing how to do with my not knowing than anything I know. While the power of a visionary “shaper” is great, it is nowhere near as powerful as the collection of independent-minded shapers who know how to disagree well and then get beyond their disagreements to make the best decisions. In addition, if you don’t have people who can think for themselves, you won’t have great leverage and you won’t build a great organization. You also won’t have them devoted to the mission. So I believe an idea meritocracy is so much more powerful than organizations that resemble feudal monarchies.
+## Hi Ray! Big BIG fan. Your book is the most important book I have read (and changed the way I view the world)Thank you! My question is, do you think the idea meritocracy works for tech startups?
+Peter Thiel said
+    "Apple’s value crucially depended on the singular vision of a particular person. This hints at the strange way in which the companies that create new technology often resemble feudal monarchies rather than organizations that are supposedly more 'modern.' A unique founder can make authoritative decisions, inspire strong personal loyalty, and plan ahead for decades."
+
+Patrick Collison, founder of Stripe said
+    "Decision making in organizations is slightly overrated, in that organizations are not like investment entities or funds or managers. With investing, it’s fundamentally very binary. There is a moment at which you either buy or don’t or sell or don’t [...] Whereas in organizations, everything is more fluid and continuous."
+Thanks for any answer!
+
+ - 對於任何的成功，關鍵在於我必須　do more　我的態度、交易如何處理　my not knowing 比 我所知道到　更重要
+ - The key to whatever success I’ve had has to do more with my dealing how to do with my not knowing than anything I know.
+ While the power of a visionary “shaper” is great, it is nowhere near as powerful as the collection of independent-minded shapers who know how to disagree well and then get beyond their disagreements to make the best decisions. 
+ 
+ In addition, if you don’t have people who can think for themselves, you won’t have great leverage and you won’t build a great organization. 
+ You also won’t have them devoted to the mission. So I believe an idea meritocracy is so much more powerful than organizations that resemble feudal monarchies.
 
  > Three great books were:
  > Lessons from History by Will and Ariel Durant, which is a 104-page distillation of the themes of history by great historians who covered 500 years of history in all countries.
