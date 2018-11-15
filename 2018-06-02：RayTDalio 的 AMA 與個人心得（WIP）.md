@@ -106,4 +106,5 @@ Thanks for any answer!
 
  > I wanted to pass along the principle that brought me the success you’re referring to in both a very simple form and a very comprehensive form so that everyone could have the access to the version the find most appropriate.
 
- > Everyone faces a tradeoff between the amount of time and the depth of understanding in order to understand a subject. I believe that in order to communicate effectively with anyone, you’ve got to give them the choice between comprehensive and simple, which is why I did it both ways. I did this first with “How the Economic Machine Works” that received 5.5 mil views and told people everything important that I knew about economics and decided to do it again with “Principles for Success” which distilled my 600 page book down to 30 minutes. I believe that it’ll always be true that doing it both ways will be best.
+## 花多少時間學習、時間分配
+  `多少時間 vs 學習某個主題到什麼深度` 這是所有人都要面對的 `tradeoff`。我相信為了有效跟任何人勾同，你需要讓對方在 `簡單(simple)` 跟 `全面性(comprehensive)` 兩者之間做選擇。這就是我兩種方式都採用的原因。我先做了 `How the Economic Machine Works` ，這超過 5百萬人觀看，告訴其他人所有我知道關於經濟的重點，接著做了 `Principles for Success`。我相信這兩個方法會總是會有效。
