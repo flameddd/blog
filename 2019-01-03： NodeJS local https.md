@@ -8,6 +8,12 @@
 ### NodeJS 部分
 除了 http 之外，另外起 https server 並 proxy 過去
 ```js
+const https = require('https');
+const httpProxy = require('http-proxy');
+const fs = require('fs');
+
+const proxy = httpProxy.createProxyServer({});
+
 https.createServer({
   key: fs.readFileSync('./server.key'), // 確認這目錄是上個步驟所產生的檔案
   cert: fs.readFileSync('./server.cert'), // Windows、Linux 的目錄位置可能不同
