@@ -6,6 +6,7 @@
  1. 原生 Object assign
  2. immutableJS set
  3. Seamless-immutable set
+ 4. immer produce update
 
 object size 5000 key:value
 
@@ -17,6 +18,7 @@ object size 5000 key:value
  1. 測試_Object_Assign: `1.822ms`
  2. 測試ImmutableJS_set: `0.783ms`
  3. 測試Seamless-Immutable_set: `4.477ms`
+ 4. 測試 immer produce update: `29.253ms`
 
 ## 結論 Immutable 真的快。
 但作者也有一段話很重要

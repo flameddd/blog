@@ -59,8 +59,8 @@ export default GoogleTagManager;
 ### Google Tag Manger 
 這邊要新增規則 "history change" 為觸發條件
 #### ０１－GTM有不同的觸發條件可以設定.jpg
-![image info](./assets/img/react-google-tag-manager_01.jpg))
+![image info](./assets/img/react-google-tag-manager_01.jpg)
 #### ０２－新設定一個「紀錄變更」的觸發條件.jpg
-![image info](./assets/img/react-google-tag-manager_02.jpg))
-#### ０３－新增 we6 的 tag，觸發條件用剛剛新增的.jpg
-![image info](./assets/img/react-google-tag-manager_03.jpg))
+![image info](./assets/img/react-google-tag-manager_02.jpg)
+#### ０３－新增 tag，觸發條件用剛剛新增的.jpg
+![image info](./assets/img/react-google-tag-manager_03.jpg)
