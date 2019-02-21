@@ -1,4 +1,8 @@
-## 2018-12-01：Javascript 取得 IP 和 internal IP
+## 2018-12-01：Javascript 取得 IP 和 internal IP
+
+#### npm: https://www.npmjs.com/package/binternalip
+#### repo: https://github.com/flameddd/binternalip
+
 這個議題算是最近才了解，做個小紀錄。
 1. client side JS 是抓不到 user ip 的。
 2. client side JS 要取得 ip 的目前唯一解是，往一個 server 打 request，讓該 server 回傳 ip。（網路上似乎有些在提供這種服務，不然只能自己架）
