@@ -20,7 +20,7 @@ object size 5000 key:value
  3. 測試Seamless-Immutable_set: `4.477ms`
  4. 測試 immer produce update: `29.253ms`
 
-## 結論 Immutable 真的快。
+## 結論 ImmutableJS 真的快(也有利於 GC)。
 但作者也有一段話很重要
 > Not always…
 Please don’t take this article to mean “you should always use Immutable.js.” No, I’m just trying to highlight its benefits in this article and explain why it’s recommended a lot.
