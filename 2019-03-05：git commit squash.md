@@ -12,3 +12,5 @@
 
 3. `git push -f`
 若 remote 有的話，要 force 
+
+![image](./assets/img/git_squash.png)
