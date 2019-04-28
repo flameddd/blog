@@ -6,7 +6,7 @@
 ### how Samsung configured their `.com` for the launch of the S10. 
 
 這邊會討論到
--UX process
+- UX process
 - user flows
 - wireframes
 
