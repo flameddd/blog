@@ -53,10 +53,11 @@ CORS 是由**兩個 Header** 來做相對的存取控制
 - Response 中的 Access-Control-Allow-Origin。
 
 當
-- Request 的 Origin 和
-- Response 的 header 中 Access-Control-Allow-Origin
-的值相同
-- 或是Access-Control-Allow-Origin: * （代表允許任何網域存取資源）
+- **Request** 的 `Origin` 和
+- **Response** 的 **header** 中 `Access-Control-Allow-Origin` 的值相同
+
+或是
+- `Access-Control-Allow-Origin: *` （代表允許任何網域存取資源）
 
 此時就會放寬 CORS 的限制，允許存取跨域資源  
 如果不符合 CORS policy 的話，會顯示警告錯誤訊息  

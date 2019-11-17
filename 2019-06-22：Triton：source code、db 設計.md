@@ -1,4 +1,4 @@
-### Triton: source code、db 設計
+### Triton：source code、db 設計
 幾篇文長的整理，學習些思維
 
 ### 有人問：應該要如何寫出又好又快的source code。
