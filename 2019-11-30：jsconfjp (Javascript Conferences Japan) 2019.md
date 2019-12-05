@@ -4,8 +4,8 @@ ref: https://jsconf.jp/2019/schedule/
 
 ### Day1 
 #### 13:00-13:30 Opening talk
-![JsConfJap2019_Tokyo_Day1_1](/assets/img/JsConfJap2019_Tokyo_Day1_1.jpg)  
-![JsConfJap2019_Tokyo_Day1_3](/assets/img/JsConfJap2019_Tokyo_Day1_3.jpg)  
+![JsConfJap2019_Tokyo_Day1_1](/assets/img/JsConfJap2019_Tokyo_Day1_1.JPG)  
+![JsConfJap2019_Tokyo_Day1_3](/assets/img/JsConfJap2019_Tokyo_Day1_3.JPG)  
 
 opening 就是介紹一些行程而已  
 讓我意外的是，**第一件事情是講 harassment，代表 jsconf (japan) 非常非常重視這件事情**
@@ -16,16 +16,16 @@ opening 就是介紹一些行程而已
 搶先聽到 `State of JavaScript` 的目前統計結果，後續可能會有些變動  
 不過也是聽聽 `Raphaël Benitte` 本人親口講講他的解讀  
 
-![JsConfJap2019_Tokyo_Day1_6](/assets/img/JsConfJap2019_Tokyo_Day1_6.jpg)  
+![JsConfJap2019_Tokyo_Day1_6](/assets/img/JsConfJap2019_Tokyo_Day1_6.JPG)  
 
 Raphaël Benitte 當時也是感到**混亂**，覺得怎麼 frontend 變得越來越複雜  
 他對這篇 `How it feels to learn Javascript in 2016` 深有同感，所以他決定弄個 survey  
 - https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f
 
-![JsConfJap2019_Tokyo_Day1_7](/assets/img/JsConfJap2019_Tokyo_Day1_7.jpg)  
+![JsConfJap2019_Tokyo_Day1_7](/assets/img/JsConfJap2019_Tokyo_Day1_7.JPG)  
 
 這三年，`typescript` 的發展驚人  
-![JsConfJap2019_Tokyo_Day1_9](/assets/img/JsConfJap2019_Tokyo_Day1_9.jpg)  
+![JsConfJap2019_Tokyo_Day1_9](/assets/img/JsConfJap2019_Tokyo_Day1_9.JPG)  
 
 `Elm` 我算是偶而會看到，`Reason` 好像是 FB 的  
 關於 `Reason` 感覺現在 fb 主力偏向 `Relay`  
@@ -40,28 +40,28 @@ Raphaël Benitte 當時也是感到**混亂**，覺得怎麼 frontend 變得越�
 有想到時，在來玩個 demo 看看吧
 - https://elm-lang.org/
 
-![JsConfJap2019_Tokyo_Day1_10](/assets/img/JsConfJap2019_Tokyo_Day1_10.jpg)  
+![JsConfJap2019_Tokyo_Day1_10](/assets/img/JsConfJap2019_Tokyo_Day1_10.JPG)  
 
 `react` 跟 `vuejs` 的使用度差這麼多？  
 我是覺得結果還會變  
 但他有說出，兩個的 `滿意度都非常高`（年度下面灰色圈圈的百分比數字）  
 所以可以預期後續幾年還是會繼續熱門
 
-![JsConfJap2019_Tokyo_Day1_11](/assets/img/JsConfJap2019_Tokyo_Day1_11.jpg)
-![JsConfJap2019_Tokyo_Day1_12](/assets/img/JsConfJap2019_Tokyo_Day1_12.jpg)  
+![JsConfJap2019_Tokyo_Day1_11](/assets/img/JsConfJap2019_Tokyo_Day1_11.JPG)
+![JsConfJap2019_Tokyo_Day1_12](/assets/img/JsConfJap2019_Tokyo_Day1_12.JPG)  
 
 `Svelte` 才剛出，但可以看到 **滿意度** 很高  
-![JsConfJap2019_Tokyo_Day1_13](/assets/img/JsConfJap2019_Tokyo_Day1_13.jpg)  
+![JsConfJap2019_Tokyo_Day1_13](/assets/img/JsConfJap2019_Tokyo_Day1_13.JPG)  
 
 這邊提到一部分稱為 `infra` 的主題  
 這是 `frontend infra` 的概念，這主題算是今天蠻吸引我的  
 之前沒有好好思考這問題，後面有 JAMstack talk  
-![JsConfJap2019_Tokyo_Day1_15](/assets/img/JsConfJap2019_Tokyo_Day1_15.jpg)  
-![JsConfJap2019_Tokyo_Day1_17](/assets/img/JsConfJap2019_Tokyo_Day1_17.jpg)  
+![JsConfJap2019_Tokyo_Day1_15](/assets/img/JsConfJap2019_Tokyo_Day1_15.JPG)  
+![JsConfJap2019_Tokyo_Day1_17](/assets/img/JsConfJap2019_Tokyo_Day1_17.JPG)  
 
 `netlify`, `zeit`, `gatsby` 這三間都是在做類似的事情（嗎？）  
 可以 google 看看，這算是有意思的主題  
-![JsConfJap2019_Tokyo_Day1_18](/assets/img/JsConfJap2019_Tokyo_Day1_18.jpg)  
+![JsConfJap2019_Tokyo_Day1_18](/assets/img/JsConfJap2019_Tokyo_Day1_18.JPG)  
 
 
 #### 14:15-14:45 Visualizing Connections
@@ -76,17 +76,17 @@ Raphaël Benitte 當時也是感到**混亂**，覺得怎麼 frontend 變得越�
 
 這 talk 講她多個 project 的構思過程  
 
-![JsConfJap2019_Tokyo_Day1_20](/assets/img/JsConfJap2019_Tokyo_Day1_20.jpg)  
+![JsConfJap2019_Tokyo_Day1_20](/assets/img/JsConfJap2019_Tokyo_Day1_20.JPG)  
 
 構思時，她常常會這樣畫下來幫助自己設計發想  
-![JsConfJap2019_Tokyo_Day1_23](/assets/img/JsConfJap2019_Tokyo_Day1_23.jpg)  
+![JsConfJap2019_Tokyo_Day1_23](/assets/img/JsConfJap2019_Tokyo_Day1_23.JPG)  
 
 我忘了這個 data 是表示什麼的了，但也是經過好幾次調整  
 - 一開始是純碎的圓圈點代表資料
 - 後來好像**加入顏色代表某些年代的屬性**（但資料點太多，還是很難看）
 - 接著底下**加入時間軸來分群**才好些
 
-![JsConfJap2019_Tokyo_Day1_24](/assets/img/JsConfJap2019_Tokyo_Day1_24.jpg)  
+![JsConfJap2019_Tokyo_Day1_24](/assets/img/JsConfJap2019_Tokyo_Day1_24.JPG)  
 
 Royal Constellations
 - 一個追朔歐洲皇室過去 1000 年的族譜專案
@@ -99,13 +99,13 @@ link 點去玩玩吧
   - hover 會呈現 6 代關聯的親人
   - onClick 任意兩個點，會呈現相關聯的線
 
-![JsConfJap2019_Tokyo_Day1_31](/assets/img/JsConfJap2019_Tokyo_Day1_31.jpg)  
+![JsConfJap2019_Tokyo_Day1_31](/assets/img/JsConfJap2019_Tokyo_Day1_31.JPG)  
 
 這是`真實網頁截圖` = = |||，不是 ps 喔
 
-![Royal_Constellations_01](/assets/img/Royal_Constellations_01.jpg)  
-![Royal_Constellations_02](/assets/img/Royal_Constellations_02.jpg)
-![Royal_Constellations_03](/assets/img/Royal_Constellations_03.jpg)  
+![Royal_Constellations_01](/assets/img/Royal_Constellations_01.JPG)  
+![Royal_Constellations_02](/assets/img/Royal_Constellations_02.JPG)
+![Royal_Constellations_03](/assets/img/Royal_Constellations_03.JPG)  
 
 後面這個專案好像是關於 homeless people 的
 - 也是花了大量時間清洗資料
@@ -118,8 +118,8 @@ link
 
 最後的效果...，這要做出來，真的要 d3 專業才行  
 
-![JsConfJap2019_Tokyo_Day1_33](/assets/img/JsConfJap2019_Tokyo_Day1_33.jpg)  
-![JsConfJap2019_Tokyo_Day1_34](/assets/img/JsConfJap2019_Tokyo_Day1_34.jpg)
+![JsConfJap2019_Tokyo_Day1_33](/assets/img/JsConfJap2019_Tokyo_Day1_33.JPG)  
+![JsConfJap2019_Tokyo_Day1_34](/assets/img/JsConfJap2019_Tokyo_Day1_34.JPG)
 ![Bussed_out_01](/assets/img/Bussed_out_01.gif)  
 
 Intangible Cultural Heritage （非物質文化遺產）
@@ -132,11 +132,11 @@ link
 - https://ich.unesco.org/en/dive&display=biome#tabs
   - 這麼大量的 data，最後效果真的很好
 
-![JsConfJap2019_Tokyo_Day1_36](/assets/img/JsConfJap2019_Tokyo_Day1_36.jpg)  
-![JsConfJap2019_Tokyo_Day1_38](/assets/img/JsConfJap2019_Tokyo_Day1_38.jpg)
-![JsConfJap2019_Tokyo_Day1_39](/assets/img/JsConfJap2019_Tokyo_Day1_39.jpg)  
-![IntangibleCulturalHeritage_01](/assets/img/Intangible_Cultural_Heritage_01.jpg)  
-![IntangibleCulturalHeritage_02](/assets/img/Intangible_Cultural_Heritage_02.jpg)  
+![JsConfJap2019_Tokyo_Day1_36](/assets/img/JsConfJap2019_Tokyo_Day1_36.JPG)  
+![JsConfJap2019_Tokyo_Day1_38](/assets/img/JsConfJap2019_Tokyo_Day1_38.JPG)
+![JsConfJap2019_Tokyo_Day1_39](/assets/img/JsConfJap2019_Tokyo_Day1_39.JPG)  
+![IntangibleCulturalHeritage_01](/assets/img/Intangible_Cultural_Heritage_01.JPG)  
+![IntangibleCulturalHeritage_02](/assets/img/Intangible_Cultural_Heritage_02.JPG)  
 
 接著是一個關於貓的專案
 - 她好奇網路上大家都問些什麼關於貓的問題
@@ -150,8 +150,8 @@ link
 
 
 
-![JsConfJap2019_Tokyo_Day1_43](/assets/img/JsConfJap2019_Tokyo_Day1_43.jpg)
-![JsConfJap2019_Tokyo_Day1_45](/assets/img/JsConfJap2019_Tokyo_Day1_45.jpg)  
+![JsConfJap2019_Tokyo_Day1_43](/assets/img/JsConfJap2019_Tokyo_Day1_43.JPG)
+![JsConfJap2019_Tokyo_Day1_45](/assets/img/JsConfJap2019_Tokyo_Day1_45.JPG)  
 
 `實際畫面截圖`:  
 
@@ -173,12 +173,12 @@ link
   - https://www.youtube.com/watch?v=MFzDaBzBlL0 非常有意思的影片
 - 聊到投入 open Source 某些層面上對他來說是 freedom
 
-![JsConfJap2019_Tokyo_Day1_53](/assets/img/JsConfJap2019_Tokyo_Day1_53.jpg)  
+![JsConfJap2019_Tokyo_Day1_53](/assets/img/JsConfJap2019_Tokyo_Day1_53.JPG)  
 
 忘了他為什麼說這句話了
 - 好像是指他要走出 code，來跟 user、社群 互動
 
-![JsConfJap2019_Tokyo_Day1_56](/assets/img/JsConfJap2019_Tokyo_Day1_56.jpg)  
+![JsConfJap2019_Tokyo_Day1_56](/assets/img/JsConfJap2019_Tokyo_Day1_56.JPG)  
 
 
 #### 15:30-16:00 Building and Deploying for the Modern Web with JAMstack
@@ -225,13 +225,13 @@ go live 跟相關提到的
 - 由 code review 轉變為一個類似 release review 這概念我不是很懂
   - 好像是說，因為部署輕鬆，所以部署上去直接看結果？
 
-![JsConfJap2019_Tokyo_Day1_65](/assets/img/JsConfJap2019_Tokyo_Day1_65.jpg)  
-![JsConfJap2019_Tokyo_Day1_68](/assets/img/JsConfJap2019_Tokyo_Day1_68.jpg)  
-![JsConfJap2019_Tokyo_Day1_71](/assets/img/JsConfJap2019_Tokyo_Day1_71.jpg)  
-![JsConfJap2019_Tokyo_Day1_73](/assets/img/JsConfJap2019_Tokyo_Day1_73.jpg)
-![JsConfJap2019_Tokyo_Day1_74](/assets/img/JsConfJap2019_Tokyo_Day1_74.jpg)  
-![JsConfJap2019_Tokyo_Day1_77](/assets/img/JsConfJap2019_Tokyo_Day1_77.jpg)  
-![JsConfJap2019_Tokyo_Day1_78](/assets/img/JsConfJap2019_Tokyo_Day1_78.jpg)  
+![JsConfJap2019_Tokyo_Day1_65](/assets/img/JsConfJap2019_Tokyo_Day1_65.JPG)  
+![JsConfJap2019_Tokyo_Day1_68](/assets/img/JsConfJap2019_Tokyo_Day1_68.JPG)  
+![JsConfJap2019_Tokyo_Day1_71](/assets/img/JsConfJap2019_Tokyo_Day1_71.JPG)  
+![JsConfJap2019_Tokyo_Day1_73](/assets/img/JsConfJap2019_Tokyo_Day1_73.JPG)
+![JsConfJap2019_Tokyo_Day1_74](/assets/img/JsConfJap2019_Tokyo_Day1_74.JPG)  
+![JsConfJap2019_Tokyo_Day1_77](/assets/img/JsConfJap2019_Tokyo_Day1_77.JPG)  
+![JsConfJap2019_Tokyo_Day1_78](/assets/img/JsConfJap2019_Tokyo_Day1_78.JPG)  
 
 #### 16:00-16:30 Write What Not How
 - RoomA by `Jorge Bucaran`
@@ -248,9 +248,9 @@ go live 跟相關提到的
 - 我個人確實用了類似 react, redux 這樣的 `declarative` 就回不去了
 - 這場給我的感觸比較低，比較沒重心關注 or 思考這方面思維
 
-![JsConfJap2019_Tokyo_Day1_79](/assets/img/JsConfJap2019_Tokyo_Day1_79.jpg)  
-![JsConfJap2019_Tokyo_Day1_80](/assets/img/JsConfJap2019_Tokyo_Day1_80.jpg)  
-![JsConfJap2019_Tokyo_Day1_81](/assets/img/JsConfJap2019_Tokyo_Day1_81.jpg)  
+![JsConfJap2019_Tokyo_Day1_79](/assets/img/JsConfJap2019_Tokyo_Day1_79.JPG)  
+![JsConfJap2019_Tokyo_Day1_80](/assets/img/JsConfJap2019_Tokyo_Day1_80.JPG)  
+![JsConfJap2019_Tokyo_Day1_81](/assets/img/JsConfJap2019_Tokyo_Day1_81.JPG)  
 
 #### 16:45-17:15 Deno - A new way to JavaScript
 - RoomA by Kitson Kelly
@@ -271,11 +271,11 @@ link
 - 針對 v8 有改善對 typescript 的效能（說是利用 v8 對 ts 的 snapshot），讓載入速度更快（應該是指 develop 的時候）
 - roadmap 1.0 快了！
 
-![JsConfJap2019_Tokyo_Day1_82](/assets/img/JsConfJap2019_Tokyo_Day1_82.jpg)  
-![JsConfJap2019_Tokyo_Day1_83](/assets/img/JsConfJap2019_Tokyo_Day1_83.jpg)  
-![JsConfJap2019_Tokyo_Day1_85](/assets/img/JsConfJap2019_Tokyo_Day1_85.jpg)  
-![JsConfJap2019_Tokyo_Day1_87](/assets/img/JsConfJap2019_Tokyo_Day1_87.jpg)  
-![JsConfJap2019_Tokyo_Day1_88](/assets/img/JsConfJap2019_Tokyo_Day1_88.jpg)  
+![JsConfJap2019_Tokyo_Day1_82](/assets/img/JsConfJap2019_Tokyo_Day1_82.JPG)  
+![JsConfJap2019_Tokyo_Day1_83](/assets/img/JsConfJap2019_Tokyo_Day1_83.JPG)  
+![JsConfJap2019_Tokyo_Day1_85](/assets/img/JsConfJap2019_Tokyo_Day1_85.JPG)  
+![JsConfJap2019_Tokyo_Day1_87](/assets/img/JsConfJap2019_Tokyo_Day1_87.JPG)  
+![JsConfJap2019_Tokyo_Day1_88](/assets/img/JsConfJap2019_Tokyo_Day1_88.JPG)  
 
 #### 17:15-17:45 Web Accessibility in a Nutshell
 - RoomC by Nazanin Delam (`netflix` 的人)
@@ -300,15 +300,15 @@ why a11y
   - keyboard navigation、Meaningful Announcements
   - 包容的體驗
 
-![JsConfJap2019_Tokyo_Day1_93](/assets/img/JsConfJap2019_Tokyo_Day1_93.jpg)  
-![JsConfJap2019_Tokyo_Day1_94](/assets/img/JsConfJap2019_Tokyo_Day1_94.jpg)  
-![semantic_01](/assets/img/semantic_01.jpg)  
-![semantic_02](/assets/img/semantic_02.jpg)  
-![JsConfJap2019_Tokyo_Day1_99](/assets/img/JsConfJap2019_Tokyo_Day1_99.jpg)  
-![JsConfJap2019_Tokyo_Day1_96](/assets/img/JsConfJap2019_Tokyo_Day1_96.jpg)  
-![JsConfJap2019_Tokyo_Day1_97](/assets/img/JsConfJap2019_Tokyo_Day1_97.jpg)  
-![a11y_tree](/assets/img/a11y_tree.jpg)  
-![JsConfJap2019_Tokyo_Day1_102](/assets/img/JsConfJap2019_Tokyo_Day1_102.jpg)  
+![JsConfJap2019_Tokyo_Day1_93](/assets/img/JsConfJap2019_Tokyo_Day1_93.JPG)  
+![JsConfJap2019_Tokyo_Day1_94](/assets/img/JsConfJap2019_Tokyo_Day1_94.JPG)  
+![semantic_01](/assets/img/semantic_01.JPG)  
+![semantic_02](/assets/img/semantic_02.JPG)  
+![JsConfJap2019_Tokyo_Day1_99](/assets/img/JsConfJap2019_Tokyo_Day1_99.JPG)  
+![JsConfJap2019_Tokyo_Day1_96](/assets/img/JsConfJap2019_Tokyo_Day1_96.JPG)  
+![JsConfJap2019_Tokyo_Day1_97](/assets/img/JsConfJap2019_Tokyo_Day1_97.JPG)  
+![a11y_tree](/assets/img/a11y_tree.JPG)  
+![JsConfJap2019_Tokyo_Day1_102](/assets/img/JsConfJap2019_Tokyo_Day1_102.JPG)  
 
 #### 18:15-18:45 Sponsor talk (mediba, Mercari, Cybozu, CureApp)
 - Mercari frontend team 有 350 人！哇塞，
@@ -336,17 +336,17 @@ why a11y
 Cool 這應該是我第一次聽到 `prefetch` 的新玩法
 
 
-![JsConfJap2019_Tokyo_Day1_104](/assets/img/JsConfJap2019_Tokyo_Day1_104.jpg)
-![JsConfJap2019_Tokyo_Day1_105](/assets/img/JsConfJap2019_Tokyo_Day1_105.jpg)  
-![JsConfJap2019_Tokyo_Day1_106](/assets/img/JsConfJap2019_Tokyo_Day1_106.jpg)  
-![JsConfJap2019_Tokyo_Day1_109](/assets/img/JsConfJap2019_Tokyo_Day1_109.jpg)  
-![JsConfJap2019_Tokyo_Day1_110](/assets/img/JsConfJap2019_Tokyo_Day1_110.jpg)  
-![JsConfJap2019_Tokyo_Day1_112](/assets/img/JsConfJap2019_Tokyo_Day1_112.jpg)  
-![JsConfJap2019_Tokyo_Day1_114](/assets/img/JsConfJap2019_Tokyo_Day1_114.jpg)  
-![JsConfJap2019_Tokyo_Day1_115](/assets/img/JsConfJap2019_Tokyo_Day1_115.jpg)  
-![JsConfJap2019_Tokyo_Day1_116](/assets/img/JsConfJap2019_Tokyo_Day1_116.jpg)  
-![JsConfJap2019_Tokyo_Day1_117](/assets/img/JsConfJap2019_Tokyo_Day1_117.jpg)  
-![JsConfJap2019_Tokyo_Day1_118](/assets/img/JsConfJap2019_Tokyo_Day1_118.jpg)  
+![JsConfJap2019_Tokyo_Day1_104](/assets/img/JsConfJap2019_Tokyo_Day1_104.JPG)
+![JsConfJap2019_Tokyo_Day1_105](/assets/img/JsConfJap2019_Tokyo_Day1_105.JPG)  
+![JsConfJap2019_Tokyo_Day1_106](/assets/img/JsConfJap2019_Tokyo_Day1_106.JPG)  
+![JsConfJap2019_Tokyo_Day1_109](/assets/img/JsConfJap2019_Tokyo_Day1_109.JPG)  
+![JsConfJap2019_Tokyo_Day1_110](/assets/img/JsConfJap2019_Tokyo_Day1_110.JPG)  
+![JsConfJap2019_Tokyo_Day1_112](/assets/img/JsConfJap2019_Tokyo_Day1_112.JPG)  
+![JsConfJap2019_Tokyo_Day1_114](/assets/img/JsConfJap2019_Tokyo_Day1_114.JPG)  
+![JsConfJap2019_Tokyo_Day1_115](/assets/img/JsConfJap2019_Tokyo_Day1_115.JPG)  
+![JsConfJap2019_Tokyo_Day1_116](/assets/img/JsConfJap2019_Tokyo_Day1_116.JPG)  
+![JsConfJap2019_Tokyo_Day1_117](/assets/img/JsConfJap2019_Tokyo_Day1_117.JPG)  
+![JsConfJap2019_Tokyo_Day1_118](/assets/img/JsConfJap2019_Tokyo_Day1_118.JPG)  
 
 #### 19:05-19:15 Cache Me If You Can by Maxi Ferreira
 奇怪！他解釋的 `cache-control: no-cache` 怎麼跟我印象的不一樣！！？  
@@ -363,8 +363,8 @@ no-cache: 快取需存取，但是要重新驗證
   - 然後 新資源也確定拿得到，也會有新的 cache
 
 
-![JsConfJap2019_Tokyo_Day1_120](/assets/img/JsConfJap2019_Tokyo_Day1_120.jpg)  
-![JsConfJap2019_Tokyo_Day1_126](/assets/img/JsConfJap2019_Tokyo_Day1_126.jpg)  
+![JsConfJap2019_Tokyo_Day1_120](/assets/img/JsConfJap2019_Tokyo_Day1_120.JPG)  
+![JsConfJap2019_Tokyo_Day1_126](/assets/img/JsConfJap2019_Tokyo_Day1_126.JPG)  
 
 ### Day2
   
@@ -386,22 +386,22 @@ no-cache: 快取需存取，但是要重新驗證
 - 舉例了一些 native JS date 跟 momentjs 的 api 比較
 
 
-![JsConfJap2019_Tokyo_Day2_1](/assets/img/JsConfJap2019_Tokyo_Day2_1.jpg)  
+![JsConfJap2019_Tokyo_Day2_1](/assets/img/JsConfJap2019_Tokyo_Day2_1.JPG)  
 
 這就是 `rrule` 想實做的東西  
-![JsConfJap2019_Tokyo_Day2_2](/assets/img/JsConfJap2019_Tokyo_Day2_2.jpg)  
-![JsConfJap2019_Tokyo_Day2_4](/assets/img/JsConfJap2019_Tokyo_Day2_4.jpg)  
-![JsConfJap2019_Tokyo_Day2_5](/assets/img/JsConfJap2019_Tokyo_Day2_5.jpg)  
-![JsConfJap2019_Tokyo_Day2_6](/assets/img/JsConfJap2019_Tokyo_Day2_6.jpg)  
-![JsConfJap2019_Tokyo_Day2_7](/assets/img/JsConfJap2019_Tokyo_Day2_7.jpg)  
-![JsConfJap2019_Tokyo_Day2_9](/assets/img/JsConfJap2019_Tokyo_Day2_9.jpg)  
-![JsConfJap2019_Tokyo_Day2_10](/assets/img/JsConfJap2019_Tokyo_Day2_10.jpg)  
-![JsConfJap2019_Tokyo_Day2_11](/assets/img/JsConfJap2019_Tokyo_Day2_11.jpg)  
-![JsConfJap2019_Tokyo_Day2_14](/assets/img/JsConfJap2019_Tokyo_Day2_14.jpg)  
-![JsConfJap2019_Tokyo_Day2_15](/assets/img/JsConfJap2019_Tokyo_Day2_15.jpg)  
-![JsConfJap2019_Tokyo_Day2_17](/assets/img/JsConfJap2019_Tokyo_Day2_17.jpg)  
-![JsConfJap2019_Tokyo_Day2_18](/assets/img/JsConfJap2019_Tokyo_Day2_18.jpg)  
-![JsConfJap2019_Tokyo_Day2_22](/assets/img/JsConfJap2019_Tokyo_Day2_22.jpg)  
+![JsConfJap2019_Tokyo_Day2_2](/assets/img/JsConfJap2019_Tokyo_Day2_2.JPG)  
+![JsConfJap2019_Tokyo_Day2_4](/assets/img/JsConfJap2019_Tokyo_Day2_4.JPG)  
+![JsConfJap2019_Tokyo_Day2_5](/assets/img/JsConfJap2019_Tokyo_Day2_5.JPG)  
+![JsConfJap2019_Tokyo_Day2_6](/assets/img/JsConfJap2019_Tokyo_Day2_6.JPG)  
+![JsConfJap2019_Tokyo_Day2_7](/assets/img/JsConfJap2019_Tokyo_Day2_7.JPG)  
+![JsConfJap2019_Tokyo_Day2_9](/assets/img/JsConfJap2019_Tokyo_Day2_9.JPG)  
+![JsConfJap2019_Tokyo_Day2_10](/assets/img/JsConfJap2019_Tokyo_Day2_10.JPG)  
+![JsConfJap2019_Tokyo_Day2_11](/assets/img/JsConfJap2019_Tokyo_Day2_11.JPG)  
+![JsConfJap2019_Tokyo_Day2_14](/assets/img/JsConfJap2019_Tokyo_Day2_14.JPG)  
+![JsConfJap2019_Tokyo_Day2_15](/assets/img/JsConfJap2019_Tokyo_Day2_15.JPG)  
+![JsConfJap2019_Tokyo_Day2_17](/assets/img/JsConfJap2019_Tokyo_Day2_17.JPG)  
+![JsConfJap2019_Tokyo_Day2_18](/assets/img/JsConfJap2019_Tokyo_Day2_18.JPG)  
+![JsConfJap2019_Tokyo_Day2_22](/assets/img/JsConfJap2019_Tokyo_Day2_22.JPG)  
 
 #### 11:30-12:00 Life of Streams
 - RoomA by Dominic Tarr
@@ -417,12 +417,12 @@ Node.js Streams: Everything you need to know
 - 翻譯: https://juejin.im/post/5ad05b7bf265da237e0a2308
 
 
-![JsConfJap2019_Tokyo_Day2_26](/assets/img/JsConfJap2019_Tokyo_Day2_26.jpg)  
-![JsConfJap2019_Tokyo_Day2_27](/assets/img/JsConfJap2019_Tokyo_Day2_27.jpg)  
-![JsConfJap2019_Tokyo_Day2_28](/assets/img/JsConfJap2019_Tokyo_Day2_28.jpg)  
-![JsConfJap2019_Tokyo_Day2_29](/assets/img/JsConfJap2019_Tokyo_Day2_29.jpg)  
-![JsConfJap2019_Tokyo_Day2_30](/assets/img/JsConfJap2019_Tokyo_Day2_30.jpg)  
-![JsConfJap2019_Tokyo_Day2_32](/assets/img/JsConfJap2019_Tokyo_Day2_32.jpg)  
+![JsConfJap2019_Tokyo_Day2_26](/assets/img/JsConfJap2019_Tokyo_Day2_26.JPG)  
+![JsConfJap2019_Tokyo_Day2_27](/assets/img/JsConfJap2019_Tokyo_Day2_27.JPG)  
+![JsConfJap2019_Tokyo_Day2_28](/assets/img/JsConfJap2019_Tokyo_Day2_28.JPG)  
+![JsConfJap2019_Tokyo_Day2_29](/assets/img/JsConfJap2019_Tokyo_Day2_29.JPG)  
+![JsConfJap2019_Tokyo_Day2_30](/assets/img/JsConfJap2019_Tokyo_Day2_30.JPG)  
+![JsConfJap2019_Tokyo_Day2_32](/assets/img/JsConfJap2019_Tokyo_Day2_32.JPG)  
 
 #### 13:00-13:30 Passwords are so 1990
 - RoomC by Sam Bellen
@@ -437,16 +437,16 @@ Node.js Streams: Everything you need to know
   - Usr cred management 好像是說沒辦法多帳號切換管理之類的
 
 
-![JsConfJap2019_Tokyo_Day2_47](/assets/img/JsConfJap2019_Tokyo_Day2_47.jpg)
-![JsConfJap2019_Tokyo_Day2_48](/assets/img/JsConfJap2019_Tokyo_Day2_48.jpg)  
-![JsConfJap2019_Tokyo_Day2_49](/assets/img/JsConfJap2019_Tokyo_Day2_49.jpg)
-![JsConfJap2019_Tokyo_Day2_52](/assets/img/JsConfJap2019_Tokyo_Day2_52.jpg)  
-![JsConfJap2019_Tokyo_Day2_53](/assets/img/JsConfJap2019_Tokyo_Day2_53.jpg)  
-![JsConfJap2019_Tokyo_Day2_55](/assets/img/JsConfJap2019_Tokyo_Day2_55.jpg)  
-![JsConfJap2019_Tokyo_Day2_56](/assets/img/JsConfJap2019_Tokyo_Day2_56.jpg)  
-![JsConfJap2019_Tokyo_Day2_57](/assets/img/JsConfJap2019_Tokyo_Day2_57.jpg)  
-![JsConfJap2019_Tokyo_Day2_58](/assets/img/JsConfJap2019_Tokyo_Day2_58.jpg)  
-![JsConfJap2019_Tokyo_Day2_59](/assets/img/JsConfJap2019_Tokyo_Day2_59.jpg)  
+![JsConfJap2019_Tokyo_Day2_47](/assets/img/JsConfJap2019_Tokyo_Day2_47.JPG)
+![JsConfJap2019_Tokyo_Day2_48](/assets/img/JsConfJap2019_Tokyo_Day2_48.JPG)  
+![JsConfJap2019_Tokyo_Day2_49](/assets/img/JsConfJap2019_Tokyo_Day2_49.JPG)
+![JsConfJap2019_Tokyo_Day2_52](/assets/img/JsConfJap2019_Tokyo_Day2_52.JPG)  
+![JsConfJap2019_Tokyo_Day2_53](/assets/img/JsConfJap2019_Tokyo_Day2_53.JPG)  
+![JsConfJap2019_Tokyo_Day2_55](/assets/img/JsConfJap2019_Tokyo_Day2_55.JPG)  
+![JsConfJap2019_Tokyo_Day2_56](/assets/img/JsConfJap2019_Tokyo_Day2_56.JPG)  
+![JsConfJap2019_Tokyo_Day2_57](/assets/img/JsConfJap2019_Tokyo_Day2_57.JPG)  
+![JsConfJap2019_Tokyo_Day2_58](/assets/img/JsConfJap2019_Tokyo_Day2_58.JPG)  
+![JsConfJap2019_Tokyo_Day2_59](/assets/img/JsConfJap2019_Tokyo_Day2_59.JPG)  
 
 ```js
 
@@ -485,11 +485,11 @@ navigator.credentials.create(createCredentialDefaultArgs)
     - 裡面的下面有好多公司的參考：`apple`, `twitter`, `fb` 說他們怎麼處理 scale repo 的問題，好像都是 `monorepo` 方向
 - 忘了是 v6 還是 v7 要開始支援 `yarn.lock.json` 檔，這樣以後 yarn 的專案，我也能用 `npm i`
 
-![JsConfJap2019_Tokyo_Day2_60](/assets/img/JsConfJap2019_Tokyo_Day2_60.jpg)
-![JsConfJap2019_Tokyo_Day2_62](/assets/img/JsConfJap2019_Tokyo_Day2_62.jpg)
-![JsConfJap2019_Tokyo_Day2_64](/assets/img/JsConfJap2019_Tokyo_Day2_64.jpg)
-![JsConfJap2019_Tokyo_Day2_65](/assets/img/JsConfJap2019_Tokyo_Day2_65.jpg)
-![JsConfJap2019_Tokyo_Day2_66](/assets/img/JsConfJap2019_Tokyo_Day2_66.jpg)
+![JsConfJap2019_Tokyo_Day2_60](/assets/img/JsConfJap2019_Tokyo_Day2_60.JPG)
+![JsConfJap2019_Tokyo_Day2_62](/assets/img/JsConfJap2019_Tokyo_Day2_62.JPG)
+![JsConfJap2019_Tokyo_Day2_64](/assets/img/JsConfJap2019_Tokyo_Day2_64.JPG)
+![JsConfJap2019_Tokyo_Day2_65](/assets/img/JsConfJap2019_Tokyo_Day2_65.JPG)
+![JsConfJap2019_Tokyo_Day2_66](/assets/img/JsConfJap2019_Tokyo_Day2_66.JPG)
 
 #### 同一時間還有另一場關於 WebAssembly 的
 
@@ -538,7 +538,7 @@ Name	End Date	Gross Price
 Oh my god, 歐洲這種技術活動真是夭壽貴  
 前陣子來日本舉辦的 乙太訪 conference 印象約 1000€  
 
-![JsConfJap2019_Tokyo_Day2_67](/assets/img/JsConfJap2019_Tokyo_Day2_67.jpg)  
+![JsConfJap2019_Tokyo_Day2_67](/assets/img/JsConfJap2019_Tokyo_Day2_67.JPG)  
 
 #### 15:30-16:00 Browser APIs: the unknown Super Heroes
 - RoomA by Rowdy Rabouw
@@ -576,7 +576,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-![JsConfJap2019_Tokyo_Day2_69](/assets/img/JsConfJap2019_Tokyo_Day2_69.jpg)  
+![JsConfJap2019_Tokyo_Day2_69](/assets/img/JsConfJap2019_Tokyo_Day2_69.JPG)  
 
 ```js
 const battery = navigator.battery
@@ -595,8 +595,8 @@ battery.addEventListener("chargingchange", updateBatteryStatus);
 battery.addEventListener("levelchange", updateBatteryStatus);
 ```
 
-![JsConfJap2019_Tokyo_Day2_72](/assets/img/JsConfJap2019_Tokyo_Day2_72.jpg)  
-![JsConfJap2019_Tokyo_Day2_73](/assets/img/JsConfJap2019_Tokyo_Day2_73.jpg)  
+![JsConfJap2019_Tokyo_Day2_72](/assets/img/JsConfJap2019_Tokyo_Day2_72.JPG)  
+![JsConfJap2019_Tokyo_Day2_73](/assets/img/JsConfJap2019_Tokyo_Day2_73.JPG)  
 
 ```js
 const connection = navigator.connection
@@ -614,16 +614,16 @@ connection.addEventListener("change", updateConnectionStatus);
 updateConnectionStatus();
 ```
 
-![JsConfJap2019_Tokyo_Day2_74](/assets/img/JsConfJap2019_Tokyo_Day2_74.jpg)  
-![JsConfJap2019_Tokyo_Day2_75](/assets/img/JsConfJap2019_Tokyo_Day2_75.jpg)  
-![JsConfJap2019_Tokyo_Day2_76](/assets/img/JsConfJap2019_Tokyo_Day2_76.jpg)  
-![JsConfJap2019_Tokyo_Day2_77](/assets/img/JsConfJap2019_Tokyo_Day2_77.jpg)  
-![JsConfJap2019_Tokyo_Day2_78](/assets/img/JsConfJap2019_Tokyo_Day2_78.jpg)  
-![JsConfJap2019_Tokyo_Day2_79](/assets/img/JsConfJap2019_Tokyo_Day2_79.jpg)  
-![JsConfJap2019_Tokyo_Day2_80](/assets/img/JsConfJap2019_Tokyo_Day2_80.jpg)  
-![JsConfJap2019_Tokyo_Day2_81](/assets/img/JsConfJap2019_Tokyo_Day2_81.jpg)  
-![JsConfJap2019_Tokyo_Day2_83](/assets/img/JsConfJap2019_Tokyo_Day2_83.jpg)  
-![JsConfJap2019_Tokyo_Day2_87](/assets/img/JsConfJap2019_Tokyo_Day2_87.jpg)  
+![JsConfJap2019_Tokyo_Day2_74](/assets/img/JsConfJap2019_Tokyo_Day2_74.JPG)  
+![JsConfJap2019_Tokyo_Day2_75](/assets/img/JsConfJap2019_Tokyo_Day2_75.JPG)  
+![JsConfJap2019_Tokyo_Day2_76](/assets/img/JsConfJap2019_Tokyo_Day2_76.JPG)  
+![JsConfJap2019_Tokyo_Day2_77](/assets/img/JsConfJap2019_Tokyo_Day2_77.JPG)  
+![JsConfJap2019_Tokyo_Day2_78](/assets/img/JsConfJap2019_Tokyo_Day2_78.JPG)  
+![JsConfJap2019_Tokyo_Day2_79](/assets/img/JsConfJap2019_Tokyo_Day2_79.JPG)  
+![JsConfJap2019_Tokyo_Day2_80](/assets/img/JsConfJap2019_Tokyo_Day2_80.JPG)  
+![JsConfJap2019_Tokyo_Day2_81](/assets/img/JsConfJap2019_Tokyo_Day2_81.JPG)  
+![JsConfJap2019_Tokyo_Day2_83](/assets/img/JsConfJap2019_Tokyo_Day2_83.JPG)  
+![JsConfJap2019_Tokyo_Day2_87](/assets/img/JsConfJap2019_Tokyo_Day2_87.JPG)  
 
 
 #### 16:00-16:30 Anatomy of a Click
@@ -639,9 +639,9 @@ updateConnectionStatus();
 他目前好像在開發一個新的 frontend test 框架 -> `testim`  
 整場 talk 算是他在探索 `onclick 行為`
 
-![JsConfJap2019_Tokyo_Day2_91](/assets/img/JsConfJap2019_Tokyo_Day2_91.jpg)  
-![JsConfJap2019_Tokyo_Day2_92](/assets/img/JsConfJap2019_Tokyo_Day2_92.jpg)  
-![JsConfJap2019_Tokyo_Day2_93](/assets/img/JsConfJap2019_Tokyo_Day2_93.jpg)  
+![JsConfJap2019_Tokyo_Day2_91](/assets/img/JsConfJap2019_Tokyo_Day2_91.JPG)  
+![JsConfJap2019_Tokyo_Day2_92](/assets/img/JsConfJap2019_Tokyo_Day2_92.JPG)  
+![JsConfJap2019_Tokyo_Day2_93](/assets/img/JsConfJap2019_Tokyo_Day2_93.JPG)  
 
 聽他講解 onClick event 講的真是清楚，讓我複習了整個過程  
 onClick event dispatch 後，有三個階段
@@ -650,17 +650,17 @@ onClick event dispatch 後，有三個階段
   3. 往上冒泡 -> `Bubbling phase` -> 從 `目標` 一路往外到 `HTML`
 
 
-![JsConfJap2019_Tokyo_Day2_95](/assets/img/JsConfJap2019_Tokyo_Day2_95.jpg)  
-![JsConfJap2019_Tokyo_Day2_96](/assets/img/JsConfJap2019_Tokyo_Day2_96.jpg)  
-![JsConfJap2019_Tokyo_Day2_97](/assets/img/JsConfJap2019_Tokyo_Day2_97.jpg)  
-![JsConfJap2019_Tokyo_Day2_98](/assets/img/JsConfJap2019_Tokyo_Day2_98.jpg)
-![JsConfJap2019_Tokyo_Day2_99](/assets/img/JsConfJap2019_Tokyo_Day2_99.jpg)  
+![JsConfJap2019_Tokyo_Day2_95](/assets/img/JsConfJap2019_Tokyo_Day2_95.JPG)  
+![JsConfJap2019_Tokyo_Day2_96](/assets/img/JsConfJap2019_Tokyo_Day2_96.JPG)  
+![JsConfJap2019_Tokyo_Day2_97](/assets/img/JsConfJap2019_Tokyo_Day2_97.JPG)  
+![JsConfJap2019_Tokyo_Day2_98](/assets/img/JsConfJap2019_Tokyo_Day2_98.JPG)
+![JsConfJap2019_Tokyo_Day2_99](/assets/img/JsConfJap2019_Tokyo_Day2_99.JPG)  
 
 `React` 為了改善效能
 - 有做 event delegation，而且下很多功夫
 
-![JsConfJap2019_Tokyo_Day2_100](/assets/img/JsConfJap2019_Tokyo_Day2_100.jpg)
-![JsConfJap2019_Tokyo_Day2_101](/assets/img/JsConfJap2019_Tokyo_Day2_101.jpg)  
+![JsConfJap2019_Tokyo_Day2_100](/assets/img/JsConfJap2019_Tokyo_Day2_100.JPG)
+![JsConfJap2019_Tokyo_Day2_101](/assets/img/JsConfJap2019_Tokyo_Day2_101.JPG)  
 
 我聽不懂他說的 dispatch event React 會 flaky
 - 應該是指，因為 react 自己有做 event delegation，所以測試某個 target 時，有時候 listen 在這個 target 會有問題
@@ -669,8 +669,8 @@ onClick event dispatch 後，有三個階段
 - `angular`、`Svelte`、`vuejs` 沒有這樣做，所以比較沒問題
   - 說這樣做才能給 browsers 更多優化的機會
 
-![JsConfJap2019_Tokyo_Day2_102](/assets/img/JsConfJap2019_Tokyo_Day2_102.jpg)
-![JsConfJap2019_Tokyo_Day2_103](/assets/img/JsConfJap2019_Tokyo_Day2_103.jpg)  
+![JsConfJap2019_Tokyo_Day2_102](/assets/img/JsConfJap2019_Tokyo_Day2_102.JPG)
+![JsConfJap2019_Tokyo_Day2_103](/assets/img/JsConfJap2019_Tokyo_Day2_103.JPG)  
 
 其實滑鼠按下 click 時
 - OS 層級會先有動作
@@ -685,18 +685,18 @@ onClick event dispatch 後，有三個階段
 - 他找這個問題時，就搜尋 `MouseEvent` 就找到文件了
 
 
-![JsConfJap2019_Tokyo_Day2_104](/assets/img/JsConfJap2019_Tokyo_Day2_104.jpg)  
-![JsConfJap2019_Tokyo_Day2_106](/assets/img/JsConfJap2019_Tokyo_Day2_106.jpg)  
-![JsConfJap2019_Tokyo_Day2_107](/assets/img/JsConfJap2019_Tokyo_Day2_107.jpg)  
+![JsConfJap2019_Tokyo_Day2_104](/assets/img/JsConfJap2019_Tokyo_Day2_104.JPG)  
+![JsConfJap2019_Tokyo_Day2_106](/assets/img/JsConfJap2019_Tokyo_Day2_106.JPG)  
+![JsConfJap2019_Tokyo_Day2_107](/assets/img/JsConfJap2019_Tokyo_Day2_107.JPG)  
 
 他有提到 `cypress`
 - 但我沒有很懂他的意思，好像意思是 `cypress` 的 event 有跳過一段
 - 這樣跳過一段，而不是從正常的 flow 進去的話，cross browser 就會有差別
 - 所以他覺得這是其中一個主因，為什麼大家比較推崇 `selenium`
 
-![JsConfJap2019_Tokyo_Day2_110](/assets/img/JsConfJap2019_Tokyo_Day2_110.jpg)  
-![JsConfJap2019_Tokyo_Day2_111](/assets/img/JsConfJap2019_Tokyo_Day2_111.jpg)  
-![JsConfJap2019_Tokyo_Day2_112](/assets/img/JsConfJap2019_Tokyo_Day2_112.jpg)  
+![JsConfJap2019_Tokyo_Day2_110](/assets/img/JsConfJap2019_Tokyo_Day2_110.JPG)  
+![JsConfJap2019_Tokyo_Day2_111](/assets/img/JsConfJap2019_Tokyo_Day2_111.JPG)  
+![JsConfJap2019_Tokyo_Day2_112](/assets/img/JsConfJap2019_Tokyo_Day2_112.JPG)  
 
 整場可能對我來說太深了
 - 整個 talk 應該是偏向，分享一些東西給我們聽
@@ -706,7 +706,7 @@ onClick event dispatch 後，有三個階段
  `Benjamin Gruenbaum` 在 stackoverflow 那邊有回答很多 js 的問題  
 看來是蠻值得看看的
 
-![JsConfJap2019_Tokyo_Day2_113](/assets/img/JsConfJap2019_Tokyo_Day2_113.jpg)  
+![JsConfJap2019_Tokyo_Day2_113](/assets/img/JsConfJap2019_Tokyo_Day2_113.JPG)  
 
 
 #### 16:45-17:15 Discovering Animals with AI and Javascript
@@ -722,12 +722,12 @@ onClick event dispatch 後，有三個階段
 最好的文件
 - 官方教學
 
-![JsConfJap2019_Tokyo_Day2_117](/assets/img/JsConfJap2019_Tokyo_Day2_117.jpg)  
-![JsConfJap2019_Tokyo_Day2_119](/assets/img/JsConfJap2019_Tokyo_Day2_119.jpg)  
-![JsConfJap2019_Tokyo_Day2_120](/assets/img/JsConfJap2019_Tokyo_Day2_120.jpg)  
-![JsConfJap2019_Tokyo_Day2_121](/assets/img/JsConfJap2019_Tokyo_Day2_121.jpg)  
-![JsConfJap2019_Tokyo_Day2_122](/assets/img/JsConfJap2019_Tokyo_Day2_122.jpg)  
-![JsConfJap2019_Tokyo_Day2_125](/assets/img/JsConfJap2019_Tokyo_Day2_125.jpg)  
+![JsConfJap2019_Tokyo_Day2_117](/assets/img/JsConfJap2019_Tokyo_Day2_117.JPG)  
+![JsConfJap2019_Tokyo_Day2_119](/assets/img/JsConfJap2019_Tokyo_Day2_119.JPG)  
+![JsConfJap2019_Tokyo_Day2_120](/assets/img/JsConfJap2019_Tokyo_Day2_120.JPG)  
+![JsConfJap2019_Tokyo_Day2_121](/assets/img/JsConfJap2019_Tokyo_Day2_121.JPG)  
+![JsConfJap2019_Tokyo_Day2_122](/assets/img/JsConfJap2019_Tokyo_Day2_122.JPG)  
+![JsConfJap2019_Tokyo_Day2_125](/assets/img/JsConfJap2019_Tokyo_Day2_125.JPG)  
 
 另外提了三個點，是開發心得
 - modal 剛 download 完後，第一次辨識會非常慢（沒聽懂為什麼會慢）
@@ -737,9 +737,9 @@ onClick event dispatch 後，有三個階段
   - 所以有選擇的時候，**要盡可能選小 size**
 - 因為是使用 GPU，所以`要自己做 gc (garbage collection)`
 
-![JsConfJap2019_Tokyo_Day2_129](/assets/img/JsConfJap2019_Tokyo_Day2_129.jpg)  
-![JsConfJap2019_Tokyo_Day2_131](/assets/img/JsConfJap2019_Tokyo_Day2_131.jpg)  
-![JsConfJap2019_Tokyo_Day2_133](/assets/img/JsConfJap2019_Tokyo_Day2_133.jpg)  
+![JsConfJap2019_Tokyo_Day2_129](/assets/img/JsConfJap2019_Tokyo_Day2_129.JPG)  
+![JsConfJap2019_Tokyo_Day2_131](/assets/img/JsConfJap2019_Tokyo_Day2_131.JPG)  
+![JsConfJap2019_Tokyo_Day2_133](/assets/img/JsConfJap2019_Tokyo_Day2_133.JPG)  
 
 #### 17:15-17:45 Pika: Reimagining the Registry
 - RoomA by Fred K. Schott
@@ -748,19 +748,19 @@ onClick event dispatch 後，有三個階段
   - 現在的做法就是 code splite 然後傳需要的 chunk
   - 但這樣很有機會有很多重複的 code
 
-![JsConfJap2019_Tokyo_Day2_134](/assets/img/JsConfJap2019_Tokyo_Day2_134.jpg)  
-![JsConfJap2019_Tokyo_Day2_135](/assets/img/JsConfJap2019_Tokyo_Day2_135.jpg)  
-![JsConfJap2019_Tokyo_Day2_136](/assets/img/JsConfJap2019_Tokyo_Day2_136.jpg)  
-![JsConfJap2019_Tokyo_Day2_137](/assets/img/JsConfJap2019_Tokyo_Day2_137.jpg)  
+![JsConfJap2019_Tokyo_Day2_134](/assets/img/JsConfJap2019_Tokyo_Day2_134.JPG)  
+![JsConfJap2019_Tokyo_Day2_135](/assets/img/JsConfJap2019_Tokyo_Day2_135.JPG)  
+![JsConfJap2019_Tokyo_Day2_136](/assets/img/JsConfJap2019_Tokyo_Day2_136.JPG)  
+![JsConfJap2019_Tokyo_Day2_137](/assets/img/JsConfJap2019_Tokyo_Day2_137.JPG)  
 
 如果能幹掉這些重複的 code，那未來可能會
 - 減少 80% 的 tool
 - 開發快 10 倍
 - web 快 10 倍
 
-![JsConfJap2019_Tokyo_Day2_138](/assets/img/JsConfJap2019_Tokyo_Day2_138.jpg)  
-![JsConfJap2019_Tokyo_Day2_139](/assets/img/JsConfJap2019_Tokyo_Day2_139.jpg)  
-![JsConfJap2019_Tokyo_Day2_142](/assets/img/JsConfJap2019_Tokyo_Day2_142.jpg)  
+![JsConfJap2019_Tokyo_Day2_138](/assets/img/JsConfJap2019_Tokyo_Day2_138.JPG)  
+![JsConfJap2019_Tokyo_Day2_139](/assets/img/JsConfJap2019_Tokyo_Day2_139.JPG)  
+![JsConfJap2019_Tokyo_Day2_142](/assets/img/JsConfJap2019_Tokyo_Day2_142.JPG)  
 
 他說了一個很好的現況例子
 - 假如我們現在去分別訪問
@@ -778,8 +778,8 @@ onClick event dispatch 後，有三個階段
 總之這是一個大膽的賭注，他們剛 release 1.0  
 有趣的思考
 
-![JsConfJap2019_Tokyo_Day2_145](/assets/img/JsConfJap2019_Tokyo_Day2_145.jpg)  
-![JsConfJap2019_Tokyo_Day2_147](/assets/img/JsConfJap2019_Tokyo_Day2_147.jpg)  
+![JsConfJap2019_Tokyo_Day2_145](/assets/img/JsConfJap2019_Tokyo_Day2_145.JPG)  
+![JsConfJap2019_Tokyo_Day2_147](/assets/img/JsConfJap2019_Tokyo_Day2_147.JPG)  
 
 
 ####  Sponsor talk Yahoo! Japan, Recruit, Dwango DMM, Twilio
