@@ -105,8 +105,8 @@
 
 建一個新的，併過去也是很困難
 - 2000 node，你需要 double 才能做這件事情
-![LineDevDay2019_Tokyo_12_Hadoop](/assets/img/LineDevDay2019_Tokyo_12_Hadoop.JPG)  
 
+![LineDevDay2019_Tokyo_12_Hadoop](/assets/img/LineDevDay2019_Tokyo_12_Hadoop.JPG)  
 ![LineDevDay2019_Tokyo_9_Hadoop](/assets/img/LineDevDay2019_Tokyo_9_Hadoop.JPG)  
 ![LineDevDay2019_Tokyo_10_Hadoop](/assets/img/LineDevDay2019_Tokyo_10_Hadoop.JPG)  
 ![LineDevDay2019_Tokyo_14_Hadoop](/assets/img/LineDevDay2019_Tokyo_14_Hadoop.JPG)  
