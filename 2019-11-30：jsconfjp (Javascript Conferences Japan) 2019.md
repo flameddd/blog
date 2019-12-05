@@ -103,9 +103,9 @@ link 點去玩玩吧
 
 這是`真實網頁截圖` = = |||，不是 ps 喔
 
-![Royal_Constellations_01](/assets/img/Royal_Constellations_01.JPG)  
-![Royal_Constellations_02](/assets/img/Royal_Constellations_02.JPG)
-![Royal_Constellations_03](/assets/img/Royal_Constellations_03.JPG)  
+![Royal_Constellations_01](/assets/img/Royal_Constellations_01.jpg)  
+![Royal_Constellations_02](/assets/img/Royal_Constellations_02.jpg)
+![Royal_Constellations_03](/assets/img/Royal_Constellations_03.jpg)  
 
 後面這個專案好像是關於 homeless people 的
 - 也是花了大量時間清洗資料
@@ -135,8 +135,8 @@ link
 ![JsConfJap2019_Tokyo_Day1_36](/assets/img/JsConfJap2019_Tokyo_Day1_36.JPG)  
 ![JsConfJap2019_Tokyo_Day1_38](/assets/img/JsConfJap2019_Tokyo_Day1_38.JPG)
 ![JsConfJap2019_Tokyo_Day1_39](/assets/img/JsConfJap2019_Tokyo_Day1_39.JPG)  
-![IntangibleCulturalHeritage_01](/assets/img/Intangible_Cultural_Heritage_01.JPG)  
-![IntangibleCulturalHeritage_02](/assets/img/Intangible_Cultural_Heritage_02.JPG)  
+![IntangibleCulturalHeritage_01](/assets/img/Intangible_Cultural_Heritage_01.jpg)  
+![IntangibleCulturalHeritage_02](/assets/img/Intangible_Cultural_Heritage_02.jpg)  
 
 接著是一個關於貓的專案
 - 她好奇網路上大家都問些什麼關於貓的問題
@@ -302,12 +302,12 @@ why a11y
 
 ![JsConfJap2019_Tokyo_Day1_93](/assets/img/JsConfJap2019_Tokyo_Day1_93.JPG)  
 ![JsConfJap2019_Tokyo_Day1_94](/assets/img/JsConfJap2019_Tokyo_Day1_94.JPG)  
-![semantic_01](/assets/img/semantic_01.JPG)  
-![semantic_02](/assets/img/semantic_02.JPG)  
+![semantic_01](/assets/img/semantic_01.jpg)  
+![semantic_02](/assets/img/semantic_02.jpg)  
 ![JsConfJap2019_Tokyo_Day1_99](/assets/img/JsConfJap2019_Tokyo_Day1_99.JPG)  
 ![JsConfJap2019_Tokyo_Day1_96](/assets/img/JsConfJap2019_Tokyo_Day1_96.JPG)  
 ![JsConfJap2019_Tokyo_Day1_97](/assets/img/JsConfJap2019_Tokyo_Day1_97.JPG)  
-![a11y_tree](/assets/img/a11y_tree.JPG)  
+![a11y_tree](/assets/img/a11y_tree.jpg)  
 ![JsConfJap2019_Tokyo_Day1_102](/assets/img/JsConfJap2019_Tokyo_Day1_102.JPG)  
 
 #### 18:15-18:45 Sponsor talk (mediba, Mercari, Cybozu, CureApp)
