@@ -348,6 +348,10 @@ Cool 這應該是我第一次聽到 `prefetch` 的新玩法
 ![JsConfJap2019_Tokyo_Day1_117](/assets/img/JsConfJap2019_Tokyo_Day1_117.JPG)  
 ![JsConfJap2019_Tokyo_Day1_118](/assets/img/JsConfJap2019_Tokyo_Day1_118.JPG)  
 
+這篇打完事後發現 `Chrome Dev Summit 2019` 也有場小 talk 講一樣的事情！
+- https://www.youtube.com/watch?v=FS5NYN_n7_k&list=PLNYkxOF6rcIDA1uGhqy45bqlul0VcvKMr&index=44&t=0s
+
+
 #### 19:05-19:15 Cache Me If You Can by Maxi Ferreira
 奇怪！他解釋的 `cache-control: no-cache` 怎麼跟我印象的不一樣！！？  
 回去 google 看看  
