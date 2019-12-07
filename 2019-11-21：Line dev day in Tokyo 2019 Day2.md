@@ -320,10 +320,9 @@ RWD 的 width 界定範圍
 
 網路上有看到別人也有寫這 talk 的整理，也值得看看
 - https://medium.com/@EtrexKuo/line-dev-day-2019-lets-experience-super-smart-city-leveraging-line-api-213b4e0c5e55
-```
-@EtrexKuo: 
-    我們可以知道他們的 CRM （資料庫的部分）用的是 salesforce 、主機用的是 Heroku 、 NLU 自然語言辨識用的是 Dialogflow 、 logger 用的是 Firestore 、前後文儲存用的是 Redis 、功能則是定義為 Skill 
-```
+
+> @EtrexKuo: 
+> 我們可以知道他們的 CRM （資料庫的部分）用的是 salesforce 、主機用的是 Heroku 、 NLU 自然語言辨識用的是 Dialogflow 、 logger 用的是 Firestore 、前後文儲存用的是 Redis 、功能則是定義為 Skill
 
 這張圖，是他把 card 從 `受付` **拖拉**到 `修正`
 - 這位市民就會收到通知
