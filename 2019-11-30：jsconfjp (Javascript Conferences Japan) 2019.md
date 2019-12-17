@@ -233,6 +233,11 @@ go live 跟相關提到的
 ![JsConfJap2019_Tokyo_Day1_77](/assets/img/JsConfJap2019_Tokyo_Day1_77.JPG)  
 ![JsConfJap2019_Tokyo_Day1_78](/assets/img/JsConfJap2019_Tokyo_Day1_78.JPG)  
 
+##### 2019/12/17 update
+- 這個 talk 我後來在 youtube 看到他有在 github 上講
+- Building and deploying modern websites and apps - GitHub Universe 2019
+  - https://www.youtube.com/watch?v=KlO5Ksk7baQ
+
 #### 16:00-16:30 Write What Not How
 - RoomA by `Jorge Bucaran`
 - Mercari 的 Frontend architecture
