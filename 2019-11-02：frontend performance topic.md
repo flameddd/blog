@@ -64,7 +64,8 @@ cookie
 - 設定 `Secure=true` 那 cookie 只能用 `https` 協議傳送給伺服器，用http協議是不傳送
 
 
-## Virtual
+## list
+- Infinite scroll
 - Virtual List
 
 
