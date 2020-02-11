@@ -8,8 +8,10 @@
 - https://www.smashingmagazine.com/2018/11/gif-to-video/
 
 ```bash
-ffmpeg -i test.gif -b:v 0 -crf 25 -pix_fmt yuv420p video.mp4
+ffmpeg -i test.gif -b:v 0 -crf 25 -pix_fmt yuv420p test.mp4
 ```
+
+![img](/assets/img/gif_to_mp4.jpg)
  
 
 ## WebM
