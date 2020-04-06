@@ -221,7 +221,7 @@ export const init = () => {
 ## Hit ID, time, and type
 GA 的 interface 可以輕鬆 report on aggregate data，但想要進一步**針對 individual user, session, or hit-level data**，就困難了。  
 
-有一個功能叫 [BigQuery Export](https://support.google.com/analytics/answer/3437618) 能 eport 所有細分資料，但這要 premium customers。  
+有一個功能叫 [BigQuery Export](https://support.google.com/analytics/answer/3437618) 能 report 所有細分資料，但這要 premium customers。  
 
 靠 `custom dimensions` 大致上都能做到。新增一個 `唯一的` `hit-specific` 的 metadata 給`every hit` 來送給 google。report 時，就能找出來。  
 

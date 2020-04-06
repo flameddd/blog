@@ -84,3 +84,7 @@ docker run [container_id] -u "firebase.google.com" -e html,json,php,js -x 403,50
 所以他就試試看並且成功了，也拿到他的`bug bounty` first blood  
 
 ![img](https://miro.medium.com/max/1561/1*gzIpEDG2py5p8VXnIWuteg.png)  
+
+### 關於 dirsearch
+看來，大家在使用時，都會搭配 diction list 使用，官方有一個預設的  
+下次可以試試看，搭配 `-wordlist` flag

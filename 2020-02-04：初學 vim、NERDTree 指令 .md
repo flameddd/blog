@@ -24,3 +24,34 @@ search word 後
 
 refresh
 - `r`: refresh NERDtree、如果檔案有從外部改變的話，就這樣 refresh
+
+Multiple cursors
+- Vim 要 Multiple cursors 目前是需要 plugin
+- 但有人建議用 Vim 的功能也行
+- 所以步驟是
+  1. `/` 先 search 要的 work ->  /flex (enter)
+  2. `cgn` 輸入要的字 -> inline-flex
+  3. 按 `.` 下一個也取代 （一直按 `.` 一直往下取代
+
+單行間移動 (https://mropengate.blogspot.com/2015/07/vim-ch2.html)
+- `w` 移至次一個字字首(英文單字)。
+- `b` 移至前一個字字首(英文單字)。
+- `0` 移至行首
+- `$` 移至行尾
+
+回復
+- `u`: undo last change
+
+剪下一行、貼上一行
+- uppercase `V` to select whole lines
+  - (Press `v` to select characters)
+- Press `d` to cut (or `y` to copy).
+  - Move to where you would like to paste.
+- Press `P` to paste **before** the cursor, or `p` to paste **after**.
+
+插入一行
+- `O` add new line before
+- `o` add new line after
+
+很清楚的 Vim Cheat Sheet
+- https://vim.rtorr.com/lang/zh_tw

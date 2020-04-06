@@ -38,7 +38,7 @@
   - Uses HPACK, a header specific compression to reduce overhead
   - the requests can be sent without waiting for blocked requests to finish
 - Reduce Cookie Size
-- gzip
+- gzip, Brotli
 - cache
   - `Expires`
   - `Cache-Control` 與 `max-age` (HTTP 1.1)

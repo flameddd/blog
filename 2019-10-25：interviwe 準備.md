@@ -12,7 +12,7 @@
 ### 說明為什麼想離開前公司的起手式
 Here are some specific examples of good answers to explain job moves:
 
-- “I stayed for three years and learned a lot of valuable skills, but I felt
+- “I stayed for more than years and learned a lot of valuable skills, but I felt
 it was time for a new challenge”
 - “The company went through a period of struggle and I was laid off”
 - “I was recruited out of the company for a better opportunity”
@@ -80,29 +80,23 @@ Your answer:
 - 說覺得根據應用場景選擇合適的語言更重要（答得不好
 - 你覺得樂天支付將來應該如何發展？
 - 扯了一些對支付寶和國內支付市場的看法
-- 逆問題
 - 問了工作中的挑戰
 
 - 自我介紹
-- Why mercari? 有什麽吸引你的地方
-- 聊聊之前intern的項目
 - 項目中遇到的困難，然後怎麽解決的
 - 寫代碼的motivation
 - teamwork遇到的困難
 - 目前感興趣正在用的技術棧，why
-- 你更喜歡mercari還是meru pay那邊？
-- 逆問題
+
 
 
 - 實習過程中你學到了哪些技術棧
 - 問了一些測試相關的問題
 - 有沒有壓力測試經驗？
-- mercari一年之後，你最不想做的工作是什麽？
 - 用過什麽持續集成CI工具嗎？
 - 如何優化網站的性能？
 - 如果QA發現了一個bug，你會怎麽做？
-- 進入mercari後，一個月，2-3個月，1年的計劃
-- 逆問題
+
 
 - 說一個最近intern的項目，畫出architecture講講
 - architecture的每個部分，可以用什麽軟件完成？
@@ -234,11 +228,6 @@ Your answer:
 - 簽證
 - 機票補助
 
-### about mercari
-- 你喜歡 mercari 還是 meru pay 那邊？
-
-面試官介紹了一下mercari和meru pay兩邊的情況，表示mercari在推進微服務，meru pay貌似還是單體應用。
-逆問題
 
 #### salary
 - Yahoo! Japan	400~500w
@@ -410,12 +399,7 @@ leetcode 面試官評分關鍵是你的時間複雜度、空間複雜度
 - how browser works?
 - http cache
 - event loop
-
 - process and thread
-
-
-
-
 - heap sort
 
 
@@ -872,44 +856,13 @@ I went ahead with the project and it turned out to be a big success. Over the ne
 我應該不會被問這題，但裡面的例句我應該用得到  
 
 
-### Phone Interviews 技巧
-1. 找安靜的地方吧！
-2. 把「自己的履歷」跟「JD」印出來看。把想講出來的地方用筆做記號
-3. 站起來說話，這會讓你聲音更有精神和自信。講話時，也嘗試微笑，這也有差。
-4. 節奏要比平常講話更快、更急一些。對方看不到你，這樣對方能感覺到你是有興趣這份 job 的。
 
-### 跟人當面 Interviews 時
-1. 事前多印幾份你的履歷
-2. 別遲到，也別早到。
-3. Treat everyone you meet as if they’re important
-4. 面試時，看著對方的眼鏡。有自信地握個手
-5. Get business cards from each person you meet. This will make following up much easier because you’ll have everyone’s names and contact info.
-
-
-6. Expect repeat questions. One of the best places to study for your in- person interview is the topics you were previously asked about on the phone interview (if you had one). Because those questions reveal what areas are important to the employer. If you struggled with a question on your first interview, practice it before going in again, rather than assuming you’re in the clear now. They might ask more questions about the same topic you struggled with. Especially if this interview is with a different person.
-
-7. Come with at least three questions prepared, or more if you expect to meet with multiple people. Saying that the last person answered all of your questions isn’t going to get you a free-pass with most interviewers. Opinion based questions are great because you can ask multiple people the same question. Here are some examples:
-
- “What’s the most rewarding part of working in this company in your opinion?”
- “What do your best employees say about working here?”
- “How long have you been with the company? Why did you decide to come here?”
- “What are some of the most exciting changes or current projects that are going on right now?”
+### 在這份工作中，你收穫最大的是什麼？  （這問題也不錯）
+### 現在你最感興趣的專案是什麼？why？
 
 
 
-### 膩問題
-20 great questions you can ask in an interview:
-1. “I was on your website and I found ____ interesting, can you tell me more about ____?”
-3. “If I were to step into this role tomorrow, what would be my first priority?”
-4. “Can you give me an example of how I would collaborate with my manager or supervisor?”
-7. “How will you judge my success? What will need to happen in the first six months for me to know I have met your expectations?”
-9. “What improvements or changes do you hope a new candidate will bring to this position?”
 
-11. “What are the company’s strengths and weaknesses compared to its competitors?”
-
-15. “What other teams would I interact most with?”
-17. “How do you ensure that each team member is doing quality work?”
-18. “What do you feel is the biggest challenge to working here?”
 
 ### 你認為為什麼我要雇用你
 當遇到這個 job 跟你不是這麼 fit 時（但你還是想要）  
@@ -920,39 +873,4 @@ Well, I reviewed the job description last night before coming in and it seems li
 最後一句也可以這樣說
 ```
 “...so I was looking forward to having an interview and finding out more about the opportunity and exactly what’s involved.”
-```
-
-#### “Can you tell me about your recent work?”
-你的回答要表現出
-- you’re essential to your team and an important member of your group.
-- Speak like your last boss trusted you and you were their go-to person for whatever it is you did.
-
-這有些技巧跟功力
-
-差的說法 Option A: 
-```
-“I spend most of my day making sales calls, leaving voicemails, sending emails and so forth. I try to schedule product demos and convert sales. I track my goals and productivity on a spreadsheet, and I meet with my boss once a week to talk about my performance.”
-```
-
-好的說法 Option B:
-```
-“I run a sales desk in one of our top groups. I’m responsible for finding new prospects, delivering a demo and closing the deal. We operate each desk very independently so I only check in with my boss once a week. Other than that I’m responsible for making all decisions and exceeding my goals each month.”
-```
-
-
-### “Do you have experience with X?”
-當你不會這些東西時，怎麼回答  
-```
-“No, but I’m very computer-savvy and I’ve learned to use quite a few programs in my current job by reviewing manuals and studying on my own time. I also train my coworkers on some of the software we use here, after learning it from scratch. I’ve heard great things about working with Mac so I’d be interested in quickly getting up to speed on this.”
-```
-
-### “Have you ever built a piece of software from the ground up?”
-
-```
-“No but when I joined my last company we were less than two months into the year-long project, so I got involved in the development process very early. I’d actually love to start a project from the very beginning now that I’ve succeeded in the rest of the process. I’d be excited to learn that last piece.”
-```
-
-### “Have you worked in software technology before? It’s a complicated field to learn from scratch”
-```
-“No, but I had never worked in pharmaceuticals or any scientific area when I took my current job either, and I’ve learned to understand highly technical jobs and talk with scientists, doctors and other experts. It’s actually become one of my strengths that sets me apart; a lot of scientists I talk to actually ask if I have a scientific background and they’re surprised that I don’t.”
 ```
