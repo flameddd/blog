@@ -9,7 +9,7 @@ this list of recommendations to help you
 - anti-patterns
 
 ## Rule Categories
-下面的主題，分三個等個
+下面的主題，分三種建議等級
 - **Priority A**: Essential
   - These rules help prevent errors
   - learn and abide by them at all costs

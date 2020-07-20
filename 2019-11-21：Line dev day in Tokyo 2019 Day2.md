@@ -1,6 +1,11 @@
-## Line dev day in Tokyo 2019 Day 2
+# Line dev day in Tokyo 2019 Day 2
+- https://linedevday.linecorp.com/jp/2019/sessions
 
-https://linedevday.linecorp.com/jp/2019/sessions
+## 20200608 update: 兩天的影片已上傳到 youtube
+- LINE DEVELOPER DAY 2019 English version
+  - https://www.youtube.com/playlist?list=PLI2S-k0Fa59u-6tdIwSvBVRWa6TK3z0aP
+- LINE DEVELOPER DAY 2019 日本語音声
+  - https://www.youtube.com/playlist?list=PLI2S-k0Fa59u5kpsC00HJqSuPpBHLTO2Y
 
 
 ### "LINE-like" Product Management of Smart Channel

@@ -30,7 +30,7 @@ Imagine a scenario where a function c is called when a call to an asynchronous f
 
 ```js
 const a = () => {
-	b().then(() => c());
+  b().then(() => c());
 };
 ```
 `a` 執行時，會有下面的 `sync` 流程
@@ -54,8 +54,8 @@ Capturing the stack trace takes time (i.e. **degrades performance**); storing th
 用 async 的話
 ```js
 const a = async () => {
-	await b();
-	c();
+  await b();
+  c();
 };
 ```
 

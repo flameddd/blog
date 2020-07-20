@@ -53,5 +53,11 @@ Multiple cursors
 - `O` add new line before
 - `o` add new line after
 
+選取 or 清除 "",(),<> 中間的內容
+- `ci"` 清除 "" 中間的內容，並且進入 insert 模式
+  - `ci(` 清除 () 中間的內容，並且進入 insert 模式
+- `vi"` 進入 visual mode，並且選取 "" 中間的內容
+  - `vi(` 進入 visual mode，並且選取 () 中間的內容
+
 很清楚的 Vim Cheat Sheet
 - https://vim.rtorr.com/lang/zh_tw

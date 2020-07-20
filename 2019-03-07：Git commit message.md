@@ -1,4 +1,13 @@
-##  Git commit message
+#  Git commit message
+
+## 20200630 update
+發現另一種 commit message 的規範，也覺得不錯，照著規範走，可以自動產生 `change log`
+- Conventional Commits (約定式提交)
+- en: https://www.conventionalcommits.org/en/v1.0.0/
+- zh-hant: https://www.conventionalcommits.org/zh-hant/v1.0.0-beta.4/
+  - 文章下方有些推薦工具
+    - like: https://github.com/conventional-changelog/standard-version
+--------------------------------------------------------
 
 ### 用一行空白行分隔標題與內容
 ### 限制標題最多只有 50 字元

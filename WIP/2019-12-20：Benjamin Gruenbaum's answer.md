@@ -31,11 +31,12 @@
 ## What are the actual uses of ES6 WeakMap?
 
 
-## Perform .join on value in array of objects
+## Perform.join on value in array of objects
 ## Node JS Promise.all and forEach
 ## What is the explicit promise construction antipattern and how do I avoid it?
 ## How does Bluebird's util.toFastProperties function make an object's properties “fast”?
 ## How do I tell if an object is a Promise?
 ## How do I properly test promises with mocha and chai?
 ## Why are my JavaScript function names clashing?
-
+## Promise - is it possible to force cancel a promise
+- https://stackoverflow.com/questions/30233302/promise-is-it-possible-to-force-cancel-a-promise/30235261#30235261

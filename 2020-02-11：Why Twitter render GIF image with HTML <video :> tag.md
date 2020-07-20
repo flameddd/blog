@@ -44,3 +44,13 @@ To make this more robust for older browsers which do not support HTML5 video, yo
   <img src="animated.gif">
 </video>
 ```
+
+## mov to mp4
+```bash
+ffmpeg -i input.mov -q:v 0 output.mp4
+```
+
+## mov to gif
+```bash
+ffmpeg -i input.mov -pix_fmt rgb24 output.gif
+```

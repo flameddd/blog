@@ -59,7 +59,7 @@
 4. 你的 MR 最初應該只有一次 commit (git squash)
 5. 你的 change 要能順利 merge，不行的話要 rebase
 6. 別搞壞現有功能 or function
-7. fix 一個特定的 issue or 實作一個特定的 feature（別 combone 再一起、拆開 MR）
+7. fix 一個特定的 issue or 實作一個特定的 feature（別 combine 再一起、拆開 MR）
 8. 做 Migrations 應該只做一件事情 either
   - create table
   - move data 到新 table
