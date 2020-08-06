@@ -27,7 +27,7 @@ We deploy project is under a route NOT a domain.
 So, we need some trick to make this work.
 
 ### steps
-1. add repo public/private keys: follows https://github.com/peaceiris/actions-gh-pages#1-add-ssh-deploy-key
+1. add repo public/private keys: follows https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-create-ssh-deploy-key
 - Go to `Deploy Keys` and add your public key with the `Allow write access`
 - Go to `Secrets` and add your private key as `ACTIONS_DEPLOY_KEY` <--!!!
 2. add `dot-json`: `npm i --save-dev dot-json`

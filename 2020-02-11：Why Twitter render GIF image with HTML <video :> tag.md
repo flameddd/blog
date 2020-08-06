@@ -54,3 +54,16 @@ ffmpeg -i input.mov -q:v 0 output.mp4
 ```bash
 ffmpeg -i input.mov -pix_fmt rgb24 output.gif
 ```
+
+## avi to mp4
+- https://unix.stackexchange.com/questions/35746/encode-with-ffmpeg-using-avi-to-mp4
+
+```bash
+ffmpeg -i input.avi -y output.mp4
+```
+
+文章說，如果 avi 轉 mp4 時 re envode 的話，畫面、聲音可能會變差  
+所以推薦用 copy mode
+```bash
+ffmpeg -i input.avi -c:v copy -c:a copy -y output.mp4
+```
