@@ -22,3 +22,8 @@ Can't remember everything.
 - https://github.com/micromark/micromark
 - `markdown`
 - the **smallest** commonmark compliant **markdown parser**
+
+## microsoft language
+- https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
+- technical term `translation` search engine
+  - https://www.microsoft.com/zh-tw/language/  <- lots of international guideline
