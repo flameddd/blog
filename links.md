@@ -27,3 +27,7 @@ Can't remember everything.
 - https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
 - technical term `translation` search engine
   - https://www.microsoft.com/zh-tw/language/  <- lots of international guideline
+
+## one line layout (web.dev)
+- https://web.dev/one-line-layouts/
+- lots of `grid`, `flex` examples (most of them are responsive example) 
