@@ -1,6 +1,11 @@
 # A link list for everything I think cool, useful, etc.
 Can't remember everything.
 
+## squoosh
+- https://squoosh.app/
+  - https://github.com/GoogleChromeLabs/squoosh
+  - talk: https://www.youtube.com/watch?v=ipNW6lJHVEs
+- `image` compress, resize, `PWA`, `offline`, `WebAssembly` 
 
 ## markdown-it
 - https://www.npmjs.com/package/markdown-it
