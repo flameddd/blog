@@ -1,5 +1,9 @@
-# A link list for everything I think cool, useful, etc.
+# A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
+
+## 11ty, Eleventy
+-  https://www.11ty.dev/docs/
+- Eleventy is a simpler static site generator.
 
 ## squoosh
 - https://squoosh.app/
