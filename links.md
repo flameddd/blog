@@ -5,6 +5,7 @@ Can't remember everything.
 - https://github.com/woltapp/blurhash
 - A very **compact** representation of a **placeholder for an image**.
   - typescript: https://github.com/woltapp/blurhash/tree/master/TypeScript
+  - react component: https://woltapp.github.io/react-blurhash/
 - other ref:
   - https://jmperezperez.com/medium-image-progressive-loading-placeholder/
   - https://engineering.fb.com/android/the-technology-behind-preview-photos/  fb engineering
