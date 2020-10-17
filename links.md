@@ -1,6 +1,14 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## blurhash
+- https://github.com/woltapp/blurhash
+- A very **compact** representation of a **placeholder for an image**.
+  - typescript: https://github.com/woltapp/blurhash/tree/master/TypeScript
+- other ref:
+  - https://jmperezperez.com/medium-image-progressive-loading-placeholder/
+  - https://engineering.fb.com/android/the-technology-behind-preview-photos/  fb engineering
+
 ## 11ty, Eleventy
 -  https://www.11ty.dev/docs/
 - Eleventy is a simpler static site generator.
