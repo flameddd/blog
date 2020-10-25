@@ -1,6 +1,14 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## worker
+- https://developers.cloudflare.com/workers/
+- cloudflare's serverless solution. worker is relay on **V8**, not k8s or container base.
+- `serverless`, `kv worker` (key/value store), `JAMstack`, `static site`
+- ref
+  - https://medium.com/@zackbloom/isolates-are-the-future-of-cloud-computing-cf7ab91c6142
+  - https://www.youtube.com/watch?v=HK04UxENH10&list=ULSZUq9n1HTEc&index=417
+
 ## blurhash
 - https://github.com/woltapp/blurhash
 - A very **compact** representation of a **placeholder for an image**.
