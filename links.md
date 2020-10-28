@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## How to provide your own in-app install experience
+- https://web.dev/customize-install/
+- `PWA`, javascript to detect PWA status. 
+
 ## worker
 - https://developers.cloudflare.com/workers/
 - cloudflare's serverless solution. worker is relay on **V8**, not k8s or container base.
