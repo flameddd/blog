@@ -4,6 +4,8 @@ Can't remember everything.
 ## How to provide your own in-app install experience
 - https://web.dev/customize-install/
 - `PWA`, javascript to detect PWA status. 
+- ref
+  - better promotion install PWA: https://web.dev/promote-install/#browser-promotion
 
 ## worker
 - https://developers.cloudflare.com/workers/
