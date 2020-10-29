@@ -1,6 +1,11 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## bytemd
+- https://github.com/bytedance/bytemd
+- `Markdown editor` component built with Svelte. **bytedance** publish. looks high quality. support any framework 
+- demo: https://bytedance.github.io/bytemd/
+
 ## How to provide your own in-app install experience
 - https://web.dev/customize-install/
 - `PWA`, javascript to detect PWA status. 
