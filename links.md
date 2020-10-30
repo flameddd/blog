@@ -4,6 +4,7 @@ Can't remember everything.
 ## Pancake 
 - https://github.com/Rich-Harris/pancake
 - demo: https://pancake-charts.surge.sh/
+- intro: https://dev.to/richharris/a-new-technique-for-making-responsive-javascript-free-charts-gmp
 - `chart library`
 - charting library for `Svelte`. Pancake is designed with server-side rendering in mind, meaning you can create beautiful responsive charts that may not even need JavaScript to render. Here's how.
 
