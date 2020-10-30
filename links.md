@@ -1,6 +1,12 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## Pancake 
+- https://github.com/Rich-Harris/pancake
+- demo: https://pancake-charts.surge.sh/
+- `chart library`
+- charting library for `Svelte`. Pancake is designed with server-side rendering in mind, meaning you can create beautiful responsive charts that may not even need JavaScript to render. Here's how.
+
 ## bytemd
 - https://github.com/bytedance/bytemd
 - `Markdown editor` component built with Svelte. **bytedance** publish. looks high quality. support any framework 
