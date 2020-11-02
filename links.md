@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## gifshot
+- https://github.com/yahoo/gifshot
+- `js library`, create animated GIFs from media streams, videos, or images. 
+
 ## New York Time's engineer culture & hiring process
 - Diversity, Inclusion and Culture: How to Build Great Teams
   - https://open.nytimes.com/diversity-inclusion-and-culture-steps-for-building-great-teams-ca157bd98c07
