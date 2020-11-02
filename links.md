@@ -1,6 +1,17 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## New York Time's engineer culture & hiring process
+- Diversity, Inclusion and Culture: How to Build Great Teams
+  - https://open.nytimes.com/diversity-inclusion-and-culture-steps-for-building-great-teams-ca157bd98c07
+- Engineers at The New York Times
+  - https://open.nytimes.com/how-we-hire-front-end-engineers-at-the-new-york-times-e1294ea8e3f8
+- How We Designed Our Front-End Engineer Hiring Process
+  - https://open.nytimes.com/how-we-designed-our-front-end-engineer-hiring-process-9b8f20cc31fb
+- We’re Making Changes to Our Front-End Engineering Application Process
+  - https://open.nytimes.com/were-making-changes-to-our-front-end-engineering-process-abfc9654693d
+
+
 ## Pancake 
 - https://github.com/Rich-Harris/pancake
 - demo: https://pancake-charts.surge.sh/
