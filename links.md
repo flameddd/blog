@@ -1,6 +1,23 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## prosemirror
+- New York Time's open source `collaborative WYSIWYM editor`
+- https://github.com/ProseMirror/prosemirror
+  - https://prosemirror.net/docs/guide/
+- ref
+  - Oak: https://www.youtube.com/watch?v=LEoWPdQh27c
+    - backend: firestore as sub/pub, firebase to store something else (simple backend logic, simple architecture)
+    - `redux`, `redux-saga`
+  - We Built Collaborative Editing for Our Newsroom’s CMS. Here’s How.
+    - https://open.nytimes.com/we-built-collaborative-editing-for-our-newsrooms-cms-here-s-how-415618a3ec49
+    - more Oak implement detail
+  - Building a Text Editor for a Digital-First Newsroom
+    - https://open.nytimes.com/building-a-text-editor-for-a-digital-first-newsroom-f1cb8367fc21
+  - tiptap
+    - https://tiptap.dev/markdown-shortcuts
+    - a renderless rich-text editor for Vue.js
+
 ## gifshot
 - https://github.com/yahoo/gifshot
 - `js library`, create animated GIFs from media streams, videos, or images. 
