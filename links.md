@@ -1,6 +1,12 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## tweakpane
+- https://github.com/cocopon/tweakpane
+- `control panel`, Compact GUI for fine-tuning parameters and monitoring value changes 
+- demo: https://cocopon.github.io/tweakpane/
+- react: https://github.com/pmndrs/use-tweaks
+
 ## prosemirror
 - New York Time's open source `collaborative WYSIWYM editor`
 - https://github.com/ProseMirror/prosemirror
