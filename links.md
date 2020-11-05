@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## markdown-here
+- https://github.com/adam-p/markdown-here
+- `markdown`, `extension`, Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.
+
 ## material web-components
 - https://github.com/material-components/material-components-web-components
 
