@@ -1,6 +1,9 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## microsoft language Term translation
+- https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
+
 ## markdown-here
 - https://github.com/adam-p/markdown-here
 - `markdown`, `extension`, Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.
