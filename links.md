@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## pure css background 
+- https://www.magicpattern.design/tools/css-backgrounds
+- beautiful css background examples
+
 ## microsoft language Term translation
 - https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
 
