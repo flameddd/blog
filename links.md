@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## bestofjs
+- https://bestofjs.org/
+- javascript library collection
+
 ## pure css background 
 - https://www.magicpattern.design/tools/css-backgrounds
 - beautiful css background examples
