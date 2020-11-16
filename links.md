@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## monaco-editor
+- https://github.com/Microsoft/monaco-editor
+- A browser based code editor which powers VS Code
+
 ## bestofjs
 - https://bestofjs.org/
 - javascript library collection
