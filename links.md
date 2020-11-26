@@ -1,6 +1,14 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## The most accurate way to schedule a function in a web browser
+- https://medium.com/teads-engineering/the-most-accurate-way-to-schedule-a-function-in-a-web-browser-eadcd164da12
+- excellent study for `setTimeout`, `requestAnimationFrame`, `worker`
+- tl;tr
+    - The `setTimeout` function is okay, but overall, for a 250ms theoretical timeout, the real/effective timeout value ranges from 251ms to 1.66+s.
+    - As of October 2020, the most accurate way of scheduling a function/callback is using the `setTimeout` function in a `Web Worker`, in a cross-origin iframe.
+    - The `requestAnimationFrame` function is the **least accurate** and requires to be inside the viewport, otherwise the real timeout can go up to several seconds, or even minutes.
+
 ## monaco-editor
 - https://github.com/Microsoft/monaco-editor
 - A browser based code editor which powers VS Code
