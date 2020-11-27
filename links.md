@@ -1,6 +1,10 @@
 # A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
+## A Comprehensive Guide to Font Loading Strategies
+- https://www.zachleat.com/web/comprehensive-webfonts/
+- load font strategy. very detail. 
+
 ## puppeteer-webperf
 - https://github.com/addyosmani/puppeteer-webperf
 - `puppeteer` web perf testing, lot of examples.
