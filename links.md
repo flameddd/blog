@@ -151,3 +151,6 @@ Can't remember everything.
 ## one line layout (web.dev)
 - https://web.dev/one-line-layouts/
 - lots of `grid`, `flex` examples (most of them are responsive example) 
+
+## JavaScript counters the hard way - HTTP 203
+- https://www.youtube.com/watch?v=MCi6AZMkxcU&list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9&index=1
