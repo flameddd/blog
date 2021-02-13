@@ -182,7 +182,7 @@ frame(start)
 
 另外，這個例子有三個地方有著 `Math.floor` 處理/味道 
 1. ` Math.floor(elapsed / intervalTime);` 
-2. `setTimeout` 的第二個參數。如果你給它 `99.99`，實際上它會轉為 `99`，因為這參數是 second base 的
+2. `setTimeout` 的第二個參數。如果你給它 `99.99`，實際上它會轉為 `99`
 3. `elapsed % intervalTime` 這個是指邏輯上的不準確，這邊的邏輯應該算是給出「超過 1 秒多久」，而沒有給出「差多久到 1 秒」，有點微妙的差距。可能會拿到 0.99ms，但實際應該是 1ms  
 
 ## ex7
