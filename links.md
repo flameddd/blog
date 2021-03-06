@@ -154,3 +154,8 @@ Can't remember everything.
 
 ## JavaScript counters the hard way - HTTP 203
 - https://www.youtube.com/watch?v=MCi6AZMkxcU&list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9&index=1
+
+## font load STRATEGIES
+- 網頁加載字型Web Font FOIT& FOUT與效能測試: https://medium.com/lucys-design-life/%E7%B6%B2%E9%A0%81%E5%8A%A0%E8%BC%89%E5%AD%97%E5%9E%8Bfoit-fout%E8%88%87%E6%95%88%E8%83%BD%E6%B8%AC%E8%A9%A6-cb0b03daad60
+- Font Loading Performance 📉 6 Experiments with FOUT & FOIT: https://www.youtube.com/watch?v=vTf9HRTWKtM
+- A COMPREHENSIVE GUIDE TO FONT LOADING STRATEGIES: https://www.zachleat.com/web/comprehensive-webfonts
