@@ -159,3 +159,12 @@ Can't remember everything.
 - 網頁加載字型Web Font FOIT& FOUT與效能測試: https://medium.com/lucys-design-life/%E7%B6%B2%E9%A0%81%E5%8A%A0%E8%BC%89%E5%AD%97%E5%9E%8Bfoit-fout%E8%88%87%E6%95%88%E8%83%BD%E6%B8%AC%E8%A9%A6-cb0b03daad60
 - Font Loading Performance 📉 6 Experiments with FOUT & FOIT: https://www.youtube.com/watch?v=vTf9HRTWKtM
 - A COMPREHENSIVE GUIDE TO FONT LOADING STRATEGIES: https://www.zachleat.com/web/comprehensive-webfonts
+
+## localhost use https (and test `__Host-` cookie)
+- https://web.dev/when-to-use-local-https/
+- https://web.dev/how-to-use-local-https/
+  1. 修改 host file ，如 mysite.example 指回 127.0.0.1
+  2. 用 mkcert  建 CA
+  3. 用 CA 起 https server
+  4. Chrome 要調整 #allow-insecure-localhost
+  5. 用 mysite.example 來測試
