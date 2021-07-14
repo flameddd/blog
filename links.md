@@ -168,3 +168,7 @@ Can't remember everything.
   3. 用 CA 起 https server
   4. Chrome 要調整 #allow-insecure-localhost
   5. 用 mysite.example 來測試
+
+## Dinero.js
+- https://v2.dinerojs.com/docs
+- Dinero.js is the most advanced JavaScript library for manipulating money, with a deep understanding of the model. It's a modern, reliable, lightweight, fully tested library that works both in the browser and on the server. It follows Martin Fowler's money pattern, it's immutable, modular, side-effects free, generic, and natively supports TypeScript.
