@@ -1486,16 +1486,6 @@ McLaren 的 script 等待 `DOMContentLoaded` 才去做事情
 - Optimised PNG (96.7 kB)
 - Lossless WebP (80.4 kB) (<-- 上面那張圖的)
 
-Ahhh a sprite sheet. I haven't seen one of these in a while. Listen, I used to love sprite sheets. The first 'popular' bit of developer tooling I ever created was Sprite Cow. Sprite sheets overcame the HTTP/1.1 parallel request limit by bundling many images into one image. Also, it generally produced resources that were smaller than lots of little resources.
-
-With HTTP/2, lots of little requests are cheap. They're not free, as we saw in part 7, but they're cheap. The benefit of having these images separate is, if you only need one little icon, you don't need to download the whole sheet. And that's the case here. As far as I can tell, the page is only using those little flag icons in the footer, and tiny SVG flags are usually less than 300 bytes each.
-
-Even if a lot of that sprite sheet was needed, images are different to things like CSS. With CSS, all of it needs to download until anything can render (unless you're using tricks to load it async). However, images can appear one by one, as they download. By keeping the images separate, the browser can give priority to the images that are needed sooner, and they'll appear sooner as they'll be tiny.
-
-I guess this sprite sheet is legacy, as the sprite sheet features "McLaren Honda", and McLaren haven't used Honda engines since 2017. But that's another issue with sprite sheets, they're difficult to maintain.
-
-Sorry Sprite Cow, sprite sheets are dead.
-
 以前，因為 `HTTP/1.1` 有 parallel request limit，所以用 sprite 把多張圖綁成一張來改善這問題  
 現在 `HTTP/2` 比較沒有這問題  
 - 類似 [Case7: Haas](#Case7:-Haas) ，多個 request 的 cost 已經不大了
