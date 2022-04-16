@@ -1,7 +1,7 @@
 # 2022-04-11：HTTP 203 Top 10 performance pitfalls.md
 ## Jake & Surma 
-### https://www.youtube.com/watch?v=Lh9q3h2khlc
-### https://jakearchibald.com/2021/f1-perf-part-1/
+### [https://www.youtube.com/watch?v=Lh9q3h2khlc](https://www.youtube.com/watch?v=Lh9q3h2khlc) (看這篇，建議先看過這影片，這篇前半段就是這影片的筆記)
+### [https://jakearchibald.com/2021/f1-perf-part-1/](https://jakearchibald.com/2021/f1-perf-part-1/)
 ---------------------
 起始是 Jake 的 blog case study 好幾間 F1 廠商的 homepage performance case study  
 後續 Jake 拿來當 HTTP203 的主題講一集  
