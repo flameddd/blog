@@ -172,3 +172,31 @@ Can't remember everything.
 ## Dinero.js
 - https://v2.dinerojs.com/docs
 - Dinero.js is the most advanced JavaScript library for manipulating money, with a deep understanding of the model. It's a modern, reliable, lightweight, fully tested library that works both in the browser and on the server. It follows Martin Fowler's money pattern, it's immutable, modular, side-effects free, generic, and natively supports TypeScript.
+
+## patterns.dev
+- https://www.patterns.dev/posts/
+- Addy Osmani 是作者之一
+- 列舉和講解 JS pattern 跟一些 render 的模式和優化的方法，JS pattern 那邊講得很清楚易懂，有 code 參考  
+
+## best practices create modern npm package
+- https://snyk.io/blog/best-practices-create-modern-npm-package/
+- snyk 教怎麼 release npm package
+  - 涵蓋確認步驟、包含 CommonJS (CJS) and ECMAScript (ESM) module formats、typescript 怎麼設定、測試 and CI 設定等等
+  - 應該很完整，有需要時再來看這篇
+
+## Designing Front-End Components
+- https://ponyfoo.com/articles/designing-front-end-components
+- Nicolás Bevacqua, 幾個高品質 web UI component 的作者，分享他 build 這些工具的經驗
+  - 另外還有幾篇感覺也不錯
+  - https://ponyfoo.com/articles/baking-modularity-tag-editing
+  - https://ponyfoo.com/articles/building-high-quality-front-end-modules
+
+## bigfrontend.dev
+- https://bigfrontend.dev/
+- 一個蠻詳細的 frontend interview 線上練習，有很多 JS, css, framework 的不錯題目
+
+## https://deck-24abcd.netlify.app/
+- https://deck-24abcd.netlify.app/
+- 用 css 做出各種閃卡效果，閃亮背景隨滑鼠變動、指紋效果也有感覺出來
+- https://github.com/simeydotme/pokemon-cards-css
+
