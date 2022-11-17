@@ -16,10 +16,6 @@
   - https://swarm.ptsecurity.com/fuzzing-for-xss-via-nested-parsers-condition/
 - [@Psych0tr1a](https://twitter.com/Psych0tr1a) 展示了如何 stacked HTML sanitization rules against each other with specular results.
 
-
-9 - HTTP Smuggling via Higher HTTP Versions
-At the start of 2021, HTTP/2 was thought to be largely free of security concerns beyond timing attacks and minor DoS concerns. Emil Lerner's HTTP Smuggling via Higher HTTP Versions destroyed this myth, using custom tooling and innovative techniques to reveal numerous holes in HTTP/2 to HTTP/1.1 conversion. The slide deck is crammed with novel attacks and if you're fluent in Russian, be sure to check out the presentation too. Emil's also written up some terrifying new findings on HTTP/3 since.
-
 ## 9 - 通過更高的 HTTP 版本進行 HTTP 走私 (Smuggling)
 - [@Emil Lerner](https://twitter.com/emil_lerner) 的研究 [HTTP Smuggling via Higher HTTP Versions](https://www.slideshare.net/neexemil/http-request-smuggling-via-higher-http-versions)
   - 作者另一篇針對 http3 的 https://medium.com/@emil.lerner/leaking-uninitialized-memory-from-fastly-83327bcbee1f
@@ -128,5 +124,5 @@ Exchange 為了相容性，做了很多努力，相對攻擊就有機可趁。�
 ## 1 - Dependency Confusion
 - [Alex Birsan](https://twitter.com/alxbrsn) - [Dependency Confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
 
-靠邀，前幾天剛好看了這篇，沒想到是我最能讀懂意思的一篇  
+靠邀，前幾天剛好看了這篇，沒想到是我最能讀懂的一篇  --> [我的中文筆記](<./2022-03-30：Alex Birsan Dependency Confusion: How I Hacked Into Apple, Microsoft and Dozens of Other Companies.md>)  
 

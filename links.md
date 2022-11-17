@@ -200,3 +200,6 @@ Can't remember everything.
 - 用 css 做出各種閃卡效果，閃亮背景隨滑鼠變動、指紋效果也有感覺出來
 - https://github.com/simeydotme/pokemon-cards-css
 
+## html2svg
+- https://github.com/fathyb/html2svg
+- 用 chromium 把 html 轉為 svg。目前想到是，這樣可以丟進類似 figma 的工具，到時候可能可操作性會比較好，如果是純圖片的話，就沒辦法編輯之類的
