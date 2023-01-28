@@ -55,7 +55,7 @@ server.listen(5000, '0.0.0.0');
 - 正確的 config `server timeouts`，這樣就可以放棄空閒或 requests 到達過慢的連接
   - 看看 [http.Server](https://nodejs.org/api/http.html#class-httpserver)，尤其是 `headersTimeout`, `requestTimeout`, `timeout`, and `keepAliveTimeout`.
 - 限制 the number of open sockets per host 和總數
-  - 看看  [http docs](https://nodejs.org/api/http.html), 尤其是 `agent.maxSockets`, `agent.maxTotalSockets`, `agent.maxFreeSockets` and `server.maxRequestsPerSocket`.
+  - 看看 [http docs](https://nodejs.org/api/http.html), 尤其是 `agent.maxSockets`, `agent.maxTotalSockets`, `agent.maxFreeSockets` and `server.maxRequestsPerSocket`.
 
 ------------------------------------------------------------
 

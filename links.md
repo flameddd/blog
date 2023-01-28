@@ -1,4 +1,4 @@
-# A link list for everything I think cool, useful and easy forget >o< .
+ A link list for everything I think cool, useful and easy forget >o< .
 Can't remember everything.
 
 ## A Comprehensive Guide to Font Loading Strategies
@@ -202,4 +202,30 @@ Can't remember everything.
 
 ## html2svg
 - https://github.com/fathyb/html2svg
+  - https://fathy.fr/html2svg
 - 用 chromium 把 html 轉為 svg。目前想到是，這樣可以丟進類似 figma 的工具，到時候可能可操作性會比較好，如果是純圖片的話，就沒辦法編輯之類的
+
+## postgrest
+- https://postgrest.org/en/stable/
+- PostgreSQL 的工具，自動幫你建構 restful API 出來
+- https://blog.frankel.ch/poor-man-api/ 別人的心得，包含怎麼 auth, rate limit monitor
+
+## FluidFramework
+- https://github.com/microsoft/FluidFramework
+- 竟然沒記錄到這個，由 microsoft 推出的即時協作 framework
+- 而且是 frontend base 的，協作邏輯寫在 frontend，backend 只負責轉送資訊
+
+## Dashboard design patterns
+- https://dashboarddesignpatterns.github.io/patterns.html
+- 各種 Dashboard 的設計方向。有點意思，先存起來
+
+## Rollback
+- Rollback 機制。我大概不會接觸到，只是好奇而已。這邊看到好的資源，先留著
+- https://gist.github.com/rcmagic/f8d76bca32b5609e85ab156db38387e9
+  - Written by Zinac, the lead programmer of KI’s and GGST’s NetCode
+- https://www.reddit.com/r/Fighters/comments/jfzym8/is_there_a_resource_to_learning_how_to_create/
+- 另外，前陣子 youtube 關鍵字也能找到一些 coding 的影片
+
+## Real-Time Voice Cloning
+- EN: https://github.com/CorentinJ/Real-Time-Voice-Cloning
+- https://github.com/babysor/MockingBird
