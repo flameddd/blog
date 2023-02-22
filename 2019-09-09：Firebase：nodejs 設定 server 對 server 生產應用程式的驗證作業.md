@@ -5,7 +5,7 @@
 
 暫且不想設定在環境變數中，官方的範例預設為  
 先設定成環境變數
-```Shell
+```shell
 export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json"
 ```
 

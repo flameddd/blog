@@ -32,7 +32,7 @@ Remix 的理念可以歸納為四點
 ### Server/Client Model
 你可以使你的服務器快速，但你不能控制 User 的網絡 
 - 在今天的網絡基礎設施中，你不需要靜態文件來使你的服務器變快
-- 這個網站([remix doc]()https://remix.run/docs/en/v1)的第一個字節的時間是很難被打敗的
+- 這個網站 ([remix doc](https://remix.run/docs/en/v1)) 的第一個字節的時間是很難被打敗的
 - 而且是完全 fresh 的
 - 我們利用 edge 的分佈式系統，而不是靜態構建
 - 我們可以做到修復一個錯字，網站在幾秒鐘內就能反映出來：無需重建，無需重新部署，甚至無需 HTTP caching

@@ -22,7 +22,7 @@ Golang Channel / MPI library 也好
 有一個很巨型的 input array
 - 我們要把 array 內的每一個 item 都需要 gunzip 後放到對應的 output array 中
 
-```golang
+```go
 // package variable
 var taskChannel chan task
 

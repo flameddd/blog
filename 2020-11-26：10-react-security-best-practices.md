@@ -98,7 +98,7 @@ third-party components/library 可能會有 security issues
 - Check your dependencies and update when better versions become available.
 
 使用 `Snyk CLI` 撿查
-```shall
+```shell
 npx snyk test
 ```
 

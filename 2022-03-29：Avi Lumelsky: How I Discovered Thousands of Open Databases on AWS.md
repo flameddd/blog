@@ -27,7 +27,7 @@
 
 假如我是 IT，需要允許「特定 cloud」的 service 的 incoming connections，例如 AWS 的 Elastic Container Service (ECS)。可以透將將 service 的 CIDR 加入到 Security Group rules 來允許這些 CIDR blocks 的 connections
 
-```shall
+```shell
 wget -O- https://ip-ranges.amazonaws.com/ip-ranges.json | jq -r '[.prefixes[] | select(.service=="AMAZON").ip_prefix] - [.prefixes[] | select(.service=="ES").ip_prefix] | .[]'
 ```
 

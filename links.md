@@ -229,3 +229,17 @@ Can't remember everything.
 ## Real-Time Voice Cloning
 - EN: https://github.com/CorentinJ/Real-Time-Voice-Cloning
 - https://github.com/babysor/MockingBird
+
+## React dark mode
+這兩篇都不錯
+Josh 的 Gatsby dark mode 實作
+- 最一開始那張圖表很清楚
+- 有大部分原始碼，不過一些關鍵針對 Gatsby 的，套用在其他 framework 的話，就要改改
+- https://www.joshwcomeau.com/react/dark-mode/
+
+另一位網路上逛到的，`Matt Stobbs` 用 Remix 實作 dark mode
+- https://www.mattstobbs.com/remix-dark-mode/
+
+## whisper.cpp
+- https://github.com/ggerganov/whisper.cpp
+- automatic speech recognition, openAI, 好像非常精準

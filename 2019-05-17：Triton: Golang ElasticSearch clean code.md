@@ -15,7 +15,7 @@
 
 所以，新手寫出來的程式大約是長這樣子的：
 
-```golang
+```go
 func Somehandler() {
 // your application logic
 

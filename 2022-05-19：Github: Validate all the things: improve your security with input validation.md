@@ -28,7 +28,7 @@ String phoneNumber;
 
 
 以下 ASP.NET Core 範例，設置預期值範圍和必填字段：
-```c#
+```aspnet
 public class Movie
 {
     [Required]

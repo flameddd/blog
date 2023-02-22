@@ -210,7 +210,7 @@ Microservices 特別適合 CRUD pattern。這種運作模式典型的做法是�
 > /user-service/v1/?userId=ABC123&userId=DEF456&userId=GHI789
 
 #### Response 範例:
-```JSON
+```json
 {
   "ABC123": {
     "userId": "ABC123",
