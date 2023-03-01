@@ -243,3 +243,7 @@ Josh 的 Gatsby dark mode 實作
 ## whisper.cpp
 - https://github.com/ggerganov/whisper.cpp
 - automatic speech recognition, openAI, 好像非常精準
+
+## MochiDiffusion
+- Run Stable Diffusion on Mac natively
+- https://github.com/godly-devotion/MochiDiffusion
