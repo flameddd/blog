@@ -58,7 +58,7 @@
   <img width="80%" loading="lazy" src="./assets/img/webpagetest_07.jpg" >
 </p>
 
-上面範例匯出來的結果 (可以播放體驗看看 `Slow Motion` 的速度):  
+上面範例匯出來的結果 (可以播放體驗看看 `Slow Motion` 的速度)  
 
 <p align="center">
   <video width="80%" muted loop controls loading="lazy"  src="./assets/img/webpagetest_08.mp4" ></video>
@@ -89,19 +89,16 @@
 2. `Advanced Configuration` 選擇 `SPOF`
 3. 把 3rd 資源的 domain 輸入進去
 4. `Start Test`
+    - (如果模擬的是關鍵資源 failed 的話，這個測試會跑蠻久的，要稍微有耐心)
 
+![](./assets/img/webpagetest_11.jpg)  
 
-<p align="center">
-  <img width="80%" loading="lazy" src="./assets/img/webpagetest_11.jpg" >
-</p>
-
-測試會測試 `沒有 SPOF` vs `有 SPOF` 的情況  
+測試會測試 `沒有 SPOF` vs `有 SPOF` 的情況
 
 看看下圖，最下面的結果，可以看到關鍵資源 `有 SPOF` 時，Github 首頁都無法順利載入  
 
-<p align="center">
-  <img width="80%" loading="lazy" src="./assets/img/webpagetest_12.jpg" >
-</p>
+![](./assets/img/webpagetest_12.jpg)  
+
 
 ------------------------
 
