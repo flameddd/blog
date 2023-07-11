@@ -247,3 +247,23 @@ Josh 的 Gatsby dark mode 實作
 ## MochiDiffusion
 - Run Stable Diffusion on Mac natively
 - https://github.com/godly-devotion/MochiDiffusion
+
+
+## deoptigate
+- https://github.com/thlorenz/deoptigate
+- 看起來是很不錯的 Nodejs/V8 perf debugger, 感覺很適合做 micro perf 工具  
+
+## best-dnd-map-makers
+- https://www.dicebreaker.com/games/dungeons-and-dragons-5e/best-games/best-dnd-map-makers
+- 介紹好幾個製作地圖的工具
+
+## A11y
+- `A11ycasts with Rob Dodson`
+- https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g
+
+## JSDoc for typescript
+- https://dev.to/thepassle/using-typescript-without-compilation-3ko4
+
+## bug bounty 回報範例
+- https://www.microsoft.com/en-us/msrc/bounty-example-report-submission
+- https://www.zerodayinitiative.com/blog/2017/9/5/getting-into-submitting-how-to-maximize-your-research

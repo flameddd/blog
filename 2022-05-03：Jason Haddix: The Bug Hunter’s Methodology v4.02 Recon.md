@@ -6,7 +6,7 @@
 Recon 的 Methodology  
 
 這個影片算是上半部，下半部是 application analysis
-- 但 Jason 還沒有講過 talk
+- ~~但 Jason 還沒有講過 talk~~ -> Jason 前陣子講了 App analysis 了 !! -> https://www.youtube.com/watch?v=FqnSAa2KmBI
 - 但最近有 slide 放出來
   - https://docs.google.com/presentation/d/1cMSRVlJJ5de6Pyv-09YgzOGS0OYrP6p7ggGl0f42wmw/edit#slide=id.p
 
