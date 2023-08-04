@@ -29,9 +29,6 @@ Can't remember everything.
 - https://www.magicpattern.design/tools/css-backgrounds
 - beautiful css background examples
 
-## microsoft language Term translation
-- https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
-
 ## markdown-here
 - https://github.com/adam-p/markdown-here
 - `markdown`, `extension`, Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.
@@ -144,7 +141,8 @@ Can't remember everything.
 - the **smallest** commonmark compliant **markdown parser**
 
 ## microsoft language
-- https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0
+- ~~https://www.microsoft.com/zh-tw/language/Search?&searchTerm=iterator&langID=129&Source=true&productid=0~~
+  - 好像改版了，上面連結不能用，好像換成這個 [https://msit.powerbi.com/view?r=eyJrIjoiODJmYjU4Y2YtM2M0ZC00YzYxLWE1YTktNzFjYmYxNTAxNjQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9](https://msit.powerbi.com/view?r=eyJrIjoiODJmYjU4Y2YtM2M0ZC00YzYxLWE1YTktNzFjYmYxNTAxNjQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
 - technical term `translation` search engine
   - https://www.microsoft.com/zh-tw/language/  <- lots of international guideline
 

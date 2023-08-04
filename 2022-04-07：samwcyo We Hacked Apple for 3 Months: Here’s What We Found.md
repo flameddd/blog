@@ -49,9 +49,7 @@ Apple Distinguished Educators 網站
 - 用戶可以輕鬆地使用他們現有的 Apple 帳號向論壇進行身份驗證
 - 而不必處理創建額外的用戶帳號。只需使用“使用 Apple 登錄”並登錄到論壇。
 
-The landing page for users who were not allowed to access the forum was an application portal where you provided information about yourself that was assessed by the forum moderators for approval.
-
-不允許訪問論壇的用戶的頁面是一個 Application portal
+Landing page 是不允許 User 訪問論壇的
 - 可以在其中提供有關自己的資料，這些資料由論壇版主評估以供批准
 
 ![](https://secureservercdn.net/198.71.233.25/623.f31.myftpupload.com/wp-content/uploads/2020/08/ade_reg_upda.png)  
@@ -433,8 +431,6 @@ User 上傳檔案，散播到各種 Apple 服務，例如 iTuren。這對 User X
 - 我們無法使用 iPad 或 iPhone
 - 但我們仍在繼續尋找使用該服務的方法
 - 經過調查，我們發現了一個名為 Transporter 的工具。
-
-[Transporter](https://help.apple.com/itc/transporteruserguide/#/) is a Java app that can be used to interact with a jsonrpc API for bulk uploading files utilizing a few different file services.
 
 [Transporter](https://help.apple.com/itc/transporteruserguide/#/)
 - 是 Java application
