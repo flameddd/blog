@@ -265,3 +265,7 @@ Josh 的 Gatsby dark mode 實作
 ## bug bounty 回報範例
 - https://www.microsoft.com/en-us/msrc/bounty-example-report-submission
 - https://www.zerodayinitiative.com/blog/2017/9/5/getting-into-submitting-how-to-maximize-your-research
+
+## total typescript
+- https://www.totaltypescript.com/
+- 高手的 typescript 收費課程，有好幾篇 blog 可以看看
