@@ -269,3 +269,9 @@ Josh 的 Gatsby dark mode 實作
 ## total typescript
 - https://www.totaltypescript.com/
 - 高手的 typescript 收費課程，有好幾篇 blog 可以看看
+
+## 開啟 mac 能夠 inspect 一些 mac 自家 app embbed 的 web 頁面
+- https://blog.jim-nielsen.com/2022/inspecting-web-views-in-macos/
+
+## 一些 JS, react 的線上練習
+- https://bigfrontend.dev/
