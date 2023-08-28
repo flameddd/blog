@@ -163,12 +163,6 @@ type User = {
 
 ---------
 
-## Index Signatures in Types vs Interfaces
-Another difference between interfaces and types is a subtle one.
-
-Type aliases have an implicit index signature, but interfaces don't. This means that they're assignable to types that have an index signature, but interfaces aren't. This can lead to errors like:
-
-
 
 ## `Types` 與 `interface` 中的索引簽名
 `interface` 與 `types` 間還有一個微妙的區別
@@ -196,7 +190,6 @@ const oi: RecordType = knownAttributes;
 //   Index signature for type 'string' is missing in type 'KnownAttributes'.
 ```
 
-The reason this errors is that an interface could later be extended. It might have a property added that doesn't match the key of `string` or the value of `number`.
 
 出現這種錯誤的原因是，`interface` 以後可能會 extended
 - 它可能會加一個與字串或數字不匹配的 type
@@ -234,10 +227,6 @@ const oi: RecordType = knownAttributes;
 
 
 ----------------
-
-## Default to type, not interface
-The TypeScript documentation has a [great guide](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces) on this. They cover each feature (although not the implicit index signature), but they reach a different conclusion than me.
-
 
 
 ## 默認使用 `type`，而非 `interface` 
