@@ -129,14 +129,9 @@ server.listen(5000, '0.0.0.0');
 
 **補救措施:**
 - `crypto` API 有個 function [timingSafeEqual](https://nodejs.org/api/crypto.html#cryptotimingsafeequala-b)，使用恆定時間算法比較實際和預期的敏感值
-- 對於密碼比較，可以使用[scrypt](https://nodejs.org/api/crypto.html#cryptoscryptpassword-salt-keylen-options-callback)
+- 對於密碼比較，可以使用 [scrypt](https://nodejs.org/api/crypto.html#cryptoscryptpassword-salt-keylen-options-callback)
 - 避免在 variable-time operations 中使用 secrets。這包括在秘密上的 branching，以及當 attacker 可能在同一基礎設施（例如，同一 cloud）上共處時，使用 secrets 作為 memory 的 index。在 JavaScript 中寫恆定時間 code 是困難的（部分原因是 JIT）
   - 對於 crypto 應用，使用built-in crypto APIs or WebAssembly（針對原生還沒有實現的 algorithms）
-
-
-
-
-
 
 
 ------------------------------------------------------------

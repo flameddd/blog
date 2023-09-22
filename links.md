@@ -275,3 +275,6 @@ Josh 的 Gatsby dark mode 實作
 
 ## 一些 JS, react 的線上練習
 - https://bigfrontend.dev/
+
+## 一個 repo 收集 JSDoc 來做 ts type check 的範例
+- https://github.com/DavidWells/types-with-jsdocs#examples
