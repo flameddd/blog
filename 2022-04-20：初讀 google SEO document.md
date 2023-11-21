@@ -1263,7 +1263,7 @@ Sitemap 通用規範
   - 如果網址多於幾十個，就需要讓系統自動產生 Sitemap
   - 雖然能產生 Sitemap 的工具有許多種，不過還是建議使用你的網站軟體自動產生
 
-將 Sitemap 提交給 Google
+將 Sitemap 上傳給 Google
 - Google 不會在每次檢索網站時檢查 Sitemap。除非透過連線偵測 (ping) 告知 Sitemap 有異動
 - **否則 Google 只會在首次偵測到 Sitemap 時進行檢查**
 - 如果你並未新增或更新 Sitemap，請勿要求 Google 檢查 Sitemap
