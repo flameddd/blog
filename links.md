@@ -278,3 +278,7 @@ Josh 的 Gatsby dark mode 實作
 
 ## 一個 repo 收集 JSDoc 來做 ts type check 的範例
 - https://github.com/DavidWells/types-with-jsdocs#examples
+
+
+## 看起來很詳細的一些 react native 教學
+- https://github.com/anisurrahman072/React-Native-Advanced-Guide

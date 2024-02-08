@@ -9,7 +9,9 @@ Playback 主要的 canvases 有：
 - Video Playback: The member is watching their selected content, and has access to controls to pause the video, change the volume, etc.
 - Post Play: When the selected content ends, members are presented with the next episode in a series, or recommendations on what to watch next.
 
-透過 AB testing 跟隨後的學習，我們上線了一版 modern playback UI 希望帶來更好的 experience。
+透過 AB testing 跟隨後的學習，我們上線了一版 modern playback UI 希望帶來更好的 experience。  
+
+![](https://miro.medium.com/v2/resize:fit:2000/format:webp/0*diyHmTgTIpyfxgjR)  
 
 ### 如果一開始你失敗了...
 2015 年夏天的時候，整個網站都已經轉 react 了，只有 `playback UI` 還是 vanilla JavaScript framework，而這塊只有少數幾位 RD 有經驗。  
@@ -40,7 +42,7 @@ AB test design:
 > 寶貴的一堂課，確保測試變數是獨立的。 （all your test variables are isolated）
 
 ### Rendering Performance Gap (React 效能問題)
-改成 React 時，整題重構了整個 UI architecture，AB test 發現 startup to take longer (than 之前的做法)  
+改成 React 時，整題重構了整個 UI architecture，AB test 發現 startup to take longer (than 之前的做法) 
 - drop more frames of video
 
 前後比較：  
