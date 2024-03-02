@@ -282,3 +282,8 @@ Josh 的 Gatsby dark mode 實作
 
 ## 看起來很詳細的一些 react native 教學
 - https://github.com/anisurrahman072/React-Native-Advanced-Guide
+
+
+## web tracking
+- https://web-tracking.allenchou.cc/
+- 一個 blog 介紹各種 web tracking 的細節 (fingerprinting)
