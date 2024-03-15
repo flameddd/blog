@@ -872,7 +872,8 @@ In fact, Remix prefetching isn't limited to just links, it can prefetch any page
 看看 User 輸入時 prefetch search page:  
 | Search Input Prefetching, Fast 3G |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/prefetch-search.mp4" ></video>|
+| <video width="100%" muted autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/68727219-d9cf-4357-b95b-a4d16f3a1c07" ></video> |
+(video source: https://remix.run/blog-images/posts/remix-vs-next/prefetch-search.mp4)
 
 
 沒有 spinners, skeletons，就算網路慢，也有快速的 UX  
@@ -954,7 +955,8 @@ browser 將 form 的 serialized data post 到 `"/add-to-cart"`
 
 | Next.js Failed POST |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/next-error.mp4" ></video>|
+| <video width="100%" muted loop autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/3cfc46c9-bb23-482f-b0b2-a14e959d7f42" ></video>|
+(video source: https://remix.run/blog-images/posts/remix-vs-next/next-error.mp4)  
 
 什麼也沒發生
 -  Error handling 是困難的，也是令人討厭的
@@ -966,7 +968,8 @@ browser 將 form 的 serialized data post 到 `"/add-to-cart"`
 
 | Remix Failed POST |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/remix-error.mp4" ></video>|
+| <video width="100%" muted loop autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/bc11790d-6c54-400b-8e5e-1ef000d91415" ></video>|
+(video source: https://remix.run/blog-images/posts/remix-vs-next/remix-error.mp4)  
 
 Remix 可以處理 App 中關於 data 和 render 的所有錯誤，甚至是 server 上的錯誤
 - 你所要做的就是在 App 的 root 定義 [error boundary](https://remix.run/docs/en/v1/guides/errors)
@@ -988,7 +991,8 @@ User 經常會點擊按鈕兩次
 
 | Next.js Interruption |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/change-quantity-next.mp4" ></video> |
+| <video width="100%" muted loop autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/e7858242-c5cb-434e-9f8a-2e3a2448eebe" ></video> |
+(video source: https://remix.run/blog-images/posts/remix-vs-next/change-quantity-next.mp4)
 
 在中間有個從 5 到 6 再到 5 的奇怪東西。不過，最後幾秒鐘是最有趣的
 - 可以看到，最後一個發送的請求落地（到 4），然後幾 frame 後，第一個發送的請求落地
@@ -1002,8 +1006,8 @@ User 經常會點擊按鈕兩次
 
 | Remix Interruption |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/change-quantity-remix.mp4" ></video> |
-
+| <video width="100%" muted loop autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/89e02e33-1770-4cf7-9508-b167cc86cf57" ></video> |
+(video source: https://remix.run/blog-images/posts/remix-vs-next/change-quantity-remix.mp4)
 
 可以看到 Remix 在中斷時取消了 request
 - 並在 POST 完成後重新驗證了 data。這確保了整個頁面的 user interface（不僅僅是這個表單）與 form 剛剛在 server 上所做的任何改變是同步的
@@ -1021,8 +1025,8 @@ User 經常會點擊按鈕兩次
 
 | Remix Without JavaScript |
 | :---: |
-| <video width="100%" muted loop controls src="https://remix.run/blog-images/posts/remix-vs-next/no-js.mp4" ></video> |
-
+| <video width="100%" muted loop autoplay loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/971ccb88-90a7-45d9-83ab-bca316ddbb28" ></video> |
+(video source: https://remix.run/blog-images/posts/remix-vs-next/no-js.mp4)  
 
 雖然這樣用 Remix 是完全 OK 的
 - 但我們並不打算讓你在沒有 JavaScript 的情況下建立網站

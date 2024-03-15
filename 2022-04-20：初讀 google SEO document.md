@@ -597,7 +597,7 @@ Bad
 
 以下是影片到期日為 2009 年 11 月的`影片 Sitemap` 範例：
 
-```
+```xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
@@ -633,7 +633,7 @@ Bad
 
 以下列影片 Sitemap 為例，影片只會出現在加拿大和墨西哥的搜尋結果中。
 
-```
+```xml
 <url>
   <loc>http://www.example.com/videos/some_video_landing_page.html</loc>
   <video:video>
@@ -1361,7 +1361,7 @@ Sitemap: https://example.com/my_sitemap.xml
 - 如要防範垃圾內容發布者 bot 存取位於 `<player_loc>` 或 `<content_loc>` 網址的影片內容，可以透過驗證確認存取伺服器的漫遊器確實是 Googlebot
   - https://developers.google.com/search/docs/advanced/crawling/verifying-googlebot
 
-```
+```xml
 <url>
   <loc>https://example.com/mypage</loc>      <!-- URL of host page -->
   <video> ... information about video 1 ... </video>

@@ -17,16 +17,19 @@ Apple 的頁面一直有很動畫，當往下 scroll 時，經常會有類似
 等等特效，下面影片是 ipad pro 頁面往下 scroll 時的效果
 
 <p align="center">
-<video width="80%" height="500px" autoplay muted loop controls src="https://res.cloudinary.com/css-tricks/video/upload/f_auto,q_auto/v1588108817/ipad-pro_wdpam6.mp4" ></video>
+<video width="80%" height="500px" autoplay muted loop  src="https://github.com/flameddd/blog/assets/22259196/a25a4656-a23e-41cb-adff-f51064dd786d" ></video>
 </p>
+(video source: https://res.cloudinary.com/css-tricks/video/upload/f_auto,q_auto/v1588108817/ipad-pro_wdpam6.mp4)  
 
 
 很多效果都不是只用 `HTML` 和 `CSS`，即使用 devtools 也不一定能找到答案，因為它往往無法看透 `<canvas>`  
 下面展示看看該如何實作 AirPods Pro 頁面的 shifting light effect  
  
 <p align="center">
-<video width="80%" height="500px" autoplay muted loop controls src="https://res.cloudinary.com/css-tricks/video/upload/v1588889054/airpods-animation_g2qstg.mp4" ></video>
+<video width="80%" height="500px" autoplay muted loop  src="https://github.com/flameddd/blog/assets/22259196/57dd58d3-2252-4630-b605-e8abb20a2872" ></video>
 </p>
+
+(video source: https://res.cloudinary.com/css-tricks/video/upload/v1588889054/airpods-animation_g2qstg.mp4)  
 
 ---------------------------------------
 
@@ -36,8 +39,9 @@ Apple 的頁面一直有很動畫，當往下 scroll 時，經常會有類似
 - 將每一 frame 與 User 的 scroll 的位置同步，我們可以在 User 向下（或向上） scroll 時播放該動畫
 
 <p align="center">
-<video width="80%" height="500px" autoplay muted loop controls src="https://res.cloudinary.com/css-tricks/video/upload/v1588889054/flipbook_tisnxf.mp4" ></video>
+<video width="80%" height="500px" autoplay muted loop  src="https://github.com/flameddd/blog/assets/22259196/cf81bf49-18dd-4c40-b83a-af2fecbaad39" ></video>
 </p>
+(video source: https://res.cloudinary.com/css-tricks/video/upload/v1588889054/flipbook_tisnxf.mp4)  
 
 ---------------------------------------
 

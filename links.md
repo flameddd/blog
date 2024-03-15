@@ -291,3 +291,11 @@ Josh 的 Gatsby dark mode 實作
 ## npm graph
 - https://npmgraph.js.org/?q=express
 - 產生 dependency tree 的線上工具
+
+## 頁面設計參考
+- https://www.footer.design/
+- https://www.curated.design/
+- https://www.404s.design/
+
+## 藝術品圖片下載(高品質)
+- https://www.getty.edu/art/collection/search?open_content=true

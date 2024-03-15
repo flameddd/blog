@@ -110,8 +110,9 @@ client 使用 React Query 或 SWR 或 Apollo 等工具向 backend 發出 request
 經常看到這種模式。例如，UberEats 在取得實際資料時，首先會呈現一個外殼:
 
 <p align="center">
-  <video width="80%" muted loop controls loading="lazy"  src="https://www.joshwcomeau.com/images/server-components/ubereats-loading.mp4?v=2" ></video>
+  <video width="80%" autoplay muted loop loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/343ce357-66f5-4912-81d0-e8e922763d21" ></video>
 </p>  
+(video source: https://www.joshwcomeau.com/images/server-components/ubereats-loading.mp4)  
 
 
 User 將看到這種 loading state，直到網路請求解決，React re-render，用真正的內容取代 UI   

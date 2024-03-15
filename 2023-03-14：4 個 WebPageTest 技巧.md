@@ -61,8 +61,9 @@
 上面範例匯出來的結果 (可以播放體驗看看 `Slow Motion` 的速度)  
 
 <p align="center">
-  <video width="80%" muted loop controls loading="lazy"  src="./assets/img/webpagetest_08.mp4" ></video>
+  <video width="80%" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/09e61b02-528a-4835-93e0-4d747bb1c342" ></video>
 </p>  
+(video source: assets/img/webpagetest_08.mp4)  
 
 
 ------------------------

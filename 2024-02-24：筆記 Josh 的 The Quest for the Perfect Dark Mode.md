@@ -97,8 +97,9 @@ export const ThemeProvider = ({ children }) => {
 
 
 <p align="center">
-  <video width="80%" muted autoplay loop loading="lazy" src="https://www.joshwcomeau.com/videos/dark-mode/light-flash.mp4" ></video>
-</p>  
+  <video width="80%" muted autoplay loop loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/ce59c86a-c079-427e-9ce2-02eeefc5e4aa" ></video>
+</p> 
+(video source: https://www.joshwcomeau.com/videos/dark-mode/light-flash.mp4)  
 
 ----------------
 
@@ -157,9 +158,9 @@ export const ThemeProvider = ({ children }) => {
 ```
 
 <p align="center">
-  <video width="80%" muted autoplay loop loading="lazy" src="https://www.joshwcomeau.com/videos/dark-mode/alert.mp4" ></video>
+  <video width="80%" muted autoplay loop loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/afa74ce0-c144-4d2a-9fb3-5f89b7757802" ></video>
 </p> 
-
+(video source: https://www.joshwcomeau.com/videos/dark-mode/alert.mp4)  
 
 ### CSS variables
 CSS variables 最棒的是，它們是 reactive，Variable 更新，HTML 立刻 updates
@@ -347,11 +348,10 @@ function setColorMode(newValue) {
 }
 ```
 
-
-
 <p align="center">
-  <video  width="80%" muted autoplay loop loading="lazy"  src="https://www.joshwcomeau.com/videos/dark-mode/standard-toggle.mp4" ></video>
+  <video  width="80%" muted autoplay loop loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/d12adbed-aebe-4636-b190-5c63b713ccc7" ></video>
 </p>  
+(video source: https://www.joshwcomeau.com/videos/dark-mode/standard-toggle.mp4)
 
 
 
@@ -391,8 +391,9 @@ const DarkToggle = () => {
 
 (看看右上角的 checkbox)  
 <p align="center">
-  <video width="80%" muted autoplay loop loading="lazy" src="https://www.joshwcomeau.com/videos/dark-mode/checkbox-hole.mp4" ></video>
-</p>  
+  <video width="80%" muted autoplay loop loading="lazy" src="https://github.com/flameddd/blog/assets/22259196/e11affee-4282-4b5e-bedf-09da762fb720" ></video>
+</p>
+(source: https://www.joshwcomeau.com/videos/dark-mode/checkbox-hole.mp4 )
 
 到這邊就成功了，User 看到的第一個畫面就是正確的 mode。  
 
