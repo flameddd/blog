@@ -478,6 +478,7 @@ Cloudflare 不僅在 User 身邊運行 app
 
 
 (我: 到這邊為止是官網文件幾個比較描述與概念的部分，其他部分都是實作與 API 文件，這些我想放到更後面。相反，我想先看看官方 blog 寫的 `Remix vs Next.js` 的文章，所以下面先插入這篇文章的筆記)
+
 ------------------------------------------
 
 ## Remix vs Next.js: TL;DR (JANUARY 11TH, 2022)
@@ -854,13 +855,6 @@ infrastructure 的差異體現在第一個藍條上
 
 ### Remix vs Next.js: 關於 Client side 的 Transitions
 
-Clientside Transitions
-Both frameworks enable instant transitions with link prefetching, but Next.js only does this for pages created from SSG. The search page is out, again. (maybe next time, sport)
-
-However, Remix can prefetch any page because there was no architectural divergence for data loading. Prefetching an unknowable, user-driven search page URL is not any different than prefetching a knowable product URL.
-
-In fact, Remix prefetching isn't limited to just links, it can prefetch any page, at any time, for any reason! Check this out, prefetching the search page as the user types:
-
 
 兩個 frameworks 都能通過 link prefetching 實現 instant transitions
 - 但 `Next.js` 只有 SSG page 能，所以 search page 就不行
@@ -899,10 +893,6 @@ function Search() {
 - Remix 在處理異步時不需要任何 code 就能實現
 
 ### Remix vs Next.js: 關於 Data Mutations
-This is where Remix and Next.js start to look completely different. Half of your app code is related to data mutations. It's time your web framework respects that.
-
-How mutations work in Next.js: Next.js doesn't do anything for you here. `<button onClick={itsAllUpToYou}>`. Typically you'll manage the form's state to know what to post, add an API route to post to, track loading and errors states yourself, revalidate data and propagate changes throughout the UI, and finally deal with errors, interruptions, and race conditions (but let's be honest, nobody actually deals with that stuff).
-
 Data Mutations 就是 `Remix` 和 `Next.js` 開始看起來完全不同的地方  
 
 `Next.js` 中的 mutation 是如何工作的:
@@ -977,12 +967,6 @@ Remix 可以處理 App 中關於 data 和 render 的所有錯誤，甚至是 ser
 - `Remix` 能做到，而 `Next.js` 做不到，唯一的原因是，`Remix` 的 data 抽象並沒有停留在如何將 data 引入 App，還包括如何改變它
 
 ### Remix vs Next.js: 關於 Interruptions
-Users often click a button twice on accident and most apps don't deal with it very well. But sometimes you have a button that you fully expect the user to click really fast and want the UI to respond immediately.
-
-In this app, the user can change the quantity of items in the cart. It's likely they'll click it very quickly to increment the number a few times.
-
-Let's see how the Next.js app deals with interruptions
-
 User 經常會點擊按鈕兩次
 - 大多 App 沒有很好地處理這個問題
 - 在這 App，User 可以改物品的數量。User 很可能非常迅速地點擊它，將數量增加
@@ -1065,8 +1049,6 @@ export function action({ request }) {
 
 修改 Home Page:
 - 假如你想修改 homepage 上的 production，在 `Next.js` 中有兩個選擇:
-
-Let's consider you want to change the products on the home page, what does that look like? You have two choices in Next.js:
 - 重新構建和重新部署 Aoo。build time 將隨著 production 數量的增加而線性增長
   - (每次構建都要從 Shopify 獲取每個產品的 data)
   - 單單改個 typo，就需要從 Shopify 下載每個 prodcution 來部署這個 update
