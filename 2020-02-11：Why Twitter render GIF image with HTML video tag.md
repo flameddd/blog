@@ -1,4 +1,4 @@
-# Why Twitter render GIF image with HTML <video /> tag
+# Why Twitter render GIF image with HTML video tag
 
 ## TL;DR
 - size: GIFs are a terrible format for storing video.
