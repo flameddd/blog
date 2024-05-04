@@ -299,3 +299,7 @@ Josh 的 Gatsby dark mode 實作
 
 ## 藝術品圖片下載(高品質)
 - https://www.getty.edu/art/collection/search?open_content=true
+
+## 一些測試 web resource waterfall 的工具
+- https://github.com/andydavies/waterfall
+- https://github.com/micmro/performance-bookmarklet

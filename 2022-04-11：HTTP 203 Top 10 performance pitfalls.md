@@ -1,11 +1,10 @@
 # 2022-04-11：HTTP 203 Top 10 performance pitfalls.md
 ## Jake & Surma 
-### [https://www.youtube.com/watch?v=Lh9q3h2khlc](https://www.youtube.com/watch?v=Lh9q3h2khlc) (看這篇，建議先看過這影片，這篇前半段就是這影片的筆記)
+### [Youtube: Top 10 performance pitfalls - HTTP 203](https://www.youtube.com/watch?v=Lh9q3h2khlc)
 ### [https://jakearchibald.com/2021/f1-perf-part-1/](https://jakearchibald.com/2021/f1-perf-part-1/)
 ---------------------
-起始是 Jake 的 blog case study 好幾間 F1 廠商的 homepage performance case study  
-後續 Jake 拿來當 HTTP203 的主題講一集  
-從 HTTP203 開始看，再回去看 blog 文章，這樣順序比較好理解  
+
+一開始是 Jake blog 來 case study 好幾間 F1 廠商的 homepage performance，後續 Jake 拿來當 HTTP203 的主題講一集。從 HTTP203 開始看，再回去看 blog 文章，這樣順序比較好理解  
 
 ## 10 大 Web performance 陷阱  
 
@@ -296,13 +295,21 @@ Jake 寫了一個 script 來下載這些網站
 - 用來他自己測試，看能改善多少。不是 100% 正確，但也可以作為參考了
 
 ------------------------------
+
 ## Case1: Alpha Tauri
 - https://scuderia.alphatauri.com/en/
-- [測試影片: https://jakearchibald.com/c/alpha-tauri-d5bba764.mp4](https://jakearchibald.com/c/alpha-tauri-d5bba764.mp4)
-  - (稍微看過影片，會比較快理解文章內容在說什麼)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/alpha-tauri-film-1d9490f0.avif)
+
+測試影片(稍微看過影片，會比較快理解文章內容在說什麼)
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/0c1019b6-bab4-4b4f-8e3f-90789ad89a16" ></video>
+</p>  
+
+(影片來源: [assets/img/alpha-tauri-246a6b3a.mp4](assets/img/alpha-tauri-246a6b3a.mp4))  
+
+載入的縮時圖(開新頁面比較容易看)  
+![](./assets/img/alpha-tauri-film-9dc5f296.avif)  
+
 
 有機會改善的地方
 - 7 second delay to content-render caused by CSS font tracker.
@@ -310,9 +317,9 @@ Jake 寫了一個 script 來下載這些網站
 - 1 second delay to content-render caused by unnecessary SVG inlining.
 - 5 second delay to primary image caused by unnecessary preloading.
 - 1 second delay to primary image caused by poor image compression.
-- 40+ second delay to content-blocking cookie modal caused by… a number of things.
+- 40+ second delay to content-blocking cookie modal caused by  a number of things.
 
-![](https://jakearchibald.com/c/alpha-tauri-waterfall-46a3d127.png)  
+![](./assets/img/alpha-tauri-waterfall-859f43ba.png)  
 
 1-10 行:
 - HTML, row 1 (213kB gzipped)
@@ -327,7 +334,9 @@ Jake 寫了一個 script 來下載這些網站
 
 用 DevTool 查看
 
-![](https://jakearchibald.com/c/tauri-DevTools-354e9d3c.png)
+
+![](./assets/img/tauri-devtools-0f3a6c3b.png)  
+
 
 `initiator` 裡面看到，這裡是某些 CSS
 - 這是 render-blocking resource 去 load 更多的 CSS 的狀況
@@ -363,7 +372,7 @@ browser 能夠 parallel 下載檔案，但也必須要在知道有哪些目標�
 - 在 `HTTP/1.1` 時代，這是好的方案，那時候一次只能載一個檔案
 - 但現在可以平行 2-8 connectino per server 了
 
-![](https://jakearchibald.com/c/alpha-tauri-waterfall-46a3d127.png)  
+![](./assets/img/alpha-tauri-waterfall-859f43ba.png)  
 
 1 ~ 9 行就是同一個 server，所以共用一次 connection
 - 第 10 行，就需要另外 build connection
@@ -423,7 +432,7 @@ font requests 也是一種 CORS requests
 
 ### 主要問題2: Late modal
 
-![](https://jakearchibald.com/c/alpha-tauri-film-1d9490f0.avif)
+![](./assets/img/alpha-tauri-film-9dc5f296.avif)  
 
 在用戶使用頁面 30 秒後拋出一個 modal 是一種 bad UX
 - 顯示其中一種模式是在頁面頂部使用盡可能小的 JS
@@ -437,10 +446,10 @@ font requests 也是一種 CORS requests
 
 ### 主要問題3: Preload 的 priority
 
-![](https://jakearchibald.com/c/alpha-tauri-waterfall-46a3d127.png)  
+![](./assets/img/alpha-tauri-waterfall-859f43ba.png)  
 
 這邊
-- 驚訝地看到 image 在 CSS 之前被載入
+- 驚訝地看到 image 在 CSS 之前被載入 (line 2 ~ 6)
 - 因為 CSS 是 render-blocking 的，但 image 不是
 - image 正在佔用 CSS 的頻寬
 
@@ -454,14 +463,14 @@ font requests 也是一種 CORS requests
 - 但是 request priority 是 browser 請求的內容和 server 選擇發送的內容之間的一個非常微妙的平衡
 - 也許將 preload request 稍後放在 source code 中會有所幫助，或者完全避免 preload request，而是使用 `<img>`（目前它是 CSS 背景）
 
-> Update: Performance expert Andy Davies has encountered this priority issue before too, and told me why it happens, and… it's AppCache.
+> Update: Performance expert Andy Davies has encountered this priority issue before too, and told me why it happens, and it's AppCache.
 > https://twitter.com/AndyDavies/status/1375398840057102338
 
 ### 其他問題: Unnecessary preloading
 
 Chrome DevTools' console 出現警告
 
-![](https://jakearchibald.com/c/preload-warning-8c83970d.png)
+![](./assets/img/preload-warning-79ea5462.png)  
 
 這些 preload 其實一開始沒用到，一開始去 load 等於浪費
 ```html
@@ -499,12 +508,14 @@ preload 可以這樣寫
 ### 其他問題2: Inlined secondary content
 HTML 是 `213kB`，是很大的一份檔案
 
-![](https://jakearchibald.com/c/alpha-tauri-waterfall-46a3d127.png)
+![](./assets/img/alpha-tauri-waterfall-859f43ba.png)    
 
 深色的區塊，代表開始接受 bytes  
 - 看了 HTML source code 後發現，裡面一堆大型 inline SVG
+- [inline SVG](./assets/img/tauri-svg-4e5ce2a6.svg)
 
-![](https://jakearchibald.com/c/tauri-svg-c2cb53ea.webp)  
+
+![](./assets/img/tauri-svg-e07fb6d9.webp)  
 
 改善方法
 - 用 [SVGOMG](https://jakearchibald.github.io/svgomg/) compress，大小差 7 倍
@@ -519,7 +530,7 @@ HTML 是 `213kB`，是很大的一份檔案
 - 它卻佔用了本該用在更緊急地方的頻寬
 
 如果是 `<img>`，browser 自己能夠分析，了解它的優先級
-- 減少大約一秒的內容時間
+- 減少大約 1 秒的內容時間
 
 避免 inline
 - 除非它是會 render-blocking content，又或者它非常小
@@ -528,14 +539,15 @@ HTML 是 `213kB`，是很大的一份檔案
 ### 其他問題3: Large primary image
 有一張最主要動片是顯示給 user 的
 
-![](https://jakearchibald.com/c/gasly-15f1c7f8.avif)  
+
+![](./assets/img/gasly-523d1293.avif)  
+
 
 重新 compress 後，雖然品質差一點
 - 但，請記住，這種 user case，通常我們追求的是 **「快速且看起來不錯」**，而不是 **「慢而完美」**
 
 大小(所有的圖，在 Jake blog 都有放出來)
 - Original JPEG (195 kB)
-  - https://jakearchibald.com/c/gasly-95dee34b.jpg
 - Optimised JPEG (30.7 kB)
 - WebP (23.2 kB)
 - AVIF (19.5 kB) (上面那張是 AVIF)
@@ -549,15 +561,25 @@ browser 支援的問題，靠 `<picture>` 處理
 </picture>
 ```
 
+-------------------------  
+
 ## Case2: Alfa Romeo
 - https://www.sauber-group.com/motorsport/formula-1/
-- [測試影片: https://jakearchibald.com/c/alfa-romeo-d8150e0f.mp4](https://jakearchibald.com/c/alfa-romeo-d8150e0f.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/alfa-romeo-film-e54195a2.avif)
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/d9341806-8d3b-4862-b1dc-529cb455df01" ></video>
+</p>  
+
+(影片來源: [assets/img/alfa-romeo-e57e8446.mp4](assets/img/alfa-romeo-e57e8446.mp4))  
+
+載入的縮時圖(開新頁面比較容易看):  
+![](./assets/img/alfa-romeo-film-5d2e6b7c.avif)  
+
+
 
 這邊的 `loading spinner` 不拿來當作所謂的 `first content render`  
-- loading spinner 可以說是一種因為 slow 的道歉  😀
+- loading spinner 可以說是一種因為 slow 的道歉
 
 有機會改善的地方
 - 10 second delay to content-render caused by low priority render-blocking JavaScript.
@@ -567,7 +589,7 @@ browser 支援的問題，靠 `<picture>` 處理
 
 ### 主要問題: Low priority 的 render-blocking JavaScript
 
-![](https://jakearchibald.com/c/alfa-romeo-waterfall-f48a5ae6.avif)  
+![](./assets/img/alfa-romeo-waterfall-f29414f4.avif)   
 
 `<head>` 中有一些 render-blocking JavaScript
 - 第 4 行，但這個很小
@@ -578,7 +600,7 @@ browser 支援的問題，靠 `<picture>` 處理
 - 但，browser 選擇先下載其他東西
   - 這可以用 DevTools 近一步確認
 
-![](https://jakearchibald.com/c/alfa-romeo-DevTools-164ae44c.png)
+![](./assets/img/alfa-romeo-devtools-e3d1c10a.png)   
 
 可以看到，`low` priority，但，這是 render-blocking 的 script，為什麼 browser 認為是 low ?
 - 因為 browser 不知道這是 render-blocking 的 script
@@ -590,7 +612,7 @@ browser 支援的問題，靠 `<picture>` 處理
   - `defer`: DONT block parser. Execute after the document has parsed, and in order with other defer scripts.
   - `type="module"`: Load as a module, which implies `defer` by default.
 
-If you use one of the above, the script doesn't block the parser, and therefore doesn't block rendering.
+If you use one of the above, the script doesn't block the parser, and therefore doesn't block rendering.  
 
 如果把 script 放在 `<body>` 最下面
 - 它就像 defer
@@ -608,7 +630,6 @@ browser 仍會認為是 `low` priority，可是這 case，它應該要在上面�
 - JS 用 load lazily，然後 gradually enhance content 就好
 
 ### 其他問題1: Other-server sequential CSS
-![](https://jakearchibald.com/c/alfa-romeo-waterfall-f48a5ae6.avif)  
 
 第 7 行的 CSS
 - CSS loading CSS，這是有依序 loading file 的 blocking
@@ -628,19 +649,18 @@ Google Fonts 的 CSS 是很聰明的
 - 我們可以直接  copy & paste the font CSS，來避免 host another server  
 
 ### 其他問題2: Delayed primary image
-![](https://jakearchibald.com/c/alfa-romeo-film-e54195a2.avif)  
 
-從上面可以看到，image 出現的有點晚（這種 case 通常有很多不同原因，只能一步步查看可能性）
+從前面的**縮時圖**可以看到，image 出現的有點晚（這種 case 通常有很多不同原因，只能一步步查看可能性）  
+- (把圖片開新視窗比較方便查看、這邊指的是最後一張 frame)
 
-![](https://jakearchibald.com/c/alfa-romeo-waterfall-f48a5ae6.avif)
 
-第 74 行
+第 74 行 (waterfall)
 - 其實，browser 會很早就去找 `<img />` tag，image 可以在 CSS ready 之前就開始 download
 - 所以，上面這張圖可能不是 `<img>`
 - 如果上面的圖是 CSS background 也應該會在早一點 downlaod (但會在 CSS 之後)
 
 看看 DevTools  
-![](https://jakearchibald.com/c/img-fetch-940cf146.png)  
+![](./assets/img/img-fetch-1e7b7e95.png)   
 
 `initiator` 裡面告訴我們，這 image 是由後來載入的 JS 去下載的  
 
@@ -658,7 +678,9 @@ Google Fonts 的 CSS 是很聰明的
 />
 ```
 
-有些 data attributes，但 browser 好像沒做什麼事情。developer 似乎用了某些 polyfill 還實作 responsive images，而且，最後還是去 download 了 5x4 這張 (Jake 用 mobile 測試，不應該 download 這張)
+有些 data attributes，但 browser 好像沒做什麼事情
+- developer 似乎用了某些 polyfill 還實作 responsive images，而且，最後還是去 download 了 5x4 這張 
+- (Jake 用 mobile 測試，不應該 download 這張)
 
 直接用 browser 內建的 responsive images feature 就好了
 - https://jakearchibald.com/2015/anatomy-of-responsive-images/ 
@@ -667,23 +689,30 @@ Google Fonts 的 CSS 是很聰明的
 
 這張主要的 image 有壓縮過了，但壓縮的比例不夠好，另外圖片尺寸也不合適
 
-![](https://jakearchibald.com/c/alfa-42220f2e.avif)
+![](./assets/img/alfa-f60edda0.avif)   
 
 大小(所有的圖，在 Jake blog 都有放出來)
 - Original JPEG (286 kB)
-  - https://jakearchibald.com/c/alfa-c35692a1.jpg
 - Optimised JPEG (30.2 kB)
 - WebP (24.3 kB)
 - AVIF (15.7 kB) (上面那張圖，是這個 AVIF 的版本)
 
 壓縮後，就算品質差一點，User 也很難用肉眼分辨出來  
 
+-------------------------  
+
 ## Case3: Red Bull
 - https://www.redbullracing.com/int-en
-- [測試影片: https://jakearchibald.com/c/red-bull-b73f846b.mp4](https://jakearchibald.com/c/red-bull-b73f846b.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/red-bull-film-2a9970e8.avif)
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/5f8a67e7-f0b3-4a51-a723-4da48678dcab" ></video>
+</p>  
+
+(影片來源: [assets/img/red-bull-bc1c17cd.mp4](assets/img/red-bull-bc1c17cd.mp4))  
+
+載入的縮時圖(開新頁面比較容易看):  
+![](./assets/img/red-bull-film-303a9440.avif)   
 
 有機會的改善
 - 3 second delay to content-render caused by unnecessary inlining.
@@ -693,51 +722,51 @@ Google Fonts 的 CSS 是很聰明的
 - 40 second delay to key image caused by loading it with JavaScript.
 - Additional 30 second delay to that image caused by poor optimisation.
 - 2 second delay to fonts caused by extra connection.
-- 40+ second delay to content-blocking cookie modal caused by… a number of things
+- 40+ second delay to content-blocking cookie modal caused by a number of things
+
+![](./assets/img/red-bull-waterfall-873d54ef.png)   
 
 ### 問題1: Unnecessary inlining
-![](https://jakearchibald.com/c/red-bull-waterfall-c26b5731.png)  
-
 直到第 6 秒左右，HTML 仍在下載
 - HTML 能夠 streaming HTML，也就是邊下載、邊 render 已經下載的部分
 - 但如果有 blocking resources 的話，幾乎等於無法利用到這優點
 
 從上面的圖上看，這裡沒有其他 blocking resources
 - 頁面就靠這一個 resorce 來 render
-  - (`First Contentful Paint`馬上出現在 HTML 下載之後)
+  - (`First Contentful Paint` 馬上出現在 HTML 下載之後)
 
 查看 source code 後，了解到這邊 CSS 是用 inline 的方式  
 - inline 可以避免過多的 request/response，可以拿來避免 render-blocking resources
 - 但也要小心，它是雙面刃。你下載的檔案因此變大，需要載完，才能接續 task
 
 用 DevTools 的 coverage panel 確認
-![](https://jakearchibald.com/c/red-bull-coverage-ea1c6160.png)  
+![](./assets/img/red-bull-coverage-9cd8514d.png)   
+
 
 這頁面
 - `79.5%` code，是 init render 時沒用到的
 - 將近 600kb 都沒用到
 
-相比一下 [Squoosh App](https://squoosh.app/)
-![](https://jakearchibald.com/c/squoosh-coverage-0065d291.png)  
+相比一下 [Squoosh App](https://squoosh.app/)  
+![](./assets/img/squoosh-coverage-a789620f.png)   
 
 inline style 和 script 應該要盡量只放 first render 和 first interaction 相關的就好  
 
 ### 問題2: Large primary image
 
-![](https://jakearchibald.com/c/red-bull-main-80852dac.avif)
+![](./assets/img/red-bull-main-ac386e0b.avif)  
 
 他們用 WebP，但品質設很高
 - 壓縮雖然差一點，但 UX 真的沒什麼差
 
 大小
 - Original WebP (99.1 kB)
-  - https://jakearchibald.com/c/red-bull-main-f701110d.webp
 - Optimised WebP (24.8 kB)
 - AVIF (13.9 kB) (上面的圖是 AVIF 版本)
 
 
 ### 問題3: Large overlay image
-![](https://jakearchibald.com/c/red-bull-overlay-mobile-08382f0a.avif)  
+![](./assets/img/red-bull-overlay-mobile-9ce23696.avif)  
 
 這圖用在 main carousel，主要的背景
 - 是設計的重要部分
@@ -750,21 +779,20 @@ create WebP 時
 
 大小
 - Original WebP (1.1 MB)
-  - https://jakearchibald.com/c/red-bull-overlay-359ea2cd.webp
 - Optimised WebP (620 kB)
 - AVIF (132 kB)
 - AVIF for mobile (47.8 kB) (<- 上圖的版本)
 
 | Full image | Alpha channel |
 | :---: | :----: | 
-| ![](https://jakearchibald.com/c/poster-main-98104045.avif) | ![](https://jakearchibald.com/c/poster-alpha-cead4ed1.avif) |
+| ![](assets/img/poster-main-506e073e.avif) | ![](assets/img/poster-alpha-de49d8c8.avif) |
 
 因為這個原因(Alpha channel)，所以他們採用 `lossless mode` 的 WebP
 - 如果是很多顏色的圖，lossy mode 是ＯＫ的，但這個 case 剛好是個例外  
 
 | Full image | Alpha channel |
 | :---: | :----: | 
-| ![](https://jakearchibald.com/c/red-bull-overlay-mobile-08382f0a.avif) | ![](https://jakearchibald.com/c/red-bull-overlay-alpha-9d8ccc5b.avif) |
+| ![](assets/img/red-bull-overlay-mobile-9ce23696.avif) | ![](assets/img/red-bull-overlay-alpha-5f3563e2.avif) |
 
 alpha channel 經常變化的地方
 - lossy codec 可以處理得更好
@@ -786,7 +814,7 @@ alpha channel 經常變化的地方
 - 它是放在 document 底部的 blob of JSON
 - 它是 JSON，也就意味這是靠 JS 來處理的
 
-Jake 是說是他的話，就會改用 `<img>` + responsive images 來處理這張圖，這樣最簡單  
+Jake 說，他會改用 `<img>` + responsive images 來處理這張圖，這樣最簡單  
 
 massive WebP 也會佔用太多頻寬
 - 導致其他東西 delay
@@ -803,23 +831,20 @@ Red Bull 用了一張 blur 的圖，來改善 UX
 - 但是，我真的很喜歡這種方法，因為它提供了比 BlurHash 之類的更多的結構，但它確實使用了更多的字節。
 
 
-The performance issues the Red Bull site has with images are pretty well disguised using a low-quality inlined image, but with a blur(7px) effect. Unfortunately the image they use isn't an accurate preview of the image being loaded, as it's cropped incorrectly, so there's a jump when the final version loads. However, I really like this method, as it provides more structure than something like a BlurHash, but it does use more bytes.
-
 這邊 blurred images 每張 6kB
 - 這對 inline 而言Ｍ這些圖，很佔大小
 - 選用 `150x150` 來建立 tiny JPEG 也是個奇怪的選擇。 JPEG 是 `8x8` 一個 blocks
   - https://www.youtube.com/watch?v=F1kYBnY6mwg&t=294s
 
-![](https://jakearchibald.com/c/red-bull-blur-2-8302aeab.webp)
+![](assets/img/red-bull-blur-2-260263a4.webp)
 
 Jake 玩玩看這張圖
 - Original 150x150 JPEG, blurred (6.04 kB)
-  - https://jakearchibald.com/c/red-bull-blur-3ab1fcd5.jpg
 - 48x32 JPEG, blurred (1 kB)
 - 80x56 WebP, blurred (1 kB) (<-- 上面那張圖)
 - 136x91 AVIF, blurred (992 B)
 
-JPEG 有嚴重的 blocking artefacts
+JPEG 有嚴重的 blocking artifact
 - 因此，Jake 加強 blur 
 - WebP 成果更好，所以可以調高 resolution，減少 blur 程度
 
@@ -839,12 +864,22 @@ JPEG 有嚴重的 blocking artefacts
 - WebP 是不錯的選擇。品質、browser 支援程度
 
 
+---------------------------
+
 ## Case4: Williams
 - https://www.williamsf1.com/
-- [測試影片: https://jakearchibald.com/c/williams-4d0e7aec.mp4](https://jakearchibald.com/c/williams-4d0e7aec.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/williams-film-96d925bc.png)  
+
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/d3006dba-0d27-47bf-8962-250f69f86e95" ></video>
+</p>  
+
+(影片來源: [assets/img/williams-9b20d5bf.mp4](assets/img/williams-9b20d5bf.mp4))  
+
+載入的縮時圖(開新頁面比較容易看)  
+![](assets/img/williams-film-cc77c994.png)  
+
 
 
 有機會改善的地方
@@ -853,7 +888,7 @@ JPEG 有嚴重的 blocking artefacts
 - Layout instability caused by `<img>`s.
 
 ### 主要問題1: Delayed CSS
-![](https://jakearchibald.com/c/williams-waterfall-7d9ecf17.png)  
+![alt text](assets/img/williams-waterfall-84c460bd.png)  
 
 第 6 行
 - 在另一台 server 上，這個 connection 耗時間
@@ -867,14 +902,12 @@ JPEG 有嚴重的 blocking artefacts
 
 ### 主要問題2: HTTP/1.1
 
-![](https://jakearchibald.com/c/williams-waterfall-7d9ecf17.png)
-
 可以看到 1 ~ 3 行，有三條連線到「同一台」 server
 - 第 9 行也是
 - 這是 `HTTP/1.1` 這限制
 
 從 DevTools 來確認
-![](https://jakearchibald.com/c/network-protocol-9f05c877.png)  
+![alt text](assets/img/network-protocol-dfd6229a.png)  
 
 HTTP/2 能平行處理多個 request/response
 - 為了解決 HTTP/1.1 缺點，browser 跟 server 建立了多個連線
@@ -883,7 +916,12 @@ HTTP/2 能平行處理多個 request/response
 - 但可能會影響其他資源的優化
 
 ### 主要問題3: `<img>` 造成的 layout instability
-- [影片 clip](https://jakearchibald.com/c/layout-88fc14ef.mp4)
+
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/13911e30-8b71-4c42-af9b-a439bc571e2d" ></video>
+</p>  
+
+(source: `assets/img/layout-e199c09c.mp4`)  
 
 上面影片，可以看到 layout instability (layout shift)
 
@@ -922,7 +960,6 @@ img {
 - [調整過後的影片](https://jakearchibald.com/c/layout-fixed-380ed79d.mp4)
 
 ### 其他問題1: Delay to main image
-![](https://jakearchibald.com/c/williams-waterfall-7d9ecf17.png)
 
 主要的圖片，出現在第 20 行
 - 它在另一台 server 上，connection delay 下載它的速度
@@ -953,22 +990,30 @@ Jake 找高手幫忙研究（從事 Chrome 裡面 networking 的人），關於 
 - desktop and mobile 都用了同樣大小
 - 用 responsive 來為不同 platform 選擇更適合的 image
 
-![](https://jakearchibald.com/c/banner-eccb4ae3.avif)
+![text](assets/img/banner-7229c930.avif)  
 
 大小
 - Original JPEG (146 kB)
-  - https://jakearchibald.com/c/banner-b346bc11.jpg
 - Optimised JPEG (19.6 kB)
 - WebP (11.5 kB)
 - AVIF (8.5 kB)
 
 
+--------------------------------
+
 ## Case5: Aston Martin
 - https://www.astonmartinf1.com/en-GB/
-- [測試影片: https://jakearchibald.com/c/aston-52c1f62a.mp4](https://jakearchibald.com/c/aston-52c1f62a.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/aston-film-dfcf98b4.avif)  
+
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/d53e3b8b-c4e2-49e5-92b9-8b2db96f536c" ></video>
+</p>  
+
+(影片來源: [assets/img/aston-f3b7081b.mp4](assets/img/aston-f3b7081b.mp4))  
+
+載入的縮時圖(開新頁面比較容易看):    
+![text](assets/img/aston-film-15e3eac6.avif)  
 
 首先，有一點另外提出來非常好，在 `<body>` 的底部看到這行
 ```html
@@ -989,22 +1034,20 @@ Jake 找高手幫忙研究（從事 Chrome 裡面 networking 的人），關於 
 - 0.5 second delay to main image caused by poor image compression.
 
 ### 主要問題: Font foundry CSS
-![](https://jakearchibald.com/c/aston-waterfall-a5eaaaa9.png)  
+![alt text](assets/img/aston-waterfall-69345992.png)  
 
 第 2, 3, 6, 12 行都有額外的 connection  
 第 3 行 CSS 是屬於這網站的，應該要拉到同台 server，避免多一條 connection  
 
 第 12 行，這條這麼晚，是因為它是由其他 blocking resource 所發動的  
-![](https://jakearchibald.com/c/initiator-39f4e6a1.png)  
+![alt text](assets/img/initiator-2cc821cb.png)  
 
 (`-Infinity` 應該是指行數，但這邊顯示顯示錯誤。這是 chromium 的 bug，這邊可以不用理)    
 
 這邊一樣可以用 load async 的方式改善 --> [Load cross-origin font CSS async](#Load-cross-origin-font-CSS-async)
 
 這邊還有其他細節  
-![](https://jakearchibald.com/c/aston-waterfall-a5eaaaa9.png)  
-
-第 6 行 `hello.myfonts.net` CSS 跟第 3 行是同時發生  
+- 第 6 行 `hello.myfonts.net` CSS 跟第 3 行是同時發生  
 - 第 3 行應該是比第 6 行更為重要的東西才對，但這邊卻同時開始
 
 這是因為 developer 注意到這些資源在其他 server，而且有想辦法改善這問題  
@@ -1021,11 +1064,11 @@ Jake 找高手幫忙研究（從事 Chrome 裡面 networking 的人），關於 
 這邊也用了 `preconnect`
 - 當不清楚重要支援的完整 URL 時，就能用 `preconnect`
 
-![](https://jakearchibald.com/c/aston-waterfall-2-74384d9e.png)  
+![alt text](assets/img/aston-waterfall-2-fde5df0a.png)  
 
 第 59 行就是 `preconnect`，然後後面要下載資源時，就不需等待 connection  
 
-![](https://jakearchibald.com/c/aston-waterfall-a5eaaaa9.png)
+![alt text](assets/img/aston-waterfall-69345992.png)   
 
 上面，第 12 行發生的很晚，但我們看到 `<head />`
 ```html
@@ -1064,12 +1107,11 @@ Jake 找高手幫忙研究（從事 Chrome 裡面 networking 的人），關於 
 - 這會 credentialed request
 - 上面還是會有 preconnect，但其實沒用到 （第一張圖第 9 行）
 
-DevTools 不會顯示 extra connection，Jake 進一步用 `chrome://net-export/` 來 debug  
+DevTools 不會顯示 extra connection
+- Jake 進一步用 `chrome://net-export/` 來 debug  
+- `chrome://net-export/`，有更詳細的 network 紀錄
 
-`chrome://net-export/`
-- 有更詳細的 network 紀錄
-
-![](https://jakearchibald.com/c/netlog-4e4b269a.avif)  
+![text](assets/img/netlog-9cd69909.avif)  
 
 第 2691 行，請求建立 `p.typekit.net` connection  
 第 2695 行，socket
@@ -1085,11 +1127,10 @@ DevTools 不會顯示 extra connection，Jake 進一步用 `chrome://net-export/
 ### 其他問題: Main image compression
 Aston Martin 的 image 基本上都處理得很好，除了主要這張
 
-![](https://jakearchibald.com/c/vettel-c05e21e6.avif)
+![text](assets/img/vettel-55c7fe8b.avif)  
 
 大小
 - Original JPEG (240 kB)
-  - https://jakearchibald.com/c/vettel-b07176b5.jpg
 - Optimised JPEG (57.6 kB)
 - WebP (24.6 kB)
 - AVIF (13.2 kB) (上面那張的版本)
@@ -1097,13 +1138,21 @@ Aston Martin 的 image 基本上都處理得很好，除了主要這張
 看得出來，壓縮過後圖片變的稍微 smoothing 了，但網站上，這張圖上面還有其他 text 蓋在上面  
 UX 角度來看，User 對這張圖的感受一定沒有什麼差別  
 
+--------------------  
 
 ## Case6: Ferrari
 - https://www.ferrari.com/en-EN/formula1
-- [測試影片: https://jakearchibald.com/c/ferrari-98d7bbea.mp4](https://jakearchibald.com/c/ferrari-98d7bbea.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/ferrari-film-9c0f8ad2.avif)  
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/7ff40176-73d5-41e5-b1d1-5536d1d9e8ac" ></video>
+</p>  
+
+(影片來源: [assets/img/ferrari-dfd9455b.mp4](assets/img/ferrari-dfd9455b.mp4))  
+
+
+載入的縮時圖(開新頁面比較容易看):   
+![text](assets/img/ferrari-film-f1998770.avif)  
 
 有機會改善的地方
 - 25 second delay to content render caused by manually-blocking JavaScript
@@ -1115,7 +1164,7 @@ UX 角度來看，User 對這張圖的感受一定沒有什麼差別
 
 
 ### 主要問題1: Manually-blocking JavaScript
-![](https://jakearchibald.com/c/waterfall-1-830ba17e.png)  
+![alt text](assets/img/waterfall-1-b9885345.png)  
 
 4 ~ 26 行，全部都是 JS，這看起來怪怪的
 - 但，JS 並不一定全是問題
@@ -1130,19 +1179,18 @@ UX 角度來看，User 對這張圖的感受一定沒有什麼差別
 - 但 script 太大了、`gzip` 過後還有 1.2MB，解壓後為 6MB
 - 對 old device 來說，parse 這些 JS 花很多時間
 
-![](https://jakearchibald.com/c/waterfall-2-f8f6975d.png)
+![alt text](assets/img/waterfall-2-7f234fb1.png)  
 
 綠色線代表 CPU 正在使用中，載入後，這大概鎖住了 main thread 5 秒  
 - coverage 上來看，有 75% 都沒用到
 
-![](https://jakearchibald.com/c/coverage-a50f9273.png)  
+![alt text](assets/img/coverage-27cbee08.png)  
 
 這邊沒有輕鬆的解法
 - 大概必須要把 script 拆小。理想狀況就是每段 function 有獨立的入口
 - 讓每頁在需要的時候才載入所需要的 script
 
 ### 主要問題2: Render-blocking JavaScript
-![](https://jakearchibald.com/c/waterfall-1-830ba17e.png)  
 
 22 ~ 25 行為  render-blocking scripts，都是在 `<head>` 裡面的
 - 而且都在不同的 server 上
@@ -1155,7 +1203,6 @@ UX 角度來看，User 對這張圖的感受一定沒有什麼差別
 
 
 ### 主要問題3: Unused render-blocking CSS
-![](https://jakearchibald.com/c/waterfall-1-830ba17e.png)  
 
 第三行的 CSS 看起來很大
 - 200kb、unzip 後約 2.1MB (跟 JS 相比，CSS 比較沒這麼負擔，但還是需 CPU 去處理)
@@ -1163,8 +1210,8 @@ UX 角度來看，User 對這張圖的感受一定沒有什麼差別
 第 10 秒的時候，大約 delay 了 1s  
 97% 的 CSS 幾乎沒用到  
 
-![](https://jakearchibald.com/c/waterfall-2-f8f6975d.png)  
-![](https://jakearchibald.com/c/coverage-a50f9273.png)  
+![alt text](assets/img/waterfall-2-7f234fb1.png)  
+![alt text](assets/img/coverage-27cbee08.png)  
 
 這邊也沒有 quick fix
 - CSS 需要拆分，把最一開始所需要的 CSS 拿出來用
@@ -1174,18 +1221,17 @@ UX 角度來看，User 對這張圖的感受一定沒有什麼差別
 就 image compress 來說，目前為止 Ferrari 是做得最好的  
 
 主要的 image  
-![](https://jakearchibald.com/c/1-0476f785.avif)  
+![text](assets/img/1-064825a9.avif)  
 
 大小
 - Original JPEG (34.2 kB)
-  - https://jakearchibald.com/c/1-afa3e826.jpg
 - AVIF (7.52 kB)
 
 AVIF 沒有省非常多
 - 圖片在文字後面，所以這張圖片品質變稍稍為差一點，UX 影響不大
 
 其他圖片  
-![](https://jakearchibald.com/c/2-8cb56a87.avif)
+![text](assets/img/2-043f097b.avif)  
 
 大小
 - Original JPEG (127 kB)
@@ -1197,13 +1243,21 @@ Ferrari 網站上的很多圖都沒有針對 2x screen 進行優化
 - 這對上一張圖片沒有那麼重要，因為它在文字後面
 - 但上面的一張可以做一些清晰度。上面的原圖是 480px width，但優化後的版本是 720px（取自其他的來源），所以在這種情況下優化後的 resolution 也更高
 
+-------------------  
+
 ## Case7: Haas
 - https://www.haasf1team.com/
-- [測試影片: https://jakearchibald.com/c/haas-8808fee7.mp4](https://jakearchibald.com/c/haas-8808fee7.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/film-6503cda5.avif)  
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/c338b6ae-b2eb-491e-bb1d-e17fa38b94e3" ></video>
+</p>  
 
+(影片來源: [haas-3695ed59.mp4](assets/img/haas-3695ed59.mp4))  
+
+
+載入的縮時圖(開新頁面比較容易看):  
+![text](assets/img/film-389faa4d.avif)  
 
 有機會的改善
 - 5+ second delay to content render caused by a CSS font tracker.
@@ -1213,7 +1267,7 @@ Ferrari 網站上的很多圖都沒有針對 2x screen 進行優化
 - 10+ seconds of layout instability caused by JavaScript.
 
 ### 多個小檔案 vs 一個整包的大檔案
-![](https://jakearchibald.com/c/waterfall-1-efb31771.png)  
+![alt text](assets/img/waterfall-1-d70ace9b.png)  
 
 這邊有很多 CSS
 - 這是問題嗎？因為 `HTTP/2` 能 parallel request，所以沒問關係
@@ -1236,10 +1290,10 @@ Jake 自己弄幾個版本出來，調整成除了 CSS 以外，沒有其他 ren
 - One with the CSS inlined as a `<style>` in the `<head>`
 
 分別用 `WebPageTest` 測試 9 次來看看 first-render  
-![](https://jakearchibald.com/c/css-compare-7d9ba5dc.svg)  
+![alt text](assets/img/css-compare-c2a13d8c.svg)  
 
-結合成一個檔案大約省 0.5s。另外這裡有些 4s 的 case，是因為  
-![](https://jakearchibald.com/c/waterfall-2-a06aa64c.png)  
+結合成一個檔案大約省 0.5s。另外這裡有些 4s 的 case，是因為 
+![alt text](assets/img/waterfall-2-6f65bd79.png)  
 
 主要的 image 搶先在 CSS 前，搶走了 CSS 的頻寬
 - optimising image 可以改善的問題
@@ -1247,9 +1301,8 @@ Jake 自己弄幾個版本出來，調整成除了 CSS 以外，沒有其他 ren
   - 但，inline 的話，就要確保是這個頁面所需的，不要 inline 不需要的資源進來
 
 ### 主要問題: Layout shifts as interactivity lands (當可以互動時，發生了 layout shifts)
-![](https://jakearchibald.com/c/film-6503cda5.avif)  
 
-整頁載入完畢後，有一個 carousel 在上面
+整頁載入完畢後，有一個 carousel 在上面(縮時圖)
 - 9 ~ 14 秒時，能看到整頁的 links
   - 這是一個合理的 `no-JavaScript` UX
   - 但，這不是一個好的 `before-JavaScript` UX
@@ -1300,11 +1353,10 @@ Haas 的 carousel，有合理的 no-JavaScript experience
 
 ### 其他問題: Image optimisation
 頁面上主要的這張 image  
-![](https://jakearchibald.com/c/1-0b66944a.avif)  
+![text](assets/img/1-f3f19dc7.avif)  
 
 大小
 - Original JPEG (82.9 kB)
-  - https://jakearchibald.com/c/1-4035bf75.jpg
 - Optimised JPEG (18.5 kB)
 - WebP (13.2 kB)
 - AVIF (8.12 kB)
@@ -1312,12 +1364,23 @@ Haas 的 carousel，有合理的 no-JavaScript experience
 原圖是 1440 pixels，對 mobile，這邊 resize 到 720 已經很夠了
 
 
+
+------------------------
+
 ## Case8: McLaren
 - https://www.mclaren.com/racing/
-- [測試影片: https://jakearchibald.com/c/mclaren-8a93d89c.mp4](https://jakearchibald.com/c/mclaren-8a93d89c.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/film-15da1a77.avif)  
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/4afe3243-7af9-4ba0-b52a-927e62c85665" ></video>
+</p>  
+
+(影片來源: [assets/img/mclaren-3743ce5b.mp4](assets/img/mclaren-3743ce5b.mp4))  
+
+
+
+載入的縮時圖(開新頁面比較容易看):  
+![text](assets/img/film-4a762a19.avif)  
 
 有機會的改善
 - 14 second delay to first render caused by font CSS. This is kinda different to other sites I've looked at in this series
@@ -1328,20 +1391,22 @@ Haas 的 carousel，有合理的 no-JavaScript experience
 - Large delay to small icons due to a sprite sheet
 
 ### 主要問題1: Font CSS loading
-![](https://jakearchibald.com/c/waterfall-1-04187b06.png)
+![alt text](assets/img/waterfall-1-38f54a60.png)  
 
-第 2 行，因為是在別的 server，這是  blocking request  
-而且它還 redirect 到另一台 server (第 6 行)，這邊又浪費另一次 build connection  
-  - 能有 `<link rel="preconnect">` 提早連線
+第 2 行，因為是在別的 server，這是 blocking request  
+- 而且它還 redirect 到另一台 server (第 6 行)，這邊又浪費另一次 build connection  
+- 能有 `<link rel="preconnect">` 提早連線
   
   
-第六行還有其他問題
+第 6 行還有其他問題
 - 檔案為 `140kB`，而且全部是 `base64-encoded` 的 font 資料
 - base64 會讓檔案更大
 - 更糟的是，這邊用 `HTTP/1.1`，而且 uncompressed
-  - 雖然 `WOFF2` 的壓縮效果不好，但 base64 的壓縮效果不錯
+- 雖然 `WOFF2` 的 Brotli 壓縮效果不好，但 base64 的 Brotli 壓縮效果不錯
+  - 它是一個有限的字元集。 Brotli 可以將 response 減少近 30%  
+  
 
-有幾種不同 load web font 的模式
+但這並不是主要問題。有幾種不同 load web font 的模式  
 
 `swap`: 當 web font 載入後，立可替換文字
 - 不會 blocking text
@@ -1392,12 +1457,10 @@ McLaren，就沒有 subset、base64
 
 
 ### 主要問題2: JavaScript delay
-![](https://jakearchibald.com/c/film-15da1a77.avif)  
-
-雖然第 19 秒的時候開始 render
+縮時圖，雖然第 19 秒的時候開始 render
 - 但主要的 content 是第 26 秒，被 JS 載入的
 
-![](https://jakearchibald.com/c/waterfall-1-04187b06.png)  
+![alt text](assets/img/waterfall-1-38f54a60.png)  
 
 第 3 行是在 `<head>` 裡的 JS
 - JS 是 parser-blocking script  
@@ -1413,7 +1476,7 @@ McLaren，就沒有 subset、base64
 - chrome 知道，第 6 行的 CSS 正在 blocking，所以避免同時下載太多其他資源
 
 不過，這些 JS 也是在 CSS 這附近時開始下載的，為什麼花這麼久，才在畫面上顯示內容呢？  
-![](https://jakearchibald.com/c/waterfall-2-d93423ea.png)  
+![alt text](assets/img/waterfall-2-4c05d01f.png)  
 
 第 55 ~ 57 行，也是在 `<body>` 的 parser blocking scripts  
 不過，他們用這了樣的方法  
@@ -1437,27 +1500,29 @@ McLaren 的 script 等待 `DOMContentLoaded` 才去做事情
 - 避免透過 JS 來 render 主要的 content
 
 ### 主要問題3: Image priorities and optimisation
-![](https://jakearchibald.com/c/film-15da1a77.avif)  
 
-一直到 39 秒時，主要的 image 才出來
 
-![](https://jakearchibald.com/c/waterfall-1-04187b06.png)  
+縮時圖一直到 39 秒時，主要的 image 才出來  
+- waterfall 到第 11 行下載了第一張圖
+  - 這圖可以在小一點
 
-第 11 行下載了第一張圖
-- 這圖可以在小一點
-
-![](https://jakearchibald.com/c/1-42c1fbcf.avif)  
+![text](assets/img/1-e1a1c399.avif)  
 
 大小
 - Original JPEG (1.21 MB)
-  - https://jakearchibald.com/c/1-41a79929.jpg
 - Optimised JPEG (6.58 kB)
 - AVIF (2.88 kB)
 
-而且這張根本是不主要的圖片 -> [這張圖在哪個位置？(影片)](https://jakearchibald.com/c/image-2044e731.mp4)
+而且這張根本是不主要的圖片，這張圖在哪個位置？  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/3061908f-f5c7-4dd9-851a-f21395e339ec" ></video>
+</p>  
+
+(source: [assets/img/image-b969b0ba.mp4](assets/img/image-b969b0ba.mp4))  
+
 
 這些圖在 menu 裡面
-- mobile device 還沒辦法看到它們（需要 hover
+- mobile device 還沒辦法看到它們(需要 hover)
 - 每張都 500kb ~ 2MB ...
 
 
@@ -1479,7 +1544,7 @@ McLaren 的 script 等待 `DOMContentLoaded` 才去做事情
 
 
 ### 其他問題: Sprite sheets are bad now
-![](https://jakearchibald.com/c/2-2bbd23e8.webp)
+![alt text](assets/img/2-197e02d4.webp)  
 
 大小
 - Original PNG (292 kB)
@@ -1488,20 +1553,31 @@ McLaren 的 script 等待 `DOMContentLoaded` 才去做事情
 
 以前，因為 `HTTP/1.1` 有 parallel request limit，所以用 sprite 把多張圖綁成一張來改善這問題  
 現在 `HTTP/2` 比較沒有這問題  
-- 類似 [Case7: Haas](#Case7:-Haas) ，多個 request 的 cost 已經不大了
+- 類似 `Case7: Haas`，多個 request 的 cost 已經不大了
 - 把圖各自拆開，我們也只需要下載所需要的 image 就好，而不是整張
   - 這裡用到的這些 icon，每張通常不到 300 bytes
 
+
+-------------------------
+
 ## Case9: Google I/O event pages
 - https://events.google.com/io/session/fa14e5ee-a3e2-408c-b0fc-6a8f427411d5?lng=en
-- [測試影片: https://jakearchibald.com/c/loading-05d89af8.mp4](https://jakearchibald.com/c/loading-05d89af8.mp4)
 
-(載入的縮時圖，開新頁面比較容易看)  
-![](https://jakearchibald.com/c/film-e61a3464.avif)    
+測試影片:  
+<p align="center">
+  <video  height="250px" muted loop  autoplay loading="lazy"  src="https://github.com/flameddd/blog/assets/22259196/b693a0dc-7278-4acb-bce3-d7cc467354cb" ></video>
+</p>  
+
+(影片來源: [assets/img/loading-c284be74.mp4](assets/img/loading-c284be74.mp4))  
+
+
+
+載入的縮時圖(開新頁面比較容易看)  
+![text](assets/img/film-d10665a0.avif)  
 
 9 秒左右開始有 spinner，到 26.3 秒才開始有內容  
 
-![](https://jakearchibald.com/c/waterfall-a0650edf.png)  
+![alt text](assets/img/waterfall-5e4b7d9a.png)  
 
 Jake 說他沒參與這網站製作，所以也跟其他網站，是用同樣這些工具來研究  
 
@@ -1517,7 +1593,7 @@ page source 很空，所以問題無關是不是 render block resource
 - 這段時間 browser 的 main thread 會被佔用、browser 會被鎖定幾秒
 
 DevTools
-![](https://jakearchibald.com/c/coverage-90156c79.png)  
+![alt text](assets/img/coverage-33b0b9b1.png)  
 
 這邊顯示超果 2MB JS 有被使用，但是！這並不代表這些是必要的
 - 這網站一開始只是要顯示一些標題、內容和段落，只是簡單的 render，是不需要 2MB 的
@@ -1536,7 +1612,6 @@ source 中另外有很多不同語言的 text，這也是浪費
 最主要的問題還是是用 JS 來初始呈現內容
 - 呈現 title description 這些用不到 JS
 
-![](https://jakearchibald.com/c/waterfall-a0650edf.png)  
 
 JS 下載後，接著馬上下載 `Firebase` 的 JS (第 10 行)
 - 這些在另一台 server，所以又有 connection cost
@@ -1553,7 +1628,6 @@ Firebase JS 又去載入更多 Firebase JS（11 ~ 15 行）
 
 所以，從第 2 秒，到第 16 秒都在載 script
 
-![](https://jakearchibald.com/c/waterfall-a0650edf.png)  
 
 第 29, 30, 32, 33 行是更多的 login info 相關的 request
 - 而且還是連續呼叫
@@ -1583,7 +1657,7 @@ Firebase JS 又去載入更多 Firebase JS（11 ~ 15 行）
     - 但 Big Web Quiz 有自己的 server，因此 `I/O` 可能沒法做這點
 - 應該要先呈現未登入的狀態，然後在背景準備好 login 的資訊，等到一切好了之後，才找時間點更新畫面
 
-![](https://jakearchibald.com/c/waterfall-a0650edf.png)  
+
 
 第 6 行是 sprite sheets，也是不好  
 - 這邊，只有看到使用 hamburger icon 而已，下載了 50kb，只用 125bytes
