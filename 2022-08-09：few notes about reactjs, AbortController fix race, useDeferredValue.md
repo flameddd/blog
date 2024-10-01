@@ -47,6 +47,16 @@ useEffect(() => {
 ```
 
 
+### 20240724 update:  
+看到有更近一步完善的寫如果要在 useEffect 裡面做 fetch, make sure to:
+- abort the fetch on timeout
+- abort the fetch on unmount
+- allow user to abort the fetch manually
+
+https://www.nico.fyi/blog/cancel-fetch-js-correctly
+
+---------------------
+
 `useDeferredValue` 跟 `useTransition` 的目的非常相似  
 - `useDeferredValue` 偏向用在你比較沒辦法控制如何取得 value 的時候，例如 call 第三方 lib
 - 兩者都是用來處理有時候要用 `debounce` 來避免 UI 太快 or 過度更新的狀況

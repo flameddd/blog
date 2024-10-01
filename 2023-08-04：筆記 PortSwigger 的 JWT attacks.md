@@ -21,14 +21,13 @@ Burp Suite 的 JWT 相關功能
 - server 需要的所有資料都存儲在 JWT 本身的 client side
 - 這使 JWT 成為使用者需要與多個 backend server 進行無縫互動的高度分佈式網站的首選
 
-**JWT format:**  
-A JWT consists of 3 parts: a header, a payload, and a signature. These are each separated by a dot, as shown in the following example:
+
 
 
 
 **JWT 格式:**  
-- JWT 由三部分組成：header, payload 和 signature
-- 「點」隔開每個部分
+- JWT 由三部分組成：`header`、`payload` 和 `signature`
+- 用「點」隔開每個部分
 
 如下:  
 ```
@@ -38,12 +37,12 @@ eyJraWQiOiI5MTM2ZGRiMy1jYjBhLTRhMTktYTA3ZS1lYWRmNWE0NGM4YjUiLCJhbGciOiJSUzI1NiJ9
 
 
 
-header 和 payload 部分只是 `base64url` encode 的 JSON
-- header 包含有關 token 本身的 metadata
-- payload 則包含有關使用者的實際 `claims`
+`header` 和 `payload` 部分只是 `base64url` encode 的 JSON
+- `header` 包含有關 token 本身的 metadata
+- `payload` 則包含有關使用者的實際 `claims`
 
 
-例如，可以 decode 上面 token 的 payload，以顯示以下 `claims`: 
+例如，可以 decode 上面 token 的 `payload`，以顯示以下 `claims`: 
 ```json
 {
   "iss": "portswigger",
@@ -63,12 +62,12 @@ header 和 payload 部分只是 `base64url` encode 的 JSON
 - 因此，JWT 的安全性都在**很大程度上依賴於加密簽名**
 
 **JWT 簽名:**
-- 簽發 token 的 server 通常通過對 header 和 payload 進行 hashing 來生成簽名
+- 簽發 token 的 server 通常通過對 `header` 和 `payload` 進行 hashing 來生成簽名
 - 某些情況下，還會對 hash 進行加密
 - 無論採用哪種方式，過程都需要 `secret signing key`
 - 這種機制為 server 提供方法，以驗證 token 資料是自己所簽發，沒有被篡改過:
-  - 由於簽名直接來源於 token 的其他部分，因此更改 header 或 payload 的任一個字都會導致簽名不匹配
-  - 如果不知道 server 的 `secret signing key`，就不可能為給 header 或 payload 產生正確的簽名
+  - 由於簽名直接來源於 token 的其他部分，因此更改 `header` 或 `payload` 的任一個字都會導致簽名不匹配
+  - 如果不知道 server 的 `secret signing key`，就不可能為給 `header` 或 `payload` 產生正確的簽名
 
 
 **JWT vs JWS vs JWE**:  
@@ -239,9 +238,7 @@ Hashcat
 這些使用者可控參數分別告訴接收方 server 在驗證簽名時使用哪個 key，如何利用這些參數 inject 使用自己的任意 key 而非 server key 簽名的修改過的 JWT ?
 
 **通過 `jwk` 參數 *Injecting self-signed JWTs:**  
-The JSON Web Signature (JWS) specification describes an optional `jwk` header parameter, which servers can use to embed their public key directly within the token itself in JWK format.
-
-
+ 
 JSON Web Signature (JWS) 規範描述了一個可選的 `jwk` header 參數
 - server 可使用該參數將自己的公鑰直接嵌入 JWK 格式的 token 中
 
@@ -320,10 +317,7 @@ JWK Set 是個 JSON object
 - SSRF 主題中介紹了[範例](https://portswigger.net/web-security/ssrf#ssrf-with-whitelist-based-input-filters)
 
 
-**Injecting self-signed JWTs via the kid parameter**:  
-Servers may use several cryptographic keys for signing different kinds of data, not just JWTs. For this reason, the header of a JWT may contain a `kid` (Key ID) parameter, which helps the server identify which key to use when verifying the signature.
-
-
+ 
 **通過 `kid` 參數 injecting self-signed JWTs:**：  
 server 可能會使用多個加密密鑰來簽署不同類型的資料，而不僅僅是 JWT
 - 因此，JWT header 可能包含一個 `kid` (Key ID) 參數，用於幫助 server 識別驗證簽名時要使用的密鑰

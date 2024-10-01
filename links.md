@@ -303,3 +303,22 @@ Josh 的 Gatsby dark mode 實作
 ## 一些測試 web resource waterfall 的工具
 - https://github.com/andydavies/waterfall
 - https://github.com/micmro/performance-bookmarklet
+
+
+## React 做 library 分類 code 支援 RSC or client component
+- https://innei.in/posts/tech/exploring-environment-isolation-and-practice-of-react-server-component-and-react-client-component
+
+
+## UUID 不同版本的使用時機點
+- https://www.ntietz.com/blog/til-uses-for-the-different-uuid-versions/
+
+## BBC 準則，怎麼為圖片下 alt
+- https://www.bbc.co.uk/gel/guidelines/category/how-to
+
+
+## TutorialKit
+- 建立互動式學習的文件網站
+- https://tutorialkit.dev/guides/
+
+## 可以做 code animation 的 web
+- https://code-prez.vercel.app/

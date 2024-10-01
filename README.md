@@ -1,4 +1,6 @@
 # Blog
+- 2024-07-24：[筆記 NodeJS Asynchronous flow control Document](<2024-07-24：筆記 NodeJS Asynchronous flow control Document.md>)
+- 2024-07-24：[筆記 Addy Osmani 的 How to build an effective technical strategy](<2024-07-24：筆記 Addy Osmani 的 How to build an effective technical strategy.md>)
 - 2024-04-13：[筆記 Dan Cătălin Burzo 從 HTML 來看 responsive images](<2024-04-13：筆記 Dan Cătălin Burzo 從 HTML 來看 responsive images.md>)
 - 2024-03-30：[筆記 Joyee Cheung 談 V8 的 Memory leak regression testing](<2024-03-30：筆記 Joyee Cheung 談 V8 的 Memory leak regression testing.md>)
 - 2024-03-24：[筆記 Addy Osmani 談如何用  Puppeteer 來測 Web performance](<2024-03-24：筆記 Addy Osmani 談如何用  Puppeteer 來測 Web performance.md>)
