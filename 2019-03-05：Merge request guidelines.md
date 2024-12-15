@@ -15,30 +15,26 @@
 8. 提 MR 到 master branch (MR 至少要有一位 approval、可以多位。)
 9. MR title 應該要描述你想要改的東西
 10. MR description 寫出改的動機、跟解決方案。
-  - 如果你是貢獻 code 的人，用 description 裡面提供的方案來寫。
-  - 如果你貢獻 documentation，那選用 `Choose a template(gitlab 的功能)`
-  - 提及 MR 要解決的 issue(s)。（gitlab 用`Solves #XXX` or `Closes #XXX` 會自動 mapping 跟 close issue）
-
+    - 如果你是貢獻 code 的人，用 description 裡面提供的方案來寫。
+    - 如果你貢獻 documentation，那選用 `Choose a template(gitlab 的功能)`
+    - 提及 MR 要解決的 issue(s)。（gitlab 用`Solves #XXX` or `Closes #XXX` 會自動 mapping 跟 close issue）
 11. 設相關的 `milestone` 跟 `labels`（如果你有權利）
 12. MR 改動到 UI，那要附 `Before and After screenshots`
 13. MR 改動到 CSS 那要列出影響的 page
-> grep css-class ./app -R
+    - `> grep css-class ./app -R`
 14. 準備回答問題（包含不適當的 feedback）。討論完的問題就 resolve 掉。
 15. 如果 MR code 有關
-  - 執行 shell commands
-  - 讀 or 開檔案
-  - 處理硬碟相關檔案路徑等等  
-
-確保這些有 follow `shell command guidelines`  
-16. 如果 code 有在硬碟上 `creates new files`，follow `shared files guidelines`
-17. commit messages follow 這些指南
-  - [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-  - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+    - 執行 shell commands，讀 or 開檔案，處理硬碟相關檔案路徑等等  
+    - 確保這些有 follow `shell command guidelines`  
+16. 如果 code 有在硬碟上 `creates new files`，follow `shared files guidelines`  
+17. commit messages follow 這些指南  
+    - [A Note About Git Commit Messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+    - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 18. 如果 MR 包含一or多個 migrations，確保code review 前有執行所有的 migrations 在 fresh database。當 review 改很大的話，重新測一次。
 19. 複雜的 migrations 要寫 tests。
 20. MR 一定要遵守 [(gitlab)merge request performance guidelines](https://docs.gitlab.com/ee/development/merge_request_performance_guidelines.html).
 21. 用 `Capybara` or `PhantomJS` 測試的話，參考這篇文章寫出 reliable asynchronous tests
-  - https://thoughtbot.com/blog/write-reliable-asynchronous-integration-tests-with-capybara
+    - https://thoughtbot.com/blog/write-reliable-asynchronous-integration-tests-with-capybara
 22. 如果 MR 改動，你的 intall 方式有特別步驟的話，要寫清楚。
 23. 如果 MR 改動，你的 upgrade 方式有特別步驟的話，要寫清楚。
 
