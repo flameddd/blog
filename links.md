@@ -322,3 +322,6 @@ Josh 的 Gatsby dark mode 實作
 
 ## 可以做 code animation 的 web
 - https://code-prez.vercel.app/
+
+## Google chrome dev 的 scroll base animation 教學
+- https://www.youtube.com/playlist?list=PLNYkxOF6rcICM3ttukz9x5LCNOHfWBVnn

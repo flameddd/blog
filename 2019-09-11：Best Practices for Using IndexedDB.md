@@ -154,3 +154,71 @@ IndexedDB
 
 由於 client 涉及控制範圍之外的許多因素
 - 因此**行充分測試並正確處理錯誤至關重要**，即使最初看起來不太可能發生錯誤也是如此。
+
+
+-----------
+
+## 20241109 update
+看到一則 Notion 工程師的分享
+- https://news.ycombinator.com/item?id=40989990
+
+```
+(I work at Notion, but didn't build the WASM sqlite thingy)
+We've implemented this same cache using LocalStorage, IndexedDB, and SQLite. The Android & iOS apps used SQLite for this since 2020 (I built the Android version IIRC), and the desktop app used SQLite running on a native thread since 2021.
+
+We migrated away from LocalStorage for two reasons:
+
+1. LocalStorage is limited to 10mb file size. We also use LocalStorage for a bunch of less-durable state like "is this toggle open?" or "which view in this database was open last", and as our customer workspaces grew, we faced mounting errors as the record cache competed with the rest of the app for that space. We'd have a bunch of slowdowns under contention as we tried to delete keys in LocalStorage synchronously, which manifested as major UI lag. No good!
+
+- LocalStorage loves to lose writes if you're writing from multiple tabs. It's just not a reliable or trustworthy API. For a cache that doesn't matter as much, but we'd still end up with cache misses for power users for pages that should really be totally locally loadable.
+
+I implemented the IndexedDB version in 2019, to replace the earlier LocalStorage option. We used the IDB record cache in the desktop app until we switched over to native SQLite there in 2021 (https://www.notion.so/blog/faster-page-load-navigation) but we never shipped it for browser users for a few reasons:
+
+- Performance and reliability problems with IDB in browsers is hard to debug; in the native app we can trust the version of Chromium we ship and remediate issues using Electron APIs, where as in the browser wild we're at the mercy of the user-agent
+
+- Our testing in the browser showed limited performance improvements across all device categories: faster devices & scenarios were even faster with IndexedDB, but slower devices & scenarios could be even slower.
+
+The reason I'd attribute for the performance challenge is that IndexedDB pays a high tax per row written and row read. It can be fine in terms of total throughput for a cache if you have large, coarse-grained cache rows, like caching all of a document as a single object, and you update the cache infrequently.
+
+Notion's data model is tree/graph of very fine-grained records; each paragraph is its own database row. Our cache on IndexedDB would perform great for smaller workspace sizes and for a single tab, but with multiple tabs and medium-to-large workspaces, we'd hit contention in IndexedDB and get major slowdowns.
+
+We should improve our cache architecture to have another layer of cache that does whole-pages, but need to weigh the improvement/complexity there versus other performance opportunities.
+```
+
+大致翻譯如下
+
+我們用 LocalStorage, IndexedDB 和 SQLite 實現了相同的 cache
+- 從 2020 年起，Android 和 iOS 就使用 SQLite 進行快取
+- 而 Desktop app 從 2021 年起就在本機執行緒中運行 SQLite
+
+離開 LocalStorage 有兩個原因:
+1. LocalStorage 限制在 10MB 的檔案大小
+    - 我們還是用 LocalStorage 來儲一些持久性較低的狀態，例如 `這個開關是否打開？` or `這個 DB 中最後開啟的是哪個 view ?`
+    - 隨著 User 工作空間的增長，我們面臨著記錄 cache 和 application 其他部分爭奪空間的問題。在這種爭用下，我們試圖同步刪除 LocalStorage 中的 key，這導致了大量的性能下降，造成 UI lag !!
+2. 如果從多個標籤頁寫入，LocalStorage 很容易丟失寫入
+     - 這不是一個可靠的 API
+     - 對於不太重要的快取來說，這不算什麼，但我們仍然會面臨高級 User 的 cache 錯誤，而這些頁面本應可以完全的由 local 讀取
+
+2019 年，我實現了 IndexedDB 版本，來替換早期的 LocalStorage 選項
+- 我們在 Desktop application 中使用 IDB 記錄快取，直到 2021 年我們轉向本機 SQLite（https://www.notion.so/blog/faster-page-load-navigation），但我們從未將其發佈給 Browser 使用者，原因如下:
+- 在 Browser 中 debug  IDB 的性能和可靠性問題很困難
+  - 在 native desktop app 中，我們可以信任我們提供的 Chromium 版本，並使用 Electron API 解決問題
+  - 而在瀏覽器中，我們不得不依賴 user-agent
+
+我們在 browser 中的測試顯示，跨所有設備類別 performance 改進有限:
+- 在較快的設備和場景下，IndexedDB 的表現更好
+- 但在較慢的設備和場景下可能會更慢
+
+我認為性能問題的原因是
+- IndexedDB 每行寫入和讀取都需要付出很高的代價
+- 如果你的 cache 有大而粗粒度的快取，比如將整個文件作為一個對象進行快取，而且你很少更新快取，這還好
+
+Notion 的資料模型是非常細粒度的樹/圖結構
+- 每個段落都是其自己的 database row
+- 我們在 IndexedDB 上的快取在小型工作空間和單個標籤頁的情況下表現良好
+- 但在多個標籤頁和中大型工作空間中，我們會遇到 IndexedDB 的爭用，導致嚴重的性能下降
+
+
+有看到官方有一篇這個 How we sped up Notion in the browser with WASM SQLite
+- https://www.notion.so/blog/how-we-sped-up-notion-in-the-browser-with-wasm-sqlite  
+  - 簡單掃了一眼，技術非常深入的分享，如何用 Web worker 來 handle 多個 tab 來互動 SQLite
