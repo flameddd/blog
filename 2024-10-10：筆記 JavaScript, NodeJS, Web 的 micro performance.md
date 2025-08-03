@@ -29,6 +29,8 @@ Ref:
      - 這篇比較多 JavaScript micro performance 的樣字
 5. [Daniel Lemire’s blog](https://lemire.me/blog/2019/04/17/parsing-short-hexadecimal-strings-efficiently/)
     - 第 1, 2 篇的作者 `romgrk` 提到，每當他有很難的優化問題時，常常會逛到 Daniel 的 blog，這樣的話肯定有料可以挖挖
+6. [https://marvinh.dev/](https://marvinh.dev/)  
+    - Preact 作者有好幾篇文章可以看看
  
 ------------  
 ------------  
@@ -2285,4 +2287,549 @@ const result = (Math.max(x, y) << 16) | Math.min(x, y);
 
 
 
+------------  
+------------  
+------------  
 
+## Part 1: PostCSS, SVGO and many more: Speeding up the JavaScript ecosystem - one library at a time
+
+下面是這篇文章介紹的技巧  
+
+```js
+function isBlockIgnored(ruleOrDeclaration) {
+	const rule = ruleOrDeclaration.selector
+		? ruleOrDeclaration
+		: ruleOrDeclaration.parent;
+
+	return /(!\s*)?postcss-custom-properties:\s*off\b/i.test(rule.toString());
+}
+```
+
+`rrule.toString()` 這個很快就吸引了我的注意
+- 在追求效能時，將某種類型轉換(cast)成另一種的地方通常值得再檢視
+
+在這個情境裡，變數 `rule` 總是帶有自訂 `toString` 方法的 object，它從來就不是字串
+- 因此，為了能對它執行 regex，必須額外付出序列化成本
+- 根據經驗，用 regex去「**比對許多短字串**」，要比「**對少數長字串**」**慢得多**
+- 這正是一個等待被改善的絕佳候選
+
+這段程式碼令人擔憂的地方在於
+- 無論檔案是否真的有 postcss 註解，每一個輸入檔都得承擔這項成本
+- 考慮到在「長字串」上執行一次正規表達式，比在「短字串上重複多次加上序列化」成本來得便宜
+
+我們可以在 function 外層做保護
+- 若事先知道檔案中不含任何 postcss 註解，就根本不用呼叫
+
+PR: https://github.com/csstools/postcss-plugins/pull/730#issuecomment-1328120939
+
+----------
+
+下一段  
+
+```js
+function strongRound(data: number[]) {
+	for (var i = data.length; i-- > 0; ) {
+		if (data[i].toFixed(precision) != data[i]) {
+			var rounded = +data[i].toFixed(precision - 1);
+			data[i] =
+				+Math.abs(rounded - data[i]).toFixed(precision + 1) >= error
+					? +data[i].toFixed(precision)
+					: rounded;
+		}
+	}
+	return data;
+}
+```
+
+它是個用來壓縮數字的 function
+- 在 SVG 中都會有大量的數字
+- 這 function 會接收一個數字陣列，並預期直接修改陣列裡的項目
+- 仔細看，發現裡面有許多在**字串**和**數字**之間來回轉換的動作  
+
+註解
+```js
+function strongRound(data: number[]) {
+	for (var i = data.length; i-- > 0; ) {
+		// Comparison between string and number -> string is cast to number
+		if (data[i].toFixed(precision) != data[i]) {
+			// Creating a string from a number that's casted immediately
+			// back to a number
+			var rounded = +data[i].toFixed(precision - 1);
+			data[i] =
+				// Another number that is casted to a string and directly back
+				// to a number again
+				+Math.abs(rounded - data[i]).toFixed(precision + 1) >= error
+					? // This is the same value as in the if-condition before,
+					  // just casted to a number again
+					  +data[i].toFixed(precision)
+					: rounded;
+		}
+	}
+	return data;
+}
+```
+
+
+四捨五入只要一點點數學運算就能搞定，完全不用把數字轉成字串
+- 一般來說，大部分的優化都是要盡量以數字方式表達
+- 原因很簡單，CPU 處理數字超級快
+- 只要做些微調，就能確保始終留在數字，徹底避免任何字串轉換
+
+```js
+// Does the same as `Number.prototype.toFixed` but without casting
+// the return value to a string.
+function toFixed(num, precision) {
+	const pow = 10 ** precision;
+	return Math.round(num * pow) / pow;
+}
+
+// Rewritten to get rid of all the string casting and call our own
+// toFixed() function instead.
+function strongRound(data: number[]) {
+	for (let i = data.length; i-- > 0; ) {
+		const fixed = toFixed(data[i], precision);
+		// Look ma, we can now use a strict equality comparison!
+		if (fixed !== data[i]) {
+			const rounded = toFixed(data[i], precision - 1);
+			data[i] =
+				toFixed(Math.abs(rounded - data[i]), precision + 1) >= error
+					? fixed // We can now reuse the earlier value here
+					: rounded;
+		}
+	}
+	return data;
+}
+```
+
+------  
+
+下一段  
+
+```js
+const stringifyNumber = (number: number, precision: number) => {
+	// ...snip
+
+	// remove zero whole from decimal number
+	return number.toString().replace(/^0\./, ".").replace(/^-0\./, "-.");
+};
+```
+
+上面
+- 先把數字轉成字串，然後對它套用正規表達式
+- 我們知道，數字不可能同時滿足 `n > 0 && n < 1 (0 和 1 之間)` 和 `n > -1 && n < 0(-1 和 0 之間)`的條件
+- 由此可推斷，絕對不會同時命中兩個 regex
+- 至少有一次 `.replace` 呼叫是白費
+
+可以手動區分這些情況來優化
+- 只有當確定數字有前導 0 時，才執行替換邏輯
+- 這些數字檢查比執行 regex 搜尋更快
+
+```js
+const stringifyNumber = (number: number, precision: number) => {
+	// ...snip
+
+	// remove zero whole from decimal number
+	const strNum = number.toString();
+	// Use simple number checks
+	if (0 < number && number < 1) {
+		return strNum.replace(/^0\./, ".");
+	} else if (-1 < number && number < 0) {
+		return strNum.replace(/^-0\./, "-.");
+	}
+	return strNum;
+};
+```
+
+更進一步，完全移除 regex 搜尋
+- 因為我們已經百分之百確定字串中 prefix 0 的位置，因此可以直接操作字串  
+
+```js
+const stringifyNumber = (number: number, precision: number) => {
+	// ...snip
+
+	// remove zero whole from decimal number
+	const strNum = number.toString();
+	if (0 < num && num < 1) {
+		// Plain string processing is all we need
+		return strNum.slice(1);
+	} else if (-1 < num && num < 0) {
+		// Plain string processing is all we need
+		return "-" + strNum.slice(2);
+	}
+	return strNum;
+};
+```
+
+-----
+
+下一段  
+
+有一個叫 monkeys 的 function
+- 光是名稱就讓我感到好奇
+- 在追蹤過程中，看到它在自己內部被多次呼叫，這強烈暗示了某種遞迴正在進行。它通常用來遍歷樹狀結構的資料
+- 每當某種遍歷被使用，就有可能落在程式碼的 hot path 中，以我的經驗，這是一個相當可靠的經驗法則
+
+```js
+function perItem(data, info, plugin, params, reverse) {
+	function monkeys(items) {
+		items.children = items.children.filter(function (item) {
+			// reverse pass
+			if (reverse && item.children) {
+				monkeys(item);
+			}
+			// main filter
+			let kept = true;
+			if (plugin.active) {
+				kept = plugin.fn(item, params, info) !== false;
+			}
+			// direct pass
+			if (!reverse && item.children) {
+				monkeys(item);
+			}
+			return kept;
+		});
+		return items;
+	}
+	return monkeys(data);
+}
+```  
+
+在這裡，有個 function 在其 function 內定義並建立了另一個 function
+- 然後再度呼叫這個內部 function 。如果要猜，大概是想省掉重複傳遞所有參數的麻煩
+- 事實上，這種在 function 內部產生的 function 就很難被優化
+
+```js
+function perItem(items, info, plugin, params, reverse) {
+	items.children = items.children.filter(function (item) {
+		// reverse pass
+		if (reverse && item.children) {
+			perItem(item, info, plugin, params, reverse);
+		}
+		// main filter
+		let kept = true;
+		if (plugin.active) {
+			kept = plugin.fn(item, params, info) !== false;
+		}
+		// direct pass
+		if (!reverse && item.children) {
+			perItem(item, info, plugin, params, reverse);
+		}
+		return kept;
+	});
+	return items;
+}
+```
+
+可以透過明確地傳遞所有參數來去除內部 function
+- 這項變動的效益雖然不大，但總共又節省了約 0.8 秒(大量呼叫的結果)
+
+
+------  
+
+要小心 `for ... of` 轉譯  
+- `for ... of` 很多時候都是比較慢的那種 loop  
+
+
+
+
+------------  
+------------  
+------------  
+
+## Part 2: Speeding up the JavaScript ecosystem - module resolution
+
+下面是這篇文章的內容
+
+作者持續追蹤某個經常被呼叫的部分，發現
+- 最耗時的部分竟然花在 `captureLargerStackTrace`，這是 Node.js 內部用來將 stack trace 附加到 Error object的 function 
+- 既然兩個任務都已成功執行，且沒有任何 throw Error 的跡象，這就顯得有些異常
+
+最後追查到一段
+```js
+function isFile(file) {
+	try {
+		const stat = fs.statSync(file);
+		return stat.isFile() || stat.isFIFO();
+	} catch (err) {
+		if (err.code === "ENOENT" || err.code === "ENOTDIR") {
+			return false;
+		}
+		throw err;
+	}
+}
+```
+
+乍看之下，function 看似無害，卻仍出現在追蹤記錄中
+- 明顯地，function 忽略了某些錯誤情況，直接回傳 false 而非 throw Error
+- `ENOENT` 與 `ENOTDIR` 這都代表 path file 不存在
+- 也許這正是觀察到的 perf cost？畢竟我們在此會立即忽略那些錯誤
+
+`fs.statSync` 支援 `throwIfNoEntry` option
+- 當 no file system entry 時，可以避免拋出錯誤，改為回傳 `undefined`
+
+```js
+function isFile(file) {
+	const stat = fs.statSync(file, { throwIfNoEntry: false });
+	return stat !== undefined && (stat.isFile() || stat.isFIFO());
+}
+```
+
+這篇的其他內容偏向觀念，沒有給出非常具體的範例  
+
+
+------------  
+------------  
+------------  
+
+## Part 3: Speeding up the JavaScript ecosystem - eslint
+
+作者開始探索 eslint
+- 用 nodejs 的 `--cpu-prof` 產生 cpuprofile  檔案
+- 用 [speedscope](https://www.speedscope.app/) 看結果  
+
+我自己測試產生的
+- [CPU.20250729.232809.54830.0.001.cpuprofile](<./assets/files/CPU.20250729.232809.54830.0.001.cpuprofile>)  
+- vscode 能開這個檔案，看來是個常見的檔案格式  
+
+有個特別的 `BackwardTokenCommentCursor`
+- 它是所有中最大的區塊
+- 第一步，新增了一個簡單的計數器，每當該 class 被實例化時遞增
+- 總計來說，這 class 被 construc 超過兩千萬次
+- 這數量相當驚人。任何實例化的 object 或 class 都會佔用記憶體
+  - 這些記憶體之後需要被清理。GC 總共花了 2.43 秒。這並不理想
+
+當建立該 class 的新實例時，它會呼叫兩個 function 
+- 兩者看起來都會觸發搜尋。不過，若不了解它們的具體做法，可以先排除第一個，因為它不包含任何形式的迴圈
+- 根據經驗，**迴圈通常是性能問題的首要嫌疑**，因此通常從這裡開始調查
+
+第二個 function `utils.search()` 則包含一個迴圈
+
+```js
+exports.search = function search(tokens, location) {
+	const index = tokens.findIndex(el => location <= getStartLocation(el));
+	return index === -1 ? tokens.length : index;
+};
+```
+
+關於 `findIndex()`
+- findIndex() 是一個迭代方法。它會依照索引從小到大順序，對陣列中的每個元素呼叫所提供的 callbackFn，直到 callbackFn 回傳真值為止
+
+考慮到 token array 會隨著檔案中程式碼增加而增長，這情況看起來並不理想。
+- 我們可以使用比逐一檢查陣列中每個元素更有效率的搜尋演算法。如，二分搜尋，將時間減半
+- 雖然減少 50% 看起來不錯，但這段程式仍被呼叫了兩千萬次。才是問題的核心。
+
+
+不過，要實作此變更需要更大規模且侵入性的重構
+- 既然這不是個簡單的修正，接著檢視了效能剖析報告中其他值得關注的地方
+
+
+-----
+
+下一個追到的問題
+
+```js
+function getPath(obj, key) {
+	const keys = key.split(".");
+	for (const key of keys) {
+		if (obj == null) {
+			return obj;
+		}
+		obj = obj[key];
+	}
+	return obj;
+}
+```
+
+又是一個 `for ... of`  
+改寫，這樣就能省 `400ms`  
+
+```js
+function getPath(obj, key) {
+	const keys = key.split(".");
+	for (let i = 0; i < keys.length; i++) {
+		const key = keys[i];
+		if (obj == null) {
+			return obj;
+		}
+		obj = obj[key];
+	}
+	return obj;
+}
+```
+
+另外，許多 string 處理相關的功能上，perf 上要注意 `String.prototype.split()` 這個方法
+- 它會先 loop 所有字元、分配新的 array
+- 然後通常會再 loop 一遍這個陣列
+
+其實這整個流程都能在一次 loop 裡完成。
+```js
+function getPath(obj, key) {
+	let last = 0;
+	// Fine because all keys are ASCII and not unicode
+	for (let i = 0; i < key.length; i++) {
+		if (obj == null) {
+			return obj;
+		}
+
+		if (key[i] === ".") {
+			obj = obj[key.slice(last, i)];
+			last = i + 1;
+		} else if (i === key.length - 1) {
+			obj = obj[key.slice(last)];
+		}
+	}
+
+	return obj;
+}
+```
+
+兩次改善後，整體當 getPath 需要 `2.7s`，降至 `486ms`
+
+------------  
+------------  
+------------  
+
+## Part 4: Speeding up the JavaScript ecosystem - npm scripts
+
+接著作者研究 npm
+
+`node --cpu-prof $(which npm) run myscript` 這樣就能看到 npm 本身的 profile 了  
+
+![js-tools-npm-expensiv](https://marvinh.dev/media/js-tools-npm-expensive.png)  
+
+發現一大段都在 load 檔案  
+改成需要的時後才 import  
+
+```diff
+  // in exit-handler.js
+  const log = require('./log-shim.js')
+- const errorMessage = require('./error-message.js')
+- const replaceInfo = require('./replace-info.js')
+
+  const exitHandler = err => {
+    //...
+    if (err) {
++     const replaceInfo = require('./replace-info.js');
++     const errorMessage = require('./error-message.js')
+      //...
+    }
+  };
+
+```
+
+-----   
+
+接著關注到另一隻檔案 `collatorCompare`
+
+```js
+// Simplified example of the code in @isaacs/string-locale-compare
+
+const collatorCompare = (locale, opts) => {
+	const collator = new Intl.Collator(locale, opts);
+	// Always returns a new function that needs to be optimized from scratch
+	return (a, b) => collator.compare(a, b);
+};
+
+const cache = new Map();
+module.exports = (locale, options = {}) => {
+	const key = `${locale}\n${JSON.stringify(options)}`;
+
+	if (cache.has(key)) return cache.get(key);
+
+	const compare = collatorCompare(locale, opts);
+	cache.set(key, compare);
+	return compare;
+};
+```
+
+結果掃完 code base 過後，發現所有地方根本都只使用 `en` 來比較  
+
+```js
+// Every require call immediately calls the "default" export with "en"
+const localeCompare = require("@isaacs/string-locale-compare")("en");
+```
+
+那我們根本不需要每次呼叫都去建立 `new Intl.Collator()`  
+只需要這樣就可以了    
+
+```js
+// We only ever need to construct the Collator class instance once
+const collator = new Intl.Collator("en");
+const localeCompare = (a, b) => collator.compare(a, b);
+```
+
+-----
+
+接著注意到一個 sort 的行為竟然花了 `10ms`  
+
+```js
+// Sorting this array somehow takes 10ms
+[
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_06_53_324Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_07_35_219Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_07_36_674Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_08_11_985Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_09_23_766Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_11_30_959Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_11_42_726Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_12_53_575Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_17_08_421Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_21_52_813Z-debug-0.log",
+	"/Users/marvinhagemeister/.npm/_logs/2023-03-18T20_24_02_611Z-debug-0.log",
+];
+
+
+function alphasort(a, b) {
+	return a.localeCompare(b, "en");
+}
+```
+
+function 看起來也正常  
+轉用 `Intl.Collator` 有更好 perf  
+
+```js
+const collator = Intl.Collator("en");
+function alphasort(a, b) {
+	return collator.compare(a, b);
+}
+```
+
+剩下的部分沒有講解太具體  
+不做筆記了  
+
+------  
+
+
+------------  
+------------  
+------------  
+
+## Part 5: Speeding up the JavaScript ecosystem - draft-js emoji plugin
+
+後續研究另一個 library  
+
+其中看到一個 function
+- 當看到一個懷疑對象時，作者會用 `console.count()` 來順便查看 real case 中，它被呼叫多少次  
+
+最後了解到那個 function 是在檢查 message 中有沒有 emoji  
+最後想辦法做一些 cache，成功改善 perf  
+
+另外，
+- 以前的作法是會用 40 多 kb 的 regex  
+- 但現在已經有 `Emoji_Presentation` 可以用了  
+
+```js
+const sentence = "A ticket to 大阪 costs ¥2000 👌.";
+
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
+
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+```
